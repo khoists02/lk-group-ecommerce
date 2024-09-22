@@ -1,5 +1,6 @@
 package com.lkgroup.ecommerce.common.domain.entities;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Table;
 import jakarta.validation.constraints.NotNull;
@@ -19,6 +20,7 @@ public class User extends BaseEntity {
     private String email;
     private String address;
     private String phone;
+    @Column(name = "image_path")
     private String imagePath;
     private boolean enabled;
 }

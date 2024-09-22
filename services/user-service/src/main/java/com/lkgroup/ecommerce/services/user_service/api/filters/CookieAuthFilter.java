@@ -3,6 +3,7 @@ package com.lkgroup.ecommerce.services.user_service.api.filters;
 import com.lkgroup.ecommerce.services.user_service.api.auth.AuthenticatedUser;
 import com.lkgroup.ecommerce.services.user_service.api.exceptions.UnauthenticatedException;
 import com.lkgroup.ecommerce.services.user_service.api.service.AuthenticationService;
+import com.lkgroup.ecommerce.services.user_service.api.service.JwtTokenService;
 import io.jsonwebtoken.*;
 import io.jsonwebtoken.security.SignatureException;
 import jakarta.servlet.FilterChain;
@@ -23,7 +24,7 @@ public class CookieAuthFilter extends OncePerRequestFilter {
     private final AntPathMatcher pathMatcher = new AntPathMatcher();
 
     @Autowired
-    private AuthenticationService authenticationService;
+    private JwtTokenService jwtTokenService;
     @Override
     protected boolean shouldNotFilter(HttpServletRequest request) throws ServletException {
         return pathMatcher.match("/csrf", request.getRequestURI())
@@ -44,7 +45,7 @@ public class CookieAuthFilter extends OncePerRequestFilter {
 
         Optional<Cookie> authCookie = resolveAuthenticationCookieForSubdomain(httpServletRequest);
         try {
-            parsedJwt = authenticationService.parseJwt(authCookie.get().getValue());
+            parsedJwt = jwtTokenService.parseJwt(authCookie.get().getValue());
         } catch (UnsupportedJwtException | MalformedJwtException | CompressionException | IllegalArgumentException e) {
             throw UnauthenticatedException.MALFORMED_TOKEN;
         } catch (ExpiredJwtException e) {
@@ -59,7 +60,7 @@ public class CookieAuthFilter extends OncePerRequestFilter {
         if (!tokenType.equals("access"))
             throw UnauthenticatedException.INVALID_CREDENTIALS;
         try {
-            SecurityContextHolder.getContext().setAuthentication(new AuthenticatedUser(parsedJwt));
+            SecurityContextHolder.getContext().setAuthentication(new AuthenticatedUser(parsedJwt)); // Set whole context.
             filterChain.doFilter(httpServletRequest, httpServletResponse);
         } finally {
             SecurityContextHolder.clearContext();

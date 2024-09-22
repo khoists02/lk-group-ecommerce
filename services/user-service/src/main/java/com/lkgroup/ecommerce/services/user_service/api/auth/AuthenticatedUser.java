@@ -7,17 +7,15 @@ import org.springframework.security.core.GrantedAuthority;
 import java.util.*;
 
 public class AuthenticatedUser implements Authentication {
-    private UUID userId;
     private String username;
-    private UUID sessionId;
+    private UUID userId;
     private final Jws<Claims> parsedJwt;
     private List<? extends GrantedAuthority> grantedAuthorities = new ArrayList<>();
 
     public AuthenticatedUser(Jws<Claims> parsedJwt) {
         this.parsedJwt = parsedJwt;
-        this.userId = UUID.fromString(parsedJwt.getPayload().get("sub", String.class));
         this.username = parsedJwt.getPayload().get("un", String.class);
-        this.sessionId = UUID.fromString(parsedJwt.getPayload().get("ses", String.class));
+        this.userId = UUID.fromString(parsedJwt.getPayload().get("sub", String.class));
     }
 
     @Override
@@ -53,26 +51,21 @@ public class AuthenticatedUser implements Authentication {
     public String getAllowedOrigin() {
         return this.parsedJwt.getPayload().get("dom", String.class);
     }
-    public UUID getSessionId() {
-        return this.sessionId;
+
+    public String getUsername() {
+        return this.username;
     }
 
     public UUID getUserId() {
         return this.userId;
     }
 
-    public String getUsername() {
-        return this.username;
-    }
-
     public <T> T getClaimValue(String claim, Class<T> clazz) {
         return this.parsedJwt.getPayload().get(claim, clazz);
     }
 
-
-
     @Override
     public String getName() {
-        return "%s".formatted(this.userId);
+        return this.username;
     }
 }

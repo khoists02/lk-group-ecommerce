@@ -5,6 +5,8 @@ import com.lkgroup.ecommerce.common.domain.repositories.UserRepository;
 import com.lkgroup.ecommerce.protobuf.userproto.AuthenticationProtos;
 import com.lkgroup.ecommerce.services.user_service.api.service.AuthenticationService;
 import com.lkgroup.ecommerce.services.user_service.api.service.UserService;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
 import jakarta.validation.Valid;
 import org.modelmapper.ModelMapper;
 import org.springframework.http.HttpStatus;
@@ -55,5 +57,12 @@ public class AuthenticationController {
        } catch (Exception e) {
            throw e;
        }
+    }
+
+    @Transactional
+    @PostMapping("/logout")
+    @ResponseStatus(HttpStatus.NO_CONTENT)
+    public void handleLogout(HttpServletRequest request, HttpServletResponse response) {
+        authenticationService.logout(request, response);
     }
 }
