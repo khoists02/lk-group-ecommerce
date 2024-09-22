@@ -104,11 +104,11 @@ public class AuthenticationService {
         Jws<Claims> refreshTokenParsed;
         try {
             refreshTokenParsed = jwtTokenService.parseJwt(refreshTokenCookie.getValue());
-            if (!Optional.ofNullable(refreshTokenParsed.getPayload().get("typ", String.class)).orElseThrow(() -> new JwtException("Missing required claim: typ")).equals("refresh")) {
+            if (!Optional.ofNullable(refreshTokenParsed.getPayload().get("type", String.class)).orElseThrow(() -> new JwtException("Missing required claim: typ")).equals("refresh")) {
                 throw new JwtException("Invalid value for claim: typ");
             }
-            UUID sessionId = UUID.fromString(Optional.ofNullable(refreshTokenParsed.getPayload().get("ses", String.class)).orElseThrow(() -> new JwtException("Missing required claim: ses")));
-            logger.info("Logged out session: {}", sessionId);
+//            UUID sessionId = UUID.fromString(Optional.ofNullable(refreshTokenParsed.getPayload().get("ses", String.class)).orElseThrow(() -> new JwtException("Missing required claim: ses")));
+//            logger.info("Logged out session: {}", sessionId);
         } catch (JwtException e) {
             logger.error("There was an exception parsing the refresh token during logout. The user will be logged out but there session will not be removed", e);
             throw e;

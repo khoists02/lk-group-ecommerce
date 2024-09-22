@@ -27,10 +27,9 @@ message AuthenticatedUserResponse {
   string id = 1;
   string name = 2;
   string username = 3;
-  string password = 4;
-  string email = 5;
-  string address = 6;
-  string phone = 7;
-  string imagePath = 8;
-  bool enabled = 9;
+  string email = 4;
+  string address = 5;
+  string phone = 6;
+  string imagePath = 7;
+  bool enabled = 8;
 }

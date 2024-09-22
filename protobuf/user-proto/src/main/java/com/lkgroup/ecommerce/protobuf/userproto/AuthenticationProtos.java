@@ -2705,67 +2705,55 @@ public final class AuthenticationProtos {
         getUsernameBytes();
 
     /**
-     * <code>string password = 4;</code>
-     * @return The password.
-     */
-    java.lang.String getPassword();
-    /**
-     * <code>string password = 4;</code>
-     * @return The bytes for password.
-     */
-    com.google.protobuf.ByteString
-        getPasswordBytes();
-
-    /**
-     * <code>string email = 5;</code>
+     * <code>string email = 4;</code>
      * @return The email.
      */
     java.lang.String getEmail();
     /**
-     * <code>string email = 5;</code>
+     * <code>string email = 4;</code>
      * @return The bytes for email.
      */
     com.google.protobuf.ByteString
         getEmailBytes();
 
     /**
-     * <code>string address = 6;</code>
+     * <code>string address = 5;</code>
      * @return The address.
      */
     java.lang.String getAddress();
     /**
-     * <code>string address = 6;</code>
+     * <code>string address = 5;</code>
      * @return The bytes for address.
      */
     com.google.protobuf.ByteString
         getAddressBytes();
 
     /**
-     * <code>string phone = 7;</code>
+     * <code>string phone = 6;</code>
      * @return The phone.
      */
     java.lang.String getPhone();
     /**
-     * <code>string phone = 7;</code>
+     * <code>string phone = 6;</code>
      * @return The bytes for phone.
      */
     com.google.protobuf.ByteString
         getPhoneBytes();
 
     /**
-     * <code>string imagePath = 8;</code>
+     * <code>string imagePath = 7;</code>
      * @return The imagePath.
      */
     java.lang.String getImagePath();
     /**
-     * <code>string imagePath = 8;</code>
+     * <code>string imagePath = 7;</code>
      * @return The bytes for imagePath.
      */
     com.google.protobuf.ByteString
         getImagePathBytes();
 
     /**
-     * <code>bool enabled = 9;</code>
+     * <code>bool enabled = 8;</code>
      * @return The enabled.
      */
     boolean getEnabled();
@@ -2795,7 +2783,6 @@ public final class AuthenticationProtos {
       id_ = "";
       name_ = "";
       username_ = "";
-      password_ = "";
       email_ = "";
       address_ = "";
       phone_ = "";
@@ -2932,50 +2919,11 @@ public final class AuthenticationProtos {
       }
     }
 
-    public static final int PASSWORD_FIELD_NUMBER = 4;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object password_ = "";
-    /**
-     * <code>string password = 4;</code>
-     * @return The password.
-     */
-    @java.lang.Override
-    public java.lang.String getPassword() {
-      java.lang.Object ref = password_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        password_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>string password = 4;</code>
-     * @return The bytes for password.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getPasswordBytes() {
-      java.lang.Object ref = password_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        password_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int EMAIL_FIELD_NUMBER = 5;
+    public static final int EMAIL_FIELD_NUMBER = 4;
     @SuppressWarnings("serial")
     private volatile java.lang.Object email_ = "";
     /**
-     * <code>string email = 5;</code>
+     * <code>string email = 4;</code>
      * @return The email.
      */
     @java.lang.Override
@@ -2992,7 +2940,7 @@ public final class AuthenticationProtos {
       }
     }
     /**
-     * <code>string email = 5;</code>
+     * <code>string email = 4;</code>
      * @return The bytes for email.
      */
     @java.lang.Override
@@ -3010,11 +2958,11 @@ public final class AuthenticationProtos {
       }
     }
 
-    public static final int ADDRESS_FIELD_NUMBER = 6;
+    public static final int ADDRESS_FIELD_NUMBER = 5;
     @SuppressWarnings("serial")
     private volatile java.lang.Object address_ = "";
     /**
-     * <code>string address = 6;</code>
+     * <code>string address = 5;</code>
      * @return The address.
      */
     @java.lang.Override
@@ -3031,7 +2979,7 @@ public final class AuthenticationProtos {
       }
     }
     /**
-     * <code>string address = 6;</code>
+     * <code>string address = 5;</code>
      * @return The bytes for address.
      */
     @java.lang.Override
@@ -3049,11 +2997,11 @@ public final class AuthenticationProtos {
       }
     }
 
-    public static final int PHONE_FIELD_NUMBER = 7;
+    public static final int PHONE_FIELD_NUMBER = 6;
     @SuppressWarnings("serial")
     private volatile java.lang.Object phone_ = "";
     /**
-     * <code>string phone = 7;</code>
+     * <code>string phone = 6;</code>
      * @return The phone.
      */
     @java.lang.Override
@@ -3070,7 +3018,7 @@ public final class AuthenticationProtos {
       }
     }
     /**
-     * <code>string phone = 7;</code>
+     * <code>string phone = 6;</code>
      * @return The bytes for phone.
      */
     @java.lang.Override
@@ -3088,11 +3036,11 @@ public final class AuthenticationProtos {
       }
     }
 
-    public static final int IMAGEPATH_FIELD_NUMBER = 8;
+    public static final int IMAGEPATH_FIELD_NUMBER = 7;
     @SuppressWarnings("serial")
     private volatile java.lang.Object imagePath_ = "";
     /**
-     * <code>string imagePath = 8;</code>
+     * <code>string imagePath = 7;</code>
      * @return The imagePath.
      */
     @java.lang.Override
@@ -3109,7 +3057,7 @@ public final class AuthenticationProtos {
       }
     }
     /**
-     * <code>string imagePath = 8;</code>
+     * <code>string imagePath = 7;</code>
      * @return The bytes for imagePath.
      */
     @java.lang.Override
@@ -3127,10 +3075,10 @@ public final class AuthenticationProtos {
       }
     }
 
-    public static final int ENABLED_FIELD_NUMBER = 9;
+    public static final int ENABLED_FIELD_NUMBER = 8;
     private boolean enabled_ = false;
     /**
-     * <code>bool enabled = 9;</code>
+     * <code>bool enabled = 8;</code>
      * @return The enabled.
      */
     @java.lang.Override
@@ -3161,23 +3109,20 @@ public final class AuthenticationProtos {
       if (!com.google.protobuf.GeneratedMessage.isStringEmpty(username_)) {
         com.google.protobuf.GeneratedMessage.writeString(output, 3, username_);
       }
-      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(password_)) {
-        com.google.protobuf.GeneratedMessage.writeString(output, 4, password_);
-      }
       if (!com.google.protobuf.GeneratedMessage.isStringEmpty(email_)) {
-        com.google.protobuf.GeneratedMessage.writeString(output, 5, email_);
+        com.google.protobuf.GeneratedMessage.writeString(output, 4, email_);
       }
       if (!com.google.protobuf.GeneratedMessage.isStringEmpty(address_)) {
-        com.google.protobuf.GeneratedMessage.writeString(output, 6, address_);
+        com.google.protobuf.GeneratedMessage.writeString(output, 5, address_);
       }
       if (!com.google.protobuf.GeneratedMessage.isStringEmpty(phone_)) {
-        com.google.protobuf.GeneratedMessage.writeString(output, 7, phone_);
+        com.google.protobuf.GeneratedMessage.writeString(output, 6, phone_);
       }
       if (!com.google.protobuf.GeneratedMessage.isStringEmpty(imagePath_)) {
-        com.google.protobuf.GeneratedMessage.writeString(output, 8, imagePath_);
+        com.google.protobuf.GeneratedMessage.writeString(output, 7, imagePath_);
       }
       if (enabled_ != false) {
-        output.writeBool(9, enabled_);
+        output.writeBool(8, enabled_);
       }
       getUnknownFields().writeTo(output);
     }
@@ -3197,24 +3142,21 @@ public final class AuthenticationProtos {
       if (!com.google.protobuf.GeneratedMessage.isStringEmpty(username_)) {
         size += com.google.protobuf.GeneratedMessage.computeStringSize(3, username_);
       }
-      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(password_)) {
-        size += com.google.protobuf.GeneratedMessage.computeStringSize(4, password_);
-      }
       if (!com.google.protobuf.GeneratedMessage.isStringEmpty(email_)) {
-        size += com.google.protobuf.GeneratedMessage.computeStringSize(5, email_);
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(4, email_);
       }
       if (!com.google.protobuf.GeneratedMessage.isStringEmpty(address_)) {
-        size += com.google.protobuf.GeneratedMessage.computeStringSize(6, address_);
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(5, address_);
       }
       if (!com.google.protobuf.GeneratedMessage.isStringEmpty(phone_)) {
-        size += com.google.protobuf.GeneratedMessage.computeStringSize(7, phone_);
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(6, phone_);
       }
       if (!com.google.protobuf.GeneratedMessage.isStringEmpty(imagePath_)) {
-        size += com.google.protobuf.GeneratedMessage.computeStringSize(8, imagePath_);
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(7, imagePath_);
       }
       if (enabled_ != false) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(9, enabled_);
+          .computeBoolSize(8, enabled_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -3237,8 +3179,6 @@ public final class AuthenticationProtos {
           .equals(other.getName())) return false;
       if (!getUsername()
           .equals(other.getUsername())) return false;
-      if (!getPassword()
-          .equals(other.getPassword())) return false;
       if (!getEmail()
           .equals(other.getEmail())) return false;
       if (!getAddress()
@@ -3266,8 +3206,6 @@ public final class AuthenticationProtos {
       hash = (53 * hash) + getName().hashCode();
       hash = (37 * hash) + USERNAME_FIELD_NUMBER;
       hash = (53 * hash) + getUsername().hashCode();
-      hash = (37 * hash) + PASSWORD_FIELD_NUMBER;
-      hash = (53 * hash) + getPassword().hashCode();
       hash = (37 * hash) + EMAIL_FIELD_NUMBER;
       hash = (53 * hash) + getEmail().hashCode();
       hash = (37 * hash) + ADDRESS_FIELD_NUMBER;
@@ -3413,7 +3351,6 @@ public final class AuthenticationProtos {
         id_ = "";
         name_ = "";
         username_ = "";
-        password_ = "";
         email_ = "";
         address_ = "";
         phone_ = "";
@@ -3462,21 +3399,18 @@ public final class AuthenticationProtos {
           result.username_ = username_;
         }
         if (((from_bitField0_ & 0x00000008) != 0)) {
-          result.password_ = password_;
-        }
-        if (((from_bitField0_ & 0x00000010) != 0)) {
           result.email_ = email_;
         }
-        if (((from_bitField0_ & 0x00000020) != 0)) {
+        if (((from_bitField0_ & 0x00000010) != 0)) {
           result.address_ = address_;
         }
-        if (((from_bitField0_ & 0x00000040) != 0)) {
+        if (((from_bitField0_ & 0x00000020) != 0)) {
           result.phone_ = phone_;
         }
-        if (((from_bitField0_ & 0x00000080) != 0)) {
+        if (((from_bitField0_ & 0x00000040) != 0)) {
           result.imagePath_ = imagePath_;
         }
-        if (((from_bitField0_ & 0x00000100) != 0)) {
+        if (((from_bitField0_ & 0x00000080) != 0)) {
           result.enabled_ = enabled_;
         }
       }
@@ -3508,29 +3442,24 @@ public final class AuthenticationProtos {
           bitField0_ |= 0x00000004;
           onChanged();
         }
-        if (!other.getPassword().isEmpty()) {
-          password_ = other.password_;
-          bitField0_ |= 0x00000008;
-          onChanged();
-        }
         if (!other.getEmail().isEmpty()) {
           email_ = other.email_;
-          bitField0_ |= 0x00000010;
+          bitField0_ |= 0x00000008;
           onChanged();
         }
         if (!other.getAddress().isEmpty()) {
           address_ = other.address_;
-          bitField0_ |= 0x00000020;
+          bitField0_ |= 0x00000010;
           onChanged();
         }
         if (!other.getPhone().isEmpty()) {
           phone_ = other.phone_;
-          bitField0_ |= 0x00000040;
+          bitField0_ |= 0x00000020;
           onChanged();
         }
         if (!other.getImagePath().isEmpty()) {
           imagePath_ = other.imagePath_;
-          bitField0_ |= 0x00000080;
+          bitField0_ |= 0x00000040;
           onChanged();
         }
         if (other.getEnabled() != false) {
@@ -3578,35 +3507,30 @@ public final class AuthenticationProtos {
                 break;
               } // case 26
               case 34: {
-                password_ = input.readStringRequireUtf8();
+                email_ = input.readStringRequireUtf8();
                 bitField0_ |= 0x00000008;
                 break;
               } // case 34
               case 42: {
-                email_ = input.readStringRequireUtf8();
+                address_ = input.readStringRequireUtf8();
                 bitField0_ |= 0x00000010;
                 break;
               } // case 42
               case 50: {
-                address_ = input.readStringRequireUtf8();
+                phone_ = input.readStringRequireUtf8();
                 bitField0_ |= 0x00000020;
                 break;
               } // case 50
               case 58: {
-                phone_ = input.readStringRequireUtf8();
+                imagePath_ = input.readStringRequireUtf8();
                 bitField0_ |= 0x00000040;
                 break;
               } // case 58
-              case 66: {
-                imagePath_ = input.readStringRequireUtf8();
+              case 64: {
+                enabled_ = input.readBool();
                 bitField0_ |= 0x00000080;
                 break;
-              } // case 66
-              case 72: {
-                enabled_ = input.readBool();
-                bitField0_ |= 0x00000100;
-                break;
-              } // case 72
+              } // case 64
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -3840,81 +3764,9 @@ public final class AuthenticationProtos {
         return this;
       }
 
-      private java.lang.Object password_ = "";
-      /**
-       * <code>string password = 4;</code>
-       * @return The password.
-       */
-      public java.lang.String getPassword() {
-        java.lang.Object ref = password_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          password_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>string password = 4;</code>
-       * @return The bytes for password.
-       */
-      public com.google.protobuf.ByteString
-          getPasswordBytes() {
-        java.lang.Object ref = password_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          password_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>string password = 4;</code>
-       * @param value The password to set.
-       * @return This builder for chaining.
-       */
-      public Builder setPassword(
-          java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        password_ = value;
-        bitField0_ |= 0x00000008;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string password = 4;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearPassword() {
-        password_ = getDefaultInstance().getPassword();
-        bitField0_ = (bitField0_ & ~0x00000008);
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string password = 4;</code>
-       * @param value The bytes for password to set.
-       * @return This builder for chaining.
-       */
-      public Builder setPasswordBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        password_ = value;
-        bitField0_ |= 0x00000008;
-        onChanged();
-        return this;
-      }
-
       private java.lang.Object email_ = "";
       /**
-       * <code>string email = 5;</code>
+       * <code>string email = 4;</code>
        * @return The email.
        */
       public java.lang.String getEmail() {
@@ -3930,7 +3782,7 @@ public final class AuthenticationProtos {
         }
       }
       /**
-       * <code>string email = 5;</code>
+       * <code>string email = 4;</code>
        * @return The bytes for email.
        */
       public com.google.protobuf.ByteString
@@ -3947,7 +3799,7 @@ public final class AuthenticationProtos {
         }
       }
       /**
-       * <code>string email = 5;</code>
+       * <code>string email = 4;</code>
        * @param value The email to set.
        * @return This builder for chaining.
        */
@@ -3955,22 +3807,22 @@ public final class AuthenticationProtos {
           java.lang.String value) {
         if (value == null) { throw new NullPointerException(); }
         email_ = value;
-        bitField0_ |= 0x00000010;
+        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
       /**
-       * <code>string email = 5;</code>
+       * <code>string email = 4;</code>
        * @return This builder for chaining.
        */
       public Builder clearEmail() {
         email_ = getDefaultInstance().getEmail();
-        bitField0_ = (bitField0_ & ~0x00000010);
+        bitField0_ = (bitField0_ & ~0x00000008);
         onChanged();
         return this;
       }
       /**
-       * <code>string email = 5;</code>
+       * <code>string email = 4;</code>
        * @param value The bytes for email to set.
        * @return This builder for chaining.
        */
@@ -3979,14 +3831,14 @@ public final class AuthenticationProtos {
         if (value == null) { throw new NullPointerException(); }
         checkByteStringIsUtf8(value);
         email_ = value;
-        bitField0_ |= 0x00000010;
+        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
 
       private java.lang.Object address_ = "";
       /**
-       * <code>string address = 6;</code>
+       * <code>string address = 5;</code>
        * @return The address.
        */
       public java.lang.String getAddress() {
@@ -4002,7 +3854,7 @@ public final class AuthenticationProtos {
         }
       }
       /**
-       * <code>string address = 6;</code>
+       * <code>string address = 5;</code>
        * @return The bytes for address.
        */
       public com.google.protobuf.ByteString
@@ -4019,7 +3871,7 @@ public final class AuthenticationProtos {
         }
       }
       /**
-       * <code>string address = 6;</code>
+       * <code>string address = 5;</code>
        * @param value The address to set.
        * @return This builder for chaining.
        */
@@ -4027,22 +3879,22 @@ public final class AuthenticationProtos {
           java.lang.String value) {
         if (value == null) { throw new NullPointerException(); }
         address_ = value;
-        bitField0_ |= 0x00000020;
+        bitField0_ |= 0x00000010;
         onChanged();
         return this;
       }
       /**
-       * <code>string address = 6;</code>
+       * <code>string address = 5;</code>
        * @return This builder for chaining.
        */
       public Builder clearAddress() {
         address_ = getDefaultInstance().getAddress();
-        bitField0_ = (bitField0_ & ~0x00000020);
+        bitField0_ = (bitField0_ & ~0x00000010);
         onChanged();
         return this;
       }
       /**
-       * <code>string address = 6;</code>
+       * <code>string address = 5;</code>
        * @param value The bytes for address to set.
        * @return This builder for chaining.
        */
@@ -4051,14 +3903,14 @@ public final class AuthenticationProtos {
         if (value == null) { throw new NullPointerException(); }
         checkByteStringIsUtf8(value);
         address_ = value;
-        bitField0_ |= 0x00000020;
+        bitField0_ |= 0x00000010;
         onChanged();
         return this;
       }
 
       private java.lang.Object phone_ = "";
       /**
-       * <code>string phone = 7;</code>
+       * <code>string phone = 6;</code>
        * @return The phone.
        */
       public java.lang.String getPhone() {
@@ -4074,7 +3926,7 @@ public final class AuthenticationProtos {
         }
       }
       /**
-       * <code>string phone = 7;</code>
+       * <code>string phone = 6;</code>
        * @return The bytes for phone.
        */
       public com.google.protobuf.ByteString
@@ -4091,7 +3943,7 @@ public final class AuthenticationProtos {
         }
       }
       /**
-       * <code>string phone = 7;</code>
+       * <code>string phone = 6;</code>
        * @param value The phone to set.
        * @return This builder for chaining.
        */
@@ -4099,22 +3951,22 @@ public final class AuthenticationProtos {
           java.lang.String value) {
         if (value == null) { throw new NullPointerException(); }
         phone_ = value;
-        bitField0_ |= 0x00000040;
+        bitField0_ |= 0x00000020;
         onChanged();
         return this;
       }
       /**
-       * <code>string phone = 7;</code>
+       * <code>string phone = 6;</code>
        * @return This builder for chaining.
        */
       public Builder clearPhone() {
         phone_ = getDefaultInstance().getPhone();
-        bitField0_ = (bitField0_ & ~0x00000040);
+        bitField0_ = (bitField0_ & ~0x00000020);
         onChanged();
         return this;
       }
       /**
-       * <code>string phone = 7;</code>
+       * <code>string phone = 6;</code>
        * @param value The bytes for phone to set.
        * @return This builder for chaining.
        */
@@ -4123,14 +3975,14 @@ public final class AuthenticationProtos {
         if (value == null) { throw new NullPointerException(); }
         checkByteStringIsUtf8(value);
         phone_ = value;
-        bitField0_ |= 0x00000040;
+        bitField0_ |= 0x00000020;
         onChanged();
         return this;
       }
 
       private java.lang.Object imagePath_ = "";
       /**
-       * <code>string imagePath = 8;</code>
+       * <code>string imagePath = 7;</code>
        * @return The imagePath.
        */
       public java.lang.String getImagePath() {
@@ -4146,7 +3998,7 @@ public final class AuthenticationProtos {
         }
       }
       /**
-       * <code>string imagePath = 8;</code>
+       * <code>string imagePath = 7;</code>
        * @return The bytes for imagePath.
        */
       public com.google.protobuf.ByteString
@@ -4163,7 +4015,7 @@ public final class AuthenticationProtos {
         }
       }
       /**
-       * <code>string imagePath = 8;</code>
+       * <code>string imagePath = 7;</code>
        * @param value The imagePath to set.
        * @return This builder for chaining.
        */
@@ -4171,22 +4023,22 @@ public final class AuthenticationProtos {
           java.lang.String value) {
         if (value == null) { throw new NullPointerException(); }
         imagePath_ = value;
-        bitField0_ |= 0x00000080;
+        bitField0_ |= 0x00000040;
         onChanged();
         return this;
       }
       /**
-       * <code>string imagePath = 8;</code>
+       * <code>string imagePath = 7;</code>
        * @return This builder for chaining.
        */
       public Builder clearImagePath() {
         imagePath_ = getDefaultInstance().getImagePath();
-        bitField0_ = (bitField0_ & ~0x00000080);
+        bitField0_ = (bitField0_ & ~0x00000040);
         onChanged();
         return this;
       }
       /**
-       * <code>string imagePath = 8;</code>
+       * <code>string imagePath = 7;</code>
        * @param value The bytes for imagePath to set.
        * @return This builder for chaining.
        */
@@ -4195,14 +4047,14 @@ public final class AuthenticationProtos {
         if (value == null) { throw new NullPointerException(); }
         checkByteStringIsUtf8(value);
         imagePath_ = value;
-        bitField0_ |= 0x00000080;
+        bitField0_ |= 0x00000040;
         onChanged();
         return this;
       }
 
       private boolean enabled_ ;
       /**
-       * <code>bool enabled = 9;</code>
+       * <code>bool enabled = 8;</code>
        * @return The enabled.
        */
       @java.lang.Override
@@ -4210,23 +4062,23 @@ public final class AuthenticationProtos {
         return enabled_;
       }
       /**
-       * <code>bool enabled = 9;</code>
+       * <code>bool enabled = 8;</code>
        * @param value The enabled to set.
        * @return This builder for chaining.
        */
       public Builder setEnabled(boolean value) {
 
         enabled_ = value;
-        bitField0_ |= 0x00000100;
+        bitField0_ |= 0x00000080;
         onChanged();
         return this;
       }
       /**
-       * <code>bool enabled = 9;</code>
+       * <code>bool enabled = 8;</code>
        * @return This builder for chaining.
        */
       public Builder clearEnabled() {
-        bitField0_ = (bitField0_ & ~0x00000100);
+        bitField0_ = (bitField0_ & ~0x00000080);
         enabled_ = false;
         onChanged();
         return this;
@@ -4319,13 +4171,12 @@ public final class AuthenticationProtos {
       "d\030\003 \001(\t\022\r\n\005email\030\004 \001(\t\022\017\n\007address\030\005 \001(\t\022" +
       "\r\n\005phone\030\006 \001(\t\022\021\n\timagePath\030\007 \001(\t\022\017\n\007ena" +
       "bled\030\010 \001(\010\"\035\n\014CsrfResponse\022\r\n\005token\030\001 \001(" +
-      "\t\"\254\001\n\031AuthenticatedUserResponse\022\n\n\002id\030\001 " +
-      "\001(\t\022\014\n\004name\030\002 \001(\t\022\020\n\010username\030\003 \001(\t\022\020\n\010p" +
-      "assword\030\004 \001(\t\022\r\n\005email\030\005 \001(\t\022\017\n\007address\030" +
-      "\006 \001(\t\022\r\n\005phone\030\007 \001(\t\022\021\n\timagePath\030\010 \001(\t\022" +
-      "\017\n\007enabled\030\t \001(\010B@\n(com.lkgroup.ecommerc" +
-      "e.protobuf.userprotoB\024AuthenticationProt" +
-      "osb\006proto3"
+      "\t\"\232\001\n\031AuthenticatedUserResponse\022\n\n\002id\030\001 " +
+      "\001(\t\022\014\n\004name\030\002 \001(\t\022\020\n\010username\030\003 \001(\t\022\r\n\005e" +
+      "mail\030\004 \001(\t\022\017\n\007address\030\005 \001(\t\022\r\n\005phone\030\006 \001" +
+      "(\t\022\021\n\timagePath\030\007 \001(\t\022\017\n\007enabled\030\010 \001(\010B@" +
+      "\n(com.lkgroup.ecommerce.protobuf.userpro" +
+      "toB\024AuthenticationProtosb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -4354,7 +4205,7 @@ public final class AuthenticationProtos {
     internal_static_ecommerce_AuthenticatedUserResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_ecommerce_AuthenticatedUserResponse_descriptor,
-        new java.lang.String[] { "Id", "Name", "Username", "Password", "Email", "Address", "Phone", "ImagePath", "Enabled", });
+        new java.lang.String[] { "Id", "Name", "Username", "Email", "Address", "Phone", "ImagePath", "Enabled", });
     descriptor.resolveAllFeaturesImmutable();
   }
 

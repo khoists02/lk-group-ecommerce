@@ -13,6 +13,7 @@ public class UnauthenticatedException extends ApplicationException {
     public static UnauthenticatedException INVALID_TOKEN = new UnauthenticatedException("invalid_token_exception", "1008");
     public static UnauthenticatedException INVALID_GWI = new UnauthenticatedException("invalid_gwi_exception", "1009");
     public static UnauthenticatedException MFA_ENROLLMENT_REQUIRED = new UnauthenticatedException("mfa_enrollment_required", "1014");
+    public static UnauthenticatedException NOT_COOKIE_FOUND = new UnauthenticatedException("cookie_is_empty", "1015");
 
     private UnauthenticatedException(String messageKey, String code) {
         super(messageKey, code, 401);

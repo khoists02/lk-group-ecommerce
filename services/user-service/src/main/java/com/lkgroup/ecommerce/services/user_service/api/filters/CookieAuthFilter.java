@@ -44,6 +44,11 @@ public class CookieAuthFilter extends OncePerRequestFilter {
         Jws<Claims> parsedJwt;
 
         Optional<Cookie> authCookie = resolveAuthenticationCookieForSubdomain(httpServletRequest);
+
+        if (authCookie.get().getValue().isEmpty()) {
+            logger.info("No cookie found in request");
+            throw UnauthenticatedException.NOT_COOKIE_FOUND;
+        }
         try {
             parsedJwt = jwtTokenService.parseJwt(authCookie.get().getValue());
         } catch (UnsupportedJwtException | MalformedJwtException | CompressionException | IllegalArgumentException e) {
