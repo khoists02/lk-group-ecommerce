@@ -1,0 +1,23 @@
+syntax = "proto3";
+package ecommerce;
+option java_package = "com.lkgroup.ecommerce.protobuf.userproto";
+option java_outer_classname = "UsersProtos";
+
+message UserResponse {
+  string id = 1;
+  string name = 2;
+  string username = 3;
+  string email = 4;
+  string address = 5;
+  string phone = 6;
+  string imagePath = 7;
+  bool enabled = 8;
+}
+
+message UsersResponse {
+  repeated UserResponse content = 1;
+}
+
+message EnabledUser {
+  bool enabled = 1;
+}

@@ -770,12 +770,6 @@ public final class AuthenticationProtos {
      */
     com.google.protobuf.ByteString
         getImagePathBytes();
-
-    /**
-     * <code>bool enabled = 8;</code>
-     * @return The enabled.
-     */
-    boolean getEnabled();
   }
   /**
    * Protobuf type {@code ecommerce.UserRegister}
@@ -1094,17 +1088,6 @@ public final class AuthenticationProtos {
       }
     }
 
-    public static final int ENABLED_FIELD_NUMBER = 8;
-    private boolean enabled_ = false;
-    /**
-     * <code>bool enabled = 8;</code>
-     * @return The enabled.
-     */
-    @java.lang.Override
-    public boolean getEnabled() {
-      return enabled_;
-    }
-
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -1140,9 +1123,6 @@ public final class AuthenticationProtos {
       if (!com.google.protobuf.GeneratedMessage.isStringEmpty(imagePath_)) {
         com.google.protobuf.GeneratedMessage.writeString(output, 7, imagePath_);
       }
-      if (enabled_ != false) {
-        output.writeBool(8, enabled_);
-      }
       getUnknownFields().writeTo(output);
     }
 
@@ -1173,10 +1153,6 @@ public final class AuthenticationProtos {
       if (!com.google.protobuf.GeneratedMessage.isStringEmpty(imagePath_)) {
         size += com.google.protobuf.GeneratedMessage.computeStringSize(7, imagePath_);
       }
-      if (enabled_ != false) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(8, enabled_);
-      }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
@@ -1206,8 +1182,6 @@ public final class AuthenticationProtos {
           .equals(other.getPhone())) return false;
       if (!getImagePath()
           .equals(other.getImagePath())) return false;
-      if (getEnabled()
-          != other.getEnabled()) return false;
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -1233,9 +1207,6 @@ public final class AuthenticationProtos {
       hash = (53 * hash) + getPhone().hashCode();
       hash = (37 * hash) + IMAGEPATH_FIELD_NUMBER;
       hash = (53 * hash) + getImagePath().hashCode();
-      hash = (37 * hash) + ENABLED_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
-          getEnabled());
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -1374,7 +1345,6 @@ public final class AuthenticationProtos {
         address_ = "";
         phone_ = "";
         imagePath_ = "";
-        enabled_ = false;
         return this;
       }
 
@@ -1429,9 +1399,6 @@ public final class AuthenticationProtos {
         if (((from_bitField0_ & 0x00000040) != 0)) {
           result.imagePath_ = imagePath_;
         }
-        if (((from_bitField0_ & 0x00000080) != 0)) {
-          result.enabled_ = enabled_;
-        }
       }
 
       @java.lang.Override
@@ -1480,9 +1447,6 @@ public final class AuthenticationProtos {
           imagePath_ = other.imagePath_;
           bitField0_ |= 0x00000040;
           onChanged();
-        }
-        if (other.getEnabled() != false) {
-          setEnabled(other.getEnabled());
         }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
@@ -1545,11 +1509,6 @@ public final class AuthenticationProtos {
                 bitField0_ |= 0x00000040;
                 break;
               } // case 58
-              case 64: {
-                enabled_ = input.readBool();
-                bitField0_ |= 0x00000080;
-                break;
-              } // case 64
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -2067,38 +2026,6 @@ public final class AuthenticationProtos {
         checkByteStringIsUtf8(value);
         imagePath_ = value;
         bitField0_ |= 0x00000040;
-        onChanged();
-        return this;
-      }
-
-      private boolean enabled_ ;
-      /**
-       * <code>bool enabled = 8;</code>
-       * @return The enabled.
-       */
-      @java.lang.Override
-      public boolean getEnabled() {
-        return enabled_;
-      }
-      /**
-       * <code>bool enabled = 8;</code>
-       * @param value The enabled to set.
-       * @return This builder for chaining.
-       */
-      public Builder setEnabled(boolean value) {
-
-        enabled_ = value;
-        bitField0_ |= 0x00000080;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>bool enabled = 8;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearEnabled() {
-        bitField0_ = (bitField0_ & ~0x00000080);
-        enabled_ = false;
         onChanged();
         return this;
       }
@@ -2757,6 +2684,31 @@ public final class AuthenticationProtos {
      * @return The enabled.
      */
     boolean getEnabled();
+
+    /**
+     * <code>repeated string permissions = 9;</code>
+     * @return A list containing the permissions.
+     */
+    java.util.List<java.lang.String>
+        getPermissionsList();
+    /**
+     * <code>repeated string permissions = 9;</code>
+     * @return The count of permissions.
+     */
+    int getPermissionsCount();
+    /**
+     * <code>repeated string permissions = 9;</code>
+     * @param index The index of the element to return.
+     * @return The permissions at the given index.
+     */
+    java.lang.String getPermissions(int index);
+    /**
+     * <code>repeated string permissions = 9;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the permissions at the given index.
+     */
+    com.google.protobuf.ByteString
+        getPermissionsBytes(int index);
   }
   /**
    * Protobuf type {@code ecommerce.AuthenticatedUserResponse}
@@ -2787,6 +2739,8 @@ public final class AuthenticationProtos {
       address_ = "";
       phone_ = "";
       imagePath_ = "";
+      permissions_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
     }
 
     public static final com.google.protobuf.Descriptors.Descriptor
@@ -3086,6 +3040,43 @@ public final class AuthenticationProtos {
       return enabled_;
     }
 
+    public static final int PERMISSIONS_FIELD_NUMBER = 9;
+    @SuppressWarnings("serial")
+    private com.google.protobuf.LazyStringArrayList permissions_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+    /**
+     * <code>repeated string permissions = 9;</code>
+     * @return A list containing the permissions.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getPermissionsList() {
+      return permissions_;
+    }
+    /**
+     * <code>repeated string permissions = 9;</code>
+     * @return The count of permissions.
+     */
+    public int getPermissionsCount() {
+      return permissions_.size();
+    }
+    /**
+     * <code>repeated string permissions = 9;</code>
+     * @param index The index of the element to return.
+     * @return The permissions at the given index.
+     */
+    public java.lang.String getPermissions(int index) {
+      return permissions_.get(index);
+    }
+    /**
+     * <code>repeated string permissions = 9;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the permissions at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getPermissionsBytes(int index) {
+      return permissions_.getByteString(index);
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -3124,6 +3115,9 @@ public final class AuthenticationProtos {
       if (enabled_ != false) {
         output.writeBool(8, enabled_);
       }
+      for (int i = 0; i < permissions_.size(); i++) {
+        com.google.protobuf.GeneratedMessage.writeString(output, 9, permissions_.getRaw(i));
+      }
       getUnknownFields().writeTo(output);
     }
 
@@ -3158,6 +3152,14 @@ public final class AuthenticationProtos {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(8, enabled_);
       }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < permissions_.size(); i++) {
+          dataSize += computeStringSizeNoTag(permissions_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getPermissionsList().size();
+      }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
@@ -3189,6 +3191,8 @@ public final class AuthenticationProtos {
           .equals(other.getImagePath())) return false;
       if (getEnabled()
           != other.getEnabled()) return false;
+      if (!getPermissionsList()
+          .equals(other.getPermissionsList())) return false;
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -3217,6 +3221,10 @@ public final class AuthenticationProtos {
       hash = (37 * hash) + ENABLED_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getEnabled());
+      if (getPermissionsCount() > 0) {
+        hash = (37 * hash) + PERMISSIONS_FIELD_NUMBER;
+        hash = (53 * hash) + getPermissionsList().hashCode();
+      }
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -3356,6 +3364,8 @@ public final class AuthenticationProtos {
         phone_ = "";
         imagePath_ = "";
         enabled_ = false;
+        permissions_ =
+            com.google.protobuf.LazyStringArrayList.emptyList();
         return this;
       }
 
@@ -3413,6 +3423,10 @@ public final class AuthenticationProtos {
         if (((from_bitField0_ & 0x00000080) != 0)) {
           result.enabled_ = enabled_;
         }
+        if (((from_bitField0_ & 0x00000100) != 0)) {
+          permissions_.makeImmutable();
+          result.permissions_ = permissions_;
+        }
       }
 
       @java.lang.Override
@@ -3464,6 +3478,16 @@ public final class AuthenticationProtos {
         }
         if (other.getEnabled() != false) {
           setEnabled(other.getEnabled());
+        }
+        if (!other.permissions_.isEmpty()) {
+          if (permissions_.isEmpty()) {
+            permissions_ = other.permissions_;
+            bitField0_ |= 0x00000100;
+          } else {
+            ensurePermissionsIsMutable();
+            permissions_.addAll(other.permissions_);
+          }
+          onChanged();
         }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
@@ -3531,6 +3555,12 @@ public final class AuthenticationProtos {
                 bitField0_ |= 0x00000080;
                 break;
               } // case 64
+              case 74: {
+                java.lang.String s = input.readStringRequireUtf8();
+                ensurePermissionsIsMutable();
+                permissions_.add(s);
+                break;
+              } // case 74
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -4084,6 +4114,117 @@ public final class AuthenticationProtos {
         return this;
       }
 
+      private com.google.protobuf.LazyStringArrayList permissions_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+      private void ensurePermissionsIsMutable() {
+        if (!permissions_.isModifiable()) {
+          permissions_ = new com.google.protobuf.LazyStringArrayList(permissions_);
+        }
+        bitField0_ |= 0x00000100;
+      }
+      /**
+       * <code>repeated string permissions = 9;</code>
+       * @return A list containing the permissions.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getPermissionsList() {
+        permissions_.makeImmutable();
+        return permissions_;
+      }
+      /**
+       * <code>repeated string permissions = 9;</code>
+       * @return The count of permissions.
+       */
+      public int getPermissionsCount() {
+        return permissions_.size();
+      }
+      /**
+       * <code>repeated string permissions = 9;</code>
+       * @param index The index of the element to return.
+       * @return The permissions at the given index.
+       */
+      public java.lang.String getPermissions(int index) {
+        return permissions_.get(index);
+      }
+      /**
+       * <code>repeated string permissions = 9;</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the permissions at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getPermissionsBytes(int index) {
+        return permissions_.getByteString(index);
+      }
+      /**
+       * <code>repeated string permissions = 9;</code>
+       * @param index The index to set the value at.
+       * @param value The permissions to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPermissions(
+          int index, java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensurePermissionsIsMutable();
+        permissions_.set(index, value);
+        bitField0_ |= 0x00000100;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string permissions = 9;</code>
+       * @param value The permissions to add.
+       * @return This builder for chaining.
+       */
+      public Builder addPermissions(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensurePermissionsIsMutable();
+        permissions_.add(value);
+        bitField0_ |= 0x00000100;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string permissions = 9;</code>
+       * @param values The permissions to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllPermissions(
+          java.lang.Iterable<java.lang.String> values) {
+        ensurePermissionsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, permissions_);
+        bitField0_ |= 0x00000100;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string permissions = 9;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPermissions() {
+        permissions_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000100);;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string permissions = 9;</code>
+       * @param value The bytes of the permissions to add.
+       * @return This builder for chaining.
+       */
+      public Builder addPermissionsBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        ensurePermissionsIsMutable();
+        permissions_.add(value);
+        bitField0_ |= 0x00000100;
+        onChanged();
+        return this;
+      }
+
       // @@protoc_insertion_point(builder_scope:ecommerce.AuthenticatedUserResponse)
     }
 
@@ -4166,17 +4307,17 @@ public final class AuthenticationProtos {
     java.lang.String[] descriptorData = {
       "\n\032AuthenticationProtos.proto\022\tecommerce\"" +
       ";\n\025AuthenticationRequest\022\020\n\010username\030\001 \001" +
-      "(\t\022\020\n\010password\030\002 \001(\t\"\223\001\n\014UserRegister\022\014\n" +
+      "(\t\022\020\n\010password\030\002 \001(\t\"\202\001\n\014UserRegister\022\014\n" +
       "\004name\030\001 \001(\t\022\020\n\010username\030\002 \001(\t\022\020\n\010passwor" +
       "d\030\003 \001(\t\022\r\n\005email\030\004 \001(\t\022\017\n\007address\030\005 \001(\t\022" +
-      "\r\n\005phone\030\006 \001(\t\022\021\n\timagePath\030\007 \001(\t\022\017\n\007ena" +
-      "bled\030\010 \001(\010\"\035\n\014CsrfResponse\022\r\n\005token\030\001 \001(" +
-      "\t\"\232\001\n\031AuthenticatedUserResponse\022\n\n\002id\030\001 " +
-      "\001(\t\022\014\n\004name\030\002 \001(\t\022\020\n\010username\030\003 \001(\t\022\r\n\005e" +
-      "mail\030\004 \001(\t\022\017\n\007address\030\005 \001(\t\022\r\n\005phone\030\006 \001" +
-      "(\t\022\021\n\timagePath\030\007 \001(\t\022\017\n\007enabled\030\010 \001(\010B@" +
-      "\n(com.lkgroup.ecommerce.protobuf.userpro" +
-      "toB\024AuthenticationProtosb\006proto3"
+      "\r\n\005phone\030\006 \001(\t\022\021\n\timagePath\030\007 \001(\t\"\035\n\014Csr" +
+      "fResponse\022\r\n\005token\030\001 \001(\t\"\257\001\n\031Authenticat" +
+      "edUserResponse\022\n\n\002id\030\001 \001(\t\022\014\n\004name\030\002 \001(\t" +
+      "\022\020\n\010username\030\003 \001(\t\022\r\n\005email\030\004 \001(\t\022\017\n\007add" +
+      "ress\030\005 \001(\t\022\r\n\005phone\030\006 \001(\t\022\021\n\timagePath\030\007" +
+      " \001(\t\022\017\n\007enabled\030\010 \001(\010\022\023\n\013permissions\030\t \003" +
+      "(\tB@\n(com.lkgroup.ecommerce.protobuf.use" +
+      "rprotoB\024AuthenticationProtosb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -4193,7 +4334,7 @@ public final class AuthenticationProtos {
     internal_static_ecommerce_UserRegister_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_ecommerce_UserRegister_descriptor,
-        new java.lang.String[] { "Name", "Username", "Password", "Email", "Address", "Phone", "ImagePath", "Enabled", });
+        new java.lang.String[] { "Name", "Username", "Password", "Email", "Address", "Phone", "ImagePath", });
     internal_static_ecommerce_CsrfResponse_descriptor =
       getDescriptor().getMessageTypes().get(2);
     internal_static_ecommerce_CsrfResponse_fieldAccessorTable = new
@@ -4205,7 +4346,7 @@ public final class AuthenticationProtos {
     internal_static_ecommerce_AuthenticatedUserResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_ecommerce_AuthenticatedUserResponse_descriptor,
-        new java.lang.String[] { "Id", "Name", "Username", "Email", "Address", "Phone", "ImagePath", "Enabled", });
+        new java.lang.String[] { "Id", "Name", "Username", "Email", "Address", "Phone", "ImagePath", "Enabled", "Permissions", });
     descriptor.resolveAllFeaturesImmutable();
   }
 

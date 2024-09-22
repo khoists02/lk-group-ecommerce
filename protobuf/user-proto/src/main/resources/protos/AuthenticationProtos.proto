@@ -16,7 +16,6 @@ message UserRegister {
   string address = 5;
   string phone = 6;
   string imagePath = 7;
-  bool enabled = 8;
 }
 
 message CsrfResponse {
@@ -32,4 +31,5 @@ message AuthenticatedUserResponse {
   string phone = 6;
   string imagePath = 7;
   bool enabled = 8;
+  repeated string permissions = 9;
 }

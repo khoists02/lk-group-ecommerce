@@ -1,0 +1,1 @@
+ALTER TABLE user_roles ADD COLUMN  id  uuid  NOT NULL DEFAULT uuid_generate_v4();

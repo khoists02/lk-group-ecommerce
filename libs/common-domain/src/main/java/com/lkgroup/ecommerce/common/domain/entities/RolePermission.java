@@ -10,7 +10,7 @@ import lombok.Setter;
 import java.util.Objects;
 
 @Entity
-@Table(name = "roles_permissions")
+@Table(name = "role_permissions")
 @Getter
 @Setter
 public class RolePermission extends BaseEntity {
