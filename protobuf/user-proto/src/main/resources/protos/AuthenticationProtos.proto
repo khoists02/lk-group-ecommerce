@@ -13,6 +13,10 @@ message UserRegister {
   string username = 2;
   string password = 3;
   string email = 4;
+  string address = 5;
+  string phone = 6;
+  string imagePath = 7;
+  bool enabled = 8;
 }
 
 message CsrfResponse {

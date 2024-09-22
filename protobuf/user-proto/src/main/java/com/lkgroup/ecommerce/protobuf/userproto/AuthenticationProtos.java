@@ -734,6 +734,48 @@ public final class AuthenticationProtos {
      */
     com.google.protobuf.ByteString
         getEmailBytes();
+
+    /**
+     * <code>string address = 5;</code>
+     * @return The address.
+     */
+    java.lang.String getAddress();
+    /**
+     * <code>string address = 5;</code>
+     * @return The bytes for address.
+     */
+    com.google.protobuf.ByteString
+        getAddressBytes();
+
+    /**
+     * <code>string phone = 6;</code>
+     * @return The phone.
+     */
+    java.lang.String getPhone();
+    /**
+     * <code>string phone = 6;</code>
+     * @return The bytes for phone.
+     */
+    com.google.protobuf.ByteString
+        getPhoneBytes();
+
+    /**
+     * <code>string imagePath = 7;</code>
+     * @return The imagePath.
+     */
+    java.lang.String getImagePath();
+    /**
+     * <code>string imagePath = 7;</code>
+     * @return The bytes for imagePath.
+     */
+    com.google.protobuf.ByteString
+        getImagePathBytes();
+
+    /**
+     * <code>bool enabled = 8;</code>
+     * @return The enabled.
+     */
+    boolean getEnabled();
   }
   /**
    * Protobuf type {@code ecommerce.UserRegister}
@@ -761,6 +803,9 @@ public final class AuthenticationProtos {
       username_ = "";
       password_ = "";
       email_ = "";
+      address_ = "";
+      phone_ = "";
+      imagePath_ = "";
     }
 
     public static final com.google.protobuf.Descriptors.Descriptor
@@ -932,6 +977,134 @@ public final class AuthenticationProtos {
       }
     }
 
+    public static final int ADDRESS_FIELD_NUMBER = 5;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object address_ = "";
+    /**
+     * <code>string address = 5;</code>
+     * @return The address.
+     */
+    @java.lang.Override
+    public java.lang.String getAddress() {
+      java.lang.Object ref = address_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        address_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string address = 5;</code>
+     * @return The bytes for address.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getAddressBytes() {
+      java.lang.Object ref = address_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        address_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int PHONE_FIELD_NUMBER = 6;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object phone_ = "";
+    /**
+     * <code>string phone = 6;</code>
+     * @return The phone.
+     */
+    @java.lang.Override
+    public java.lang.String getPhone() {
+      java.lang.Object ref = phone_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        phone_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string phone = 6;</code>
+     * @return The bytes for phone.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getPhoneBytes() {
+      java.lang.Object ref = phone_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        phone_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int IMAGEPATH_FIELD_NUMBER = 7;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object imagePath_ = "";
+    /**
+     * <code>string imagePath = 7;</code>
+     * @return The imagePath.
+     */
+    @java.lang.Override
+    public java.lang.String getImagePath() {
+      java.lang.Object ref = imagePath_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        imagePath_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string imagePath = 7;</code>
+     * @return The bytes for imagePath.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getImagePathBytes() {
+      java.lang.Object ref = imagePath_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        imagePath_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ENABLED_FIELD_NUMBER = 8;
+    private boolean enabled_ = false;
+    /**
+     * <code>bool enabled = 8;</code>
+     * @return The enabled.
+     */
+    @java.lang.Override
+    public boolean getEnabled() {
+      return enabled_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -958,6 +1131,18 @@ public final class AuthenticationProtos {
       if (!com.google.protobuf.GeneratedMessage.isStringEmpty(email_)) {
         com.google.protobuf.GeneratedMessage.writeString(output, 4, email_);
       }
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(address_)) {
+        com.google.protobuf.GeneratedMessage.writeString(output, 5, address_);
+      }
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(phone_)) {
+        com.google.protobuf.GeneratedMessage.writeString(output, 6, phone_);
+      }
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(imagePath_)) {
+        com.google.protobuf.GeneratedMessage.writeString(output, 7, imagePath_);
+      }
+      if (enabled_ != false) {
+        output.writeBool(8, enabled_);
+      }
       getUnknownFields().writeTo(output);
     }
 
@@ -978,6 +1163,19 @@ public final class AuthenticationProtos {
       }
       if (!com.google.protobuf.GeneratedMessage.isStringEmpty(email_)) {
         size += com.google.protobuf.GeneratedMessage.computeStringSize(4, email_);
+      }
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(address_)) {
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(5, address_);
+      }
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(phone_)) {
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(6, phone_);
+      }
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(imagePath_)) {
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(7, imagePath_);
+      }
+      if (enabled_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(8, enabled_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -1002,6 +1200,14 @@ public final class AuthenticationProtos {
           .equals(other.getPassword())) return false;
       if (!getEmail()
           .equals(other.getEmail())) return false;
+      if (!getAddress()
+          .equals(other.getAddress())) return false;
+      if (!getPhone()
+          .equals(other.getPhone())) return false;
+      if (!getImagePath()
+          .equals(other.getImagePath())) return false;
+      if (getEnabled()
+          != other.getEnabled()) return false;
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -1021,6 +1227,15 @@ public final class AuthenticationProtos {
       hash = (53 * hash) + getPassword().hashCode();
       hash = (37 * hash) + EMAIL_FIELD_NUMBER;
       hash = (53 * hash) + getEmail().hashCode();
+      hash = (37 * hash) + ADDRESS_FIELD_NUMBER;
+      hash = (53 * hash) + getAddress().hashCode();
+      hash = (37 * hash) + PHONE_FIELD_NUMBER;
+      hash = (53 * hash) + getPhone().hashCode();
+      hash = (37 * hash) + IMAGEPATH_FIELD_NUMBER;
+      hash = (53 * hash) + getImagePath().hashCode();
+      hash = (37 * hash) + ENABLED_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getEnabled());
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -1156,6 +1371,10 @@ public final class AuthenticationProtos {
         username_ = "";
         password_ = "";
         email_ = "";
+        address_ = "";
+        phone_ = "";
+        imagePath_ = "";
+        enabled_ = false;
         return this;
       }
 
@@ -1201,6 +1420,18 @@ public final class AuthenticationProtos {
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.email_ = email_;
         }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.address_ = address_;
+        }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          result.phone_ = phone_;
+        }
+        if (((from_bitField0_ & 0x00000040) != 0)) {
+          result.imagePath_ = imagePath_;
+        }
+        if (((from_bitField0_ & 0x00000080) != 0)) {
+          result.enabled_ = enabled_;
+        }
       }
 
       @java.lang.Override
@@ -1234,6 +1465,24 @@ public final class AuthenticationProtos {
           email_ = other.email_;
           bitField0_ |= 0x00000008;
           onChanged();
+        }
+        if (!other.getAddress().isEmpty()) {
+          address_ = other.address_;
+          bitField0_ |= 0x00000010;
+          onChanged();
+        }
+        if (!other.getPhone().isEmpty()) {
+          phone_ = other.phone_;
+          bitField0_ |= 0x00000020;
+          onChanged();
+        }
+        if (!other.getImagePath().isEmpty()) {
+          imagePath_ = other.imagePath_;
+          bitField0_ |= 0x00000040;
+          onChanged();
+        }
+        if (other.getEnabled() != false) {
+          setEnabled(other.getEnabled());
         }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
@@ -1281,6 +1530,26 @@ public final class AuthenticationProtos {
                 bitField0_ |= 0x00000008;
                 break;
               } // case 34
+              case 42: {
+                address_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 42
+              case 50: {
+                phone_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000020;
+                break;
+              } // case 50
+              case 58: {
+                imagePath_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000040;
+                break;
+              } // case 58
+              case 64: {
+                enabled_ = input.readBool();
+                bitField0_ |= 0x00000080;
+                break;
+              } // case 64
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -1582,6 +1851,254 @@ public final class AuthenticationProtos {
         checkByteStringIsUtf8(value);
         email_ = value;
         bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object address_ = "";
+      /**
+       * <code>string address = 5;</code>
+       * @return The address.
+       */
+      public java.lang.String getAddress() {
+        java.lang.Object ref = address_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          address_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string address = 5;</code>
+       * @return The bytes for address.
+       */
+      public com.google.protobuf.ByteString
+          getAddressBytes() {
+        java.lang.Object ref = address_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          address_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string address = 5;</code>
+       * @param value The address to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAddress(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        address_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string address = 5;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAddress() {
+        address_ = getDefaultInstance().getAddress();
+        bitField0_ = (bitField0_ & ~0x00000010);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string address = 5;</code>
+       * @param value The bytes for address to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAddressBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        address_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object phone_ = "";
+      /**
+       * <code>string phone = 6;</code>
+       * @return The phone.
+       */
+      public java.lang.String getPhone() {
+        java.lang.Object ref = phone_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          phone_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string phone = 6;</code>
+       * @return The bytes for phone.
+       */
+      public com.google.protobuf.ByteString
+          getPhoneBytes() {
+        java.lang.Object ref = phone_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          phone_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string phone = 6;</code>
+       * @param value The phone to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPhone(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        phone_ = value;
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string phone = 6;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPhone() {
+        phone_ = getDefaultInstance().getPhone();
+        bitField0_ = (bitField0_ & ~0x00000020);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string phone = 6;</code>
+       * @param value The bytes for phone to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPhoneBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        phone_ = value;
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object imagePath_ = "";
+      /**
+       * <code>string imagePath = 7;</code>
+       * @return The imagePath.
+       */
+      public java.lang.String getImagePath() {
+        java.lang.Object ref = imagePath_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          imagePath_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string imagePath = 7;</code>
+       * @return The bytes for imagePath.
+       */
+      public com.google.protobuf.ByteString
+          getImagePathBytes() {
+        java.lang.Object ref = imagePath_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          imagePath_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string imagePath = 7;</code>
+       * @param value The imagePath to set.
+       * @return This builder for chaining.
+       */
+      public Builder setImagePath(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        imagePath_ = value;
+        bitField0_ |= 0x00000040;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string imagePath = 7;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearImagePath() {
+        imagePath_ = getDefaultInstance().getImagePath();
+        bitField0_ = (bitField0_ & ~0x00000040);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string imagePath = 7;</code>
+       * @param value The bytes for imagePath to set.
+       * @return This builder for chaining.
+       */
+      public Builder setImagePathBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        imagePath_ = value;
+        bitField0_ |= 0x00000040;
+        onChanged();
+        return this;
+      }
+
+      private boolean enabled_ ;
+      /**
+       * <code>bool enabled = 8;</code>
+       * @return The enabled.
+       */
+      @java.lang.Override
+      public boolean getEnabled() {
+        return enabled_;
+      }
+      /**
+       * <code>bool enabled = 8;</code>
+       * @param value The enabled to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEnabled(boolean value) {
+
+        enabled_ = value;
+        bitField0_ |= 0x00000080;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bool enabled = 8;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearEnabled() {
+        bitField0_ = (bitField0_ & ~0x00000080);
+        enabled_ = false;
         onChanged();
         return this;
       }
@@ -2173,12 +2690,13 @@ public final class AuthenticationProtos {
     java.lang.String[] descriptorData = {
       "\n\032AuthenticationProtos.proto\022\tecommerce\"" +
       ";\n\025AuthenticationRequest\022\020\n\010username\030\001 \001" +
-      "(\t\022\020\n\010password\030\002 \001(\t\"O\n\014UserRegister\022\014\n\004" +
-      "name\030\001 \001(\t\022\020\n\010username\030\002 \001(\t\022\020\n\010password" +
-      "\030\003 \001(\t\022\r\n\005email\030\004 \001(\t\"\035\n\014CsrfResponse\022\r\n" +
-      "\005token\030\001 \001(\tB@\n(com.lkgroup.ecommerce.pr" +
-      "otobuf.userprotoB\024AuthenticationProtosb\006" +
-      "proto3"
+      "(\t\022\020\n\010password\030\002 \001(\t\"\223\001\n\014UserRegister\022\014\n" +
+      "\004name\030\001 \001(\t\022\020\n\010username\030\002 \001(\t\022\020\n\010passwor" +
+      "d\030\003 \001(\t\022\r\n\005email\030\004 \001(\t\022\017\n\007address\030\005 \001(\t\022" +
+      "\r\n\005phone\030\006 \001(\t\022\021\n\timagePath\030\007 \001(\t\022\017\n\007ena" +
+      "bled\030\010 \001(\010\"\035\n\014CsrfResponse\022\r\n\005token\030\001 \001(" +
+      "\tB@\n(com.lkgroup.ecommerce.protobuf.user" +
+      "protoB\024AuthenticationProtosb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -2195,7 +2713,7 @@ public final class AuthenticationProtos {
     internal_static_ecommerce_UserRegister_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_ecommerce_UserRegister_descriptor,
-        new java.lang.String[] { "Name", "Username", "Password", "Email", });
+        new java.lang.String[] { "Name", "Username", "Password", "Email", "Address", "Phone", "ImagePath", "Enabled", });
     internal_static_ecommerce_CsrfResponse_descriptor =
       getDescriptor().getMessageTypes().get(2);
     internal_static_ecommerce_CsrfResponse_fieldAccessorTable = new

@@ -50,9 +50,7 @@ public class AuthenticationController {
     public void register(@Valid @RequestBody AuthenticationProtos.UserRegister model) {
        try {
            User user = modelMapper.map(model, User.class);
-           if (user.getPassword() != null && !user.getPassword().isEmpty()) {
-               user.setPassword(passwordEncoder.encode(user.getPassword()));
-           }
+           user.setPassword(passwordEncoder.encode(user.getPassword()));
            userRepository.save(user);
        } catch (Exception e) {
            throw e;
