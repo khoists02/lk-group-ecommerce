@@ -58,30 +58,4 @@ public class GenericBeans {
     public HttpMessageConverter<BufferedImage> createImageHttpMessageConverter() {
         return new BufferedImageHttpMessageConverter();
     }
-
-//    @Bean
-//    public RenderedInstanceInputStreamHttpMessageConverter renderedInstanceInputStreamHttpMessageConverter()
-//    {
-//        return new RenderedInstanceInputStreamHttpMessageConverter();
-//    }
-
-    /*
-     * This must be a Bean as this is a memory monster, ~120MiB just to parse User Agents!
-     */
-//    @Bean
-//    @ConditionalOnProperty(value = "advapacs.yauaa.delegate", havingValue = "embedded", matchIfMissing = true)
-//    public UserAgentAnalyzer userAgentAnalyzer() {
-//        return UserAgentAnalyzer.newBuilder()
-//                .withCache(5000)
-//                .withField("DeviceName")
-//                .withField("AgentName")
-//                .delayInitialization()
-//                .build();
-//    }
-//
-//    @Bean
-//    public HapiContext hapiContext() {
-//        return new DefaultHapiContext(ValidationContextFactory.noValidation());
-//    }
-
 }
