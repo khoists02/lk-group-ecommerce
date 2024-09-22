@@ -1,0 +1,20 @@
+syntax = "proto3";
+package ecommerce;
+option java_package = "com.lkgroup.ecommerce.protobuf.userproto";
+option java_outer_classname = "AuthenticationProtos";
+
+message AuthenticationRequest {
+  string username = 1;
+  string password = 2;
+}
+
+message UserRegister {
+  string name = 1;
+  string username = 2;
+  string password = 3;
+  string email = 4;
+}
+
+message CsrfResponse {
+  string token = 1;
+}

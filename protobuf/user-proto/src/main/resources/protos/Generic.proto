@@ -1,0 +1,67 @@
+syntax = "proto3";
+package ecommerce;
+option java_package = "com.lkgroup.ecommerce.protobuf.userproto";
+option java_outer_classname = "GenericProtos";
+
+
+message SliceResponse {
+  int32 size = 1;
+  int32 number = 2;
+  int32 numberOfElements = 3;
+  bool hasNext = 4;
+  bool hasPrevious = 5;
+}
+
+message PageableResponse {
+  int32 size = 1;
+  int32 number = 2;
+  int32 totalPages = 3;
+  int32 totalElements = 4;
+  int32 numberOfElements = 5;
+}
+
+message DropDownResponse {
+  string id = 1;
+  string name = 2;
+}
+
+message ErrorResponse {
+  string type = 1;
+  string code = 2;
+  string message = 3;
+  map<string, string> params = 4;
+}
+
+message TwoFactorErrorResponse {
+  string type = 1;
+  string code = 2;
+  string message = 3;
+  bool totp = 4;
+  string challenge = 5;
+}
+
+message ValidationError {
+  string field = 1;
+  string value = 2;
+  string message = 3;
+}
+
+message Reference {
+  string id = 1;
+}
+
+message ValidationErrorResponse {
+  string type = 1;
+  string code = 2;
+  repeated ValidationError errors = 3;
+}
+
+message RegionResponse {
+  string code = 1;
+  string region = 2;
+}
+
+message RangeTime {
+  string startTime = 1;
+  string endTime = 2;
+}

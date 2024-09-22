@@ -1,0 +1,1 @@
+ALTER TABLE users add COLUMN  name VARCHAR NULL;
