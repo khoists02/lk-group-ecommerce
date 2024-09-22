@@ -10,33 +10,30 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import lombok.Builder;
 import lombok.Getter;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
+
+import java.util.Arrays;
+import java.util.Optional;
+import java.util.UUID;
 
 @Service
 public class AuthenticationService {
     private final PasswordEncoder passwordEncoder;
     private final UserRepository userRepository;
-    private JwtParser jwtParser;
-    private final HttpServletRequest request;
     private final HttpServletResponse response;
     private final JwtTokenService jwtTokenService;
+    private Logger logger = LoggerFactory.getLogger(AuthenticationService.class);
 
     public AuthenticationService(PasswordEncoder passwordEncoder, UserRepository userRepository, HttpServletRequest request, HttpServletResponse response, JwtTokenService jwtTokenService) {
         this.passwordEncoder = passwordEncoder;
         this.userRepository = userRepository;
-        this.request = request;
         this.response = response;
         this.jwtTokenService = jwtTokenService;
     }
 
-    @PostConstruct
-    protected void init() {
-        this.jwtParser = Jwts.parser()
-                .requireAudience("TTC")
-                .requireIssuer("TTC")
-                .build();
-    }
 
     @Getter
     @Builder
@@ -61,11 +58,11 @@ public class AuthenticationService {
     }
 
     public String generateAccessToken(AuthenticationContext context, User user) {
-        return this.jwtTokenService.generateAccessToken(user.getUsername());
+        return this.jwtTokenService.generateAccessToken(user);
     }
 
     public String generateRefreshToken(AuthenticationContext context, User user) {
-        return this.jwtTokenService.generateRefreshToken(user.getUsername());
+        return this.jwtTokenService.generateRefreshToken(user);
     }
 
     public void injectAuthenticationTokenCookie(HttpServletResponse response, String cookieValue) {
@@ -73,7 +70,8 @@ public class AuthenticationService {
         tokenCookie.setHttpOnly(true);
         tokenCookie.setPath("/");
         tokenCookie.setSecure(true);
-        tokenCookie.setDomain("ecommerce");
+        // TODO: move to docker ENV
+        tokenCookie.setDomain("user.api.ecommerce.local");
         response.addCookie(tokenCookie);
     }
 
@@ -81,13 +79,40 @@ public class AuthenticationService {
         Cookie refreshCookie = new Cookie("secret" + ".refresh", cookieValue);
         refreshCookie.setHttpOnly(true);
         refreshCookie.setPath("/auth");
-        refreshCookie.setDomain("ecommerce");
+        // TODO: move to docker ENV
+        refreshCookie.setDomain("user.api.ecommerce.local");
         refreshCookie.setSecure(true);
         response.addCookie(refreshCookie);
     }
 
-    public Jws<Claims> parseJwt(String token) {
-        return this.jwtParser.parseClaimsJws(token);
+    public void logout(HttpServletRequest request, HttpServletResponse response) {
+        if (request.getCookies() == null || (request.getCookies() != null &&
+                Arrays.stream(request.getCookies())
+                        .filter(c -> c.getName().contains("secret" + ".token") || c.getName().contains("secret" + ".refresh"))
+                        .findFirst().isEmpty())) {
+            throw UnauthenticatedException.UNAUTHENTICATED;
+        }
+
+        Cookie refreshTokenCookie = Arrays.stream(request.getCookies()).filter(c -> c.getName().equals("secret" + ".refresh"))
+                .findFirst().orElseThrow(() -> UnauthenticatedException.UNAUTHENTICATED);
+        if (refreshTokenCookie.getValue().isBlank())
+            throw UnauthenticatedException.UNAUTHENTICATED;
+
+        this.injectAuthenticationTokenCookie(response, "");
+        this.injectRefreshTokenCookie(response, "");
+
+        Jws<Claims> refreshTokenParsed;
+        try {
+            refreshTokenParsed = jwtTokenService.parseJwt(refreshTokenCookie.getValue());
+            if (!Optional.ofNullable(refreshTokenParsed.getPayload().get("type", String.class)).orElseThrow(() -> new JwtException("Missing required claim: typ")).equals("refresh")) {
+                throw new JwtException("Invalid value for claim: typ");
+            }
+//            UUID sessionId = UUID.fromString(Optional.ofNullable(refreshTokenParsed.getPayload().get("ses", String.class)).orElseThrow(() -> new JwtException("Missing required claim: ses")));
+//            logger.info("Logged out session: {}", sessionId);
+        } catch (JwtException e) {
+            logger.error("There was an exception parsing the refresh token during logout. The user will be logged out but there session will not be removed", e);
+            throw e;
+        }
     }
 
 }
