@@ -2671,6 +2671,582 @@ public final class UsersProtos {
 
   }
 
+  public interface AssignRolesToUserRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:ecommerce.AssignRolesToUserRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated string roleIds = 1;</code>
+     * @return A list containing the roleIds.
+     */
+    java.util.List<java.lang.String>
+        getRoleIdsList();
+    /**
+     * <code>repeated string roleIds = 1;</code>
+     * @return The count of roleIds.
+     */
+    int getRoleIdsCount();
+    /**
+     * <code>repeated string roleIds = 1;</code>
+     * @param index The index of the element to return.
+     * @return The roleIds at the given index.
+     */
+    java.lang.String getRoleIds(int index);
+    /**
+     * <code>repeated string roleIds = 1;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the roleIds at the given index.
+     */
+    com.google.protobuf.ByteString
+        getRoleIdsBytes(int index);
+  }
+  /**
+   * Protobuf type {@code ecommerce.AssignRolesToUserRequest}
+   */
+  public static final class AssignRolesToUserRequest extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:ecommerce.AssignRolesToUserRequest)
+      AssignRolesToUserRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    static {
+      com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
+        com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
+        /* major= */ 4,
+        /* minor= */ 28,
+        /* patch= */ 1,
+        /* suffix= */ "",
+        AssignRolesToUserRequest.class.getName());
+    }
+    // Use AssignRolesToUserRequest.newBuilder() to construct.
+    private AssignRolesToUserRequest(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+    }
+    private AssignRolesToUserRequest() {
+      roleIds_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.internal_static_ecommerce_AssignRolesToUserRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.internal_static_ecommerce_AssignRolesToUserRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.AssignRolesToUserRequest.class, com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.AssignRolesToUserRequest.Builder.class);
+    }
+
+    public static final int ROLEIDS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private com.google.protobuf.LazyStringArrayList roleIds_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+    /**
+     * <code>repeated string roleIds = 1;</code>
+     * @return A list containing the roleIds.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getRoleIdsList() {
+      return roleIds_;
+    }
+    /**
+     * <code>repeated string roleIds = 1;</code>
+     * @return The count of roleIds.
+     */
+    public int getRoleIdsCount() {
+      return roleIds_.size();
+    }
+    /**
+     * <code>repeated string roleIds = 1;</code>
+     * @param index The index of the element to return.
+     * @return The roleIds at the given index.
+     */
+    public java.lang.String getRoleIds(int index) {
+      return roleIds_.get(index);
+    }
+    /**
+     * <code>repeated string roleIds = 1;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the roleIds at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getRoleIdsBytes(int index) {
+      return roleIds_.getByteString(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < roleIds_.size(); i++) {
+        com.google.protobuf.GeneratedMessage.writeString(output, 1, roleIds_.getRaw(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      {
+        int dataSize = 0;
+        for (int i = 0; i < roleIds_.size(); i++) {
+          dataSize += computeStringSizeNoTag(roleIds_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getRoleIdsList().size();
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.AssignRolesToUserRequest)) {
+        return super.equals(obj);
+      }
+      com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.AssignRolesToUserRequest other = (com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.AssignRolesToUserRequest) obj;
+
+      if (!getRoleIdsList()
+          .equals(other.getRoleIdsList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getRoleIdsCount() > 0) {
+        hash = (37 * hash) + ROLEIDS_FIELD_NUMBER;
+        hash = (53 * hash) + getRoleIdsList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.AssignRolesToUserRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.AssignRolesToUserRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.AssignRolesToUserRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.AssignRolesToUserRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.AssignRolesToUserRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.AssignRolesToUserRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.AssignRolesToUserRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.AssignRolesToUserRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.AssignRolesToUserRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.AssignRolesToUserRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.AssignRolesToUserRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.AssignRolesToUserRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.AssignRolesToUserRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code ecommerce.AssignRolesToUserRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:ecommerce.AssignRolesToUserRequest)
+        com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.AssignRolesToUserRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.internal_static_ecommerce_AssignRolesToUserRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.internal_static_ecommerce_AssignRolesToUserRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.AssignRolesToUserRequest.class, com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.AssignRolesToUserRequest.Builder.class);
+      }
+
+      // Construct using com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.AssignRolesToUserRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        roleIds_ =
+            com.google.protobuf.LazyStringArrayList.emptyList();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.internal_static_ecommerce_AssignRolesToUserRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.AssignRolesToUserRequest getDefaultInstanceForType() {
+        return com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.AssignRolesToUserRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.AssignRolesToUserRequest build() {
+        com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.AssignRolesToUserRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.AssignRolesToUserRequest buildPartial() {
+        com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.AssignRolesToUserRequest result = new com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.AssignRolesToUserRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.AssignRolesToUserRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          roleIds_.makeImmutable();
+          result.roleIds_ = roleIds_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.AssignRolesToUserRequest) {
+          return mergeFrom((com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.AssignRolesToUserRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.AssignRolesToUserRequest other) {
+        if (other == com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.AssignRolesToUserRequest.getDefaultInstance()) return this;
+        if (!other.roleIds_.isEmpty()) {
+          if (roleIds_.isEmpty()) {
+            roleIds_ = other.roleIds_;
+            bitField0_ |= 0x00000001;
+          } else {
+            ensureRoleIdsIsMutable();
+            roleIds_.addAll(other.roleIds_);
+          }
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                java.lang.String s = input.readStringRequireUtf8();
+                ensureRoleIdsIsMutable();
+                roleIds_.add(s);
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.google.protobuf.LazyStringArrayList roleIds_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+      private void ensureRoleIdsIsMutable() {
+        if (!roleIds_.isModifiable()) {
+          roleIds_ = new com.google.protobuf.LazyStringArrayList(roleIds_);
+        }
+        bitField0_ |= 0x00000001;
+      }
+      /**
+       * <code>repeated string roleIds = 1;</code>
+       * @return A list containing the roleIds.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getRoleIdsList() {
+        roleIds_.makeImmutable();
+        return roleIds_;
+      }
+      /**
+       * <code>repeated string roleIds = 1;</code>
+       * @return The count of roleIds.
+       */
+      public int getRoleIdsCount() {
+        return roleIds_.size();
+      }
+      /**
+       * <code>repeated string roleIds = 1;</code>
+       * @param index The index of the element to return.
+       * @return The roleIds at the given index.
+       */
+      public java.lang.String getRoleIds(int index) {
+        return roleIds_.get(index);
+      }
+      /**
+       * <code>repeated string roleIds = 1;</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the roleIds at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getRoleIdsBytes(int index) {
+        return roleIds_.getByteString(index);
+      }
+      /**
+       * <code>repeated string roleIds = 1;</code>
+       * @param index The index to set the value at.
+       * @param value The roleIds to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRoleIds(
+          int index, java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensureRoleIdsIsMutable();
+        roleIds_.set(index, value);
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string roleIds = 1;</code>
+       * @param value The roleIds to add.
+       * @return This builder for chaining.
+       */
+      public Builder addRoleIds(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensureRoleIdsIsMutable();
+        roleIds_.add(value);
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string roleIds = 1;</code>
+       * @param values The roleIds to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllRoleIds(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureRoleIdsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, roleIds_);
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string roleIds = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRoleIds() {
+        roleIds_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000001);;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string roleIds = 1;</code>
+       * @param value The bytes of the roleIds to add.
+       * @return This builder for chaining.
+       */
+      public Builder addRoleIdsBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        ensureRoleIdsIsMutable();
+        roleIds_.add(value);
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:ecommerce.AssignRolesToUserRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:ecommerce.AssignRolesToUserRequest)
+    private static final com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.AssignRolesToUserRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.AssignRolesToUserRequest();
+    }
+
+    public static com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.AssignRolesToUserRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<AssignRolesToUserRequest>
+        PARSER = new com.google.protobuf.AbstractParser<AssignRolesToUserRequest>() {
+      @java.lang.Override
+      public AssignRolesToUserRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<AssignRolesToUserRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<AssignRolesToUserRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.AssignRolesToUserRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   public interface PermissionResponseOrBuilder extends
       // @@protoc_insertion_point(interface_extends:ecommerce.PermissionResponse)
       com.google.protobuf.MessageOrBuilder {
@@ -7013,6 +7589,11 @@ public final class UsersProtos {
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_ecommerce_EnabledUser_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_ecommerce_AssignRolesToUserRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_ecommerce_AssignRolesToUserRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_ecommerce_PermissionResponse_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
@@ -7052,18 +7633,19 @@ public final class UsersProtos {
       "phone\030\006 \001(\t\022\021\n\timagePath\030\007 \001(\t\022\017\n\007enable" +
       "d\030\010 \001(\010\"9\n\rUsersResponse\022(\n\007content\030\001 \003(" +
       "\0132\027.ecommerce.UserResponse\"\036\n\013EnabledUse" +
-      "r\022\017\n\007enabled\030\001 \001(\010\"O\n\022PermissionResponse" +
-      "\022\n\n\002id\030\001 \001(\t\022\014\n\004code\030\002 \001(\t\022\014\n\004desc\030\003 \001(\t" +
-      "\022\021\n\tgroup_key\030\004 \001(\t\"E\n\023PermissionsRespon" +
-      "se\022.\n\007content\030\001 \003(\0132\035.ecommerce.Permissi" +
-      "onResponse\"R\n\014RoleResponse\022\n\n\002id\030\001 \001(\t\022\014" +
-      "\n\004name\030\002 \001(\t\022\023\n\013description\030\003 \001(\t\022\023\n\013per" +
-      "missions\030\004 \003(\t\"9\n\rRolesResponse\022(\n\007conte" +
-      "nt\030\001 \003(\0132\027.ecommerce.RoleResponse\"K\n\021Cre" +
-      "ateRoleRequest\022\014\n\004name\030\001 \001(\t\022\023\n\013descript" +
-      "ion\030\002 \001(\t\022\023\n\013permissions\030\003 \003(\tB7\n(com.lk" +
-      "group.ecommerce.protobuf.userprotoB\013User" +
-      "sProtosb\006proto3"
+      "r\022\017\n\007enabled\030\001 \001(\010\"+\n\030AssignRolesToUserR" +
+      "equest\022\017\n\007roleIds\030\001 \003(\t\"O\n\022PermissionRes" +
+      "ponse\022\n\n\002id\030\001 \001(\t\022\014\n\004code\030\002 \001(\t\022\014\n\004desc\030" +
+      "\003 \001(\t\022\021\n\tgroup_key\030\004 \001(\t\"E\n\023PermissionsR" +
+      "esponse\022.\n\007content\030\001 \003(\0132\035.ecommerce.Per" +
+      "missionResponse\"R\n\014RoleResponse\022\n\n\002id\030\001 " +
+      "\001(\t\022\014\n\004name\030\002 \001(\t\022\023\n\013description\030\003 \001(\t\022\023" +
+      "\n\013permissions\030\004 \003(\t\"9\n\rRolesResponse\022(\n\007" +
+      "content\030\001 \003(\0132\027.ecommerce.RoleResponse\"K" +
+      "\n\021CreateRoleRequest\022\014\n\004name\030\001 \001(\t\022\023\n\013des" +
+      "cription\030\002 \001(\t\022\023\n\013permissions\030\003 \003(\tB7\n(c" +
+      "om.lkgroup.ecommerce.protobuf.userprotoB" +
+      "\013UsersProtosb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -7087,32 +7669,38 @@ public final class UsersProtos {
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_ecommerce_EnabledUser_descriptor,
         new java.lang.String[] { "Enabled", });
-    internal_static_ecommerce_PermissionResponse_descriptor =
+    internal_static_ecommerce_AssignRolesToUserRequest_descriptor =
       getDescriptor().getMessageTypes().get(3);
+    internal_static_ecommerce_AssignRolesToUserRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_ecommerce_AssignRolesToUserRequest_descriptor,
+        new java.lang.String[] { "RoleIds", });
+    internal_static_ecommerce_PermissionResponse_descriptor =
+      getDescriptor().getMessageTypes().get(4);
     internal_static_ecommerce_PermissionResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_ecommerce_PermissionResponse_descriptor,
         new java.lang.String[] { "Id", "Code", "Desc", "GroupKey", });
     internal_static_ecommerce_PermissionsResponse_descriptor =
-      getDescriptor().getMessageTypes().get(4);
+      getDescriptor().getMessageTypes().get(5);
     internal_static_ecommerce_PermissionsResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_ecommerce_PermissionsResponse_descriptor,
         new java.lang.String[] { "Content", });
     internal_static_ecommerce_RoleResponse_descriptor =
-      getDescriptor().getMessageTypes().get(5);
+      getDescriptor().getMessageTypes().get(6);
     internal_static_ecommerce_RoleResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_ecommerce_RoleResponse_descriptor,
         new java.lang.String[] { "Id", "Name", "Description", "Permissions", });
     internal_static_ecommerce_RolesResponse_descriptor =
-      getDescriptor().getMessageTypes().get(6);
+      getDescriptor().getMessageTypes().get(7);
     internal_static_ecommerce_RolesResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_ecommerce_RolesResponse_descriptor,
         new java.lang.String[] { "Content", });
     internal_static_ecommerce_CreateRoleRequest_descriptor =
-      getDescriptor().getMessageTypes().get(7);
+      getDescriptor().getMessageTypes().get(8);
     internal_static_ecommerce_CreateRoleRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_ecommerce_CreateRoleRequest_descriptor,

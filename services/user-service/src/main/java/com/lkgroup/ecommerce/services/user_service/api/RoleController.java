@@ -25,13 +25,11 @@ import java.util.function.Supplier;
 @RequestMapping("/roles")
 public class RoleController {
     private final RoleRepository roleRepository;
-    private final ModelMapper modelMapper;
     private final TransactionHandler transactionHandler;
     private final PermissionRepository permissionRepository;
 
-    public RoleController(final RoleRepository roleRepository, ModelMapper modelMapper, TransactionHandler transactionHandler, PermissionRepository permissionRepository) {
+    public RoleController(final RoleRepository roleRepository, TransactionHandler transactionHandler, PermissionRepository permissionRepository) {
         this.roleRepository = roleRepository;
-        this.modelMapper = modelMapper;
         this.transactionHandler = transactionHandler;
         this.permissionRepository = permissionRepository;
     }
@@ -77,19 +75,12 @@ public class RoleController {
     @PostMapping
     @ResponseStatus(HttpStatus.NO_CONTENT)
     @PreAuthorize("hasPermission('manageRole')")
-    public void createRole(@RequestBody UsersProtos.CreateRoleRequest request) {
+    public void createRole(@Valid @RequestBody UsersProtos.CreateRoleRequest request) {
         try {
             Role role = new Role();
             role.setName(request.getName());
             role.setDescription(request.getDescription());
-            transactionHandler.runInTransaction((Supplier<Role>) () -> {
-                request.getPermissionsList().forEach(o -> {
-                    RolePermission rp = new RolePermission();
-                    rp.setPermission(permissionRepository.getReferenceById(UUID.fromString(o)));
-                    role.addRolePermission(rp);
-                });
-                return roleRepository.save(role);
-            });
+            runRoleInTransition(request, role);
         } catch (Exception e) {
             throw e;
         }
@@ -104,17 +95,23 @@ public class RoleController {
         role.setName(request.getName());
         role.setDescription(request.getDescription());
         try {
-            transactionHandler.runInTransaction((Supplier<Role>) () -> {
-                request.getPermissionsList().forEach(o -> {
-                    RolePermission rp = new RolePermission();
-                    rp.setPermission(permissionRepository.getReferenceById(UUID.fromString(o)));
-                    role.addRolePermission(rp);
-                });
-                return roleRepository.save(role);
-            });
+            runRoleInTransition(request, role);
         } catch (Exception e) {
             throw e;
         }
+    }
+
+
+    private void runRoleInTransition (UsersProtos.CreateRoleRequest request, Role role) {
+        // TODO: why we need to run in @Transactional annotation.
+        transactionHandler.runInTransaction((Supplier<Role>) () -> {
+            request.getPermissionsList().forEach(o -> {
+                RolePermission rp = new RolePermission();
+                rp.setPermission(permissionRepository.getReferenceById(UUID.fromString(o)));
+                role.addRolePermission(rp);
+            });
+            return roleRepository.save(role);
+        });
     }
 
     @DeleteMapping("/{roleId}")

@@ -22,6 +22,10 @@ message EnabledUser {
   bool enabled = 1;
 }
 
+message AssignRolesToUserRequest {
+  repeated string roleIds = 1;
+}
+
 message PermissionResponse {
   string id = 1;
   string code = 2;
