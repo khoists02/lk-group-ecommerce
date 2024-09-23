@@ -2,10 +2,7 @@ package com.lkgroup.ecommerce.services.user_service.api.auth;
 
 import com.lkgroup.ecommerce.common.domain.entities.User;
 import com.lkgroup.ecommerce.common.domain.repositories.UserRepository;
-import com.lkgroup.ecommerce.common.validation.validators.PathUUID;
 import com.lkgroup.ecommerce.protobuf.userproto.AuthenticationProtos;
-import com.lkgroup.ecommerce.protobuf.userproto.UsersProtos;
-import com.lkgroup.ecommerce.services.user_service.api.exceptions.NotFoundException;
 import com.lkgroup.ecommerce.services.user_service.api.service.AuthenticationService;
 import com.lkgroup.ecommerce.services.user_service.api.service.UserService;
 import jakarta.servlet.http.HttpServletRequest;
@@ -13,13 +10,10 @@ import jakarta.servlet.http.HttpServletResponse;
 import jakarta.validation.Valid;
 import org.modelmapper.ModelMapper;
 import org.springframework.http.HttpStatus;
-import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
-
-import java.util.UUID;
 
 @RestController
 @Validated

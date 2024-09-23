@@ -8,6 +8,9 @@ import org.springframework.security.core.Authentication;
 
 import java.util.Optional;
 
+/**
+ * This class to handle securiry authorize spring boot.
+ */
 public class MethodSecurityExpressionRoot extends SecurityExpressionRoot implements MethodSecurityExpressionOperations {
 
     private final AuthenticationService authenticationService;
@@ -23,11 +26,19 @@ public class MethodSecurityExpressionRoot extends SecurityExpressionRoot impleme
         this.request = request;
     }
 
+    /**
+     * Specific permission preAuthorize
+     * @return
+     */
     public boolean hasPermission(String permission)
     {
         return authenticationService.hasPermission(permission);
     }
 
+    /**
+     * Super Admin preAuthorize
+     * @return
+     */
     public boolean hasSuperAdmin()
     {
         return authenticationService.hasSuperAdmin();

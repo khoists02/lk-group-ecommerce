@@ -6125,8 +6125,8 @@ public final class UsersProtos {
 
   }
 
-  public interface RoleRequestOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:ecommerce.RoleRequest)
+  public interface CreateRoleRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:ecommerce.CreateRoleRequest)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -6179,12 +6179,12 @@ public final class UsersProtos {
         getPermissionsBytes(int index);
   }
   /**
-   * Protobuf type {@code ecommerce.RoleRequest}
+   * Protobuf type {@code ecommerce.CreateRoleRequest}
    */
-  public static final class RoleRequest extends
+  public static final class CreateRoleRequest extends
       com.google.protobuf.GeneratedMessage implements
-      // @@protoc_insertion_point(message_implements:ecommerce.RoleRequest)
-      RoleRequestOrBuilder {
+      // @@protoc_insertion_point(message_implements:ecommerce.CreateRoleRequest)
+      CreateRoleRequestOrBuilder {
   private static final long serialVersionUID = 0L;
     static {
       com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
@@ -6193,13 +6193,13 @@ public final class UsersProtos {
         /* minor= */ 28,
         /* patch= */ 1,
         /* suffix= */ "",
-        RoleRequest.class.getName());
+        CreateRoleRequest.class.getName());
     }
-    // Use RoleRequest.newBuilder() to construct.
-    private RoleRequest(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+    // Use CreateRoleRequest.newBuilder() to construct.
+    private CreateRoleRequest(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
     }
-    private RoleRequest() {
+    private CreateRoleRequest() {
       name_ = "";
       description_ = "";
       permissions_ =
@@ -6208,15 +6208,15 @@ public final class UsersProtos {
 
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.internal_static_ecommerce_RoleRequest_descriptor;
+      return com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.internal_static_ecommerce_CreateRoleRequest_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.internal_static_ecommerce_RoleRequest_fieldAccessorTable
+      return com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.internal_static_ecommerce_CreateRoleRequest_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.RoleRequest.class, com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.RoleRequest.Builder.class);
+              com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.CreateRoleRequest.class, com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.CreateRoleRequest.Builder.class);
     }
 
     public static final int NAME_FIELD_NUMBER = 1;
@@ -6390,10 +6390,10 @@ public final class UsersProtos {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.RoleRequest)) {
+      if (!(obj instanceof com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.CreateRoleRequest)) {
         return super.equals(obj);
       }
-      com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.RoleRequest other = (com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.RoleRequest) obj;
+      com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.CreateRoleRequest other = (com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.CreateRoleRequest) obj;
 
       if (!getName()
           .equals(other.getName())) return false;
@@ -6425,44 +6425,44 @@ public final class UsersProtos {
       return hash;
     }
 
-    public static com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.RoleRequest parseFrom(
+    public static com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.CreateRoleRequest parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.RoleRequest parseFrom(
+    public static com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.CreateRoleRequest parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.RoleRequest parseFrom(
+    public static com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.CreateRoleRequest parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.RoleRequest parseFrom(
+    public static com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.CreateRoleRequest parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.RoleRequest parseFrom(byte[] data)
+    public static com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.CreateRoleRequest parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.RoleRequest parseFrom(
+    public static com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.CreateRoleRequest parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.RoleRequest parseFrom(java.io.InputStream input)
+    public static com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.CreateRoleRequest parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessage
           .parseWithIOException(PARSER, input);
     }
-    public static com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.RoleRequest parseFrom(
+    public static com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.CreateRoleRequest parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -6470,26 +6470,26 @@ public final class UsersProtos {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
-    public static com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.RoleRequest parseDelimitedFrom(java.io.InputStream input)
+    public static com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.CreateRoleRequest parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessage
           .parseDelimitedWithIOException(PARSER, input);
     }
 
-    public static com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.RoleRequest parseDelimitedFrom(
+    public static com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.CreateRoleRequest parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessage
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.RoleRequest parseFrom(
+    public static com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.CreateRoleRequest parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessage
           .parseWithIOException(PARSER, input);
     }
-    public static com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.RoleRequest parseFrom(
+    public static com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.CreateRoleRequest parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -6502,7 +6502,7 @@ public final class UsersProtos {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.RoleRequest prototype) {
+    public static Builder newBuilder(com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.CreateRoleRequest prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -6518,26 +6518,26 @@ public final class UsersProtos {
       return builder;
     }
     /**
-     * Protobuf type {@code ecommerce.RoleRequest}
+     * Protobuf type {@code ecommerce.CreateRoleRequest}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:ecommerce.RoleRequest)
-        com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.RoleRequestOrBuilder {
+        // @@protoc_insertion_point(builder_implements:ecommerce.CreateRoleRequest)
+        com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.CreateRoleRequestOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.internal_static_ecommerce_RoleRequest_descriptor;
+        return com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.internal_static_ecommerce_CreateRoleRequest_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.internal_static_ecommerce_RoleRequest_fieldAccessorTable
+        return com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.internal_static_ecommerce_CreateRoleRequest_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.RoleRequest.class, com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.RoleRequest.Builder.class);
+                com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.CreateRoleRequest.class, com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.CreateRoleRequest.Builder.class);
       }
 
-      // Construct using com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.RoleRequest.newBuilder()
+      // Construct using com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.CreateRoleRequest.newBuilder()
       private Builder() {
 
       }
@@ -6561,17 +6561,17 @@ public final class UsersProtos {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.internal_static_ecommerce_RoleRequest_descriptor;
+        return com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.internal_static_ecommerce_CreateRoleRequest_descriptor;
       }
 
       @java.lang.Override
-      public com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.RoleRequest getDefaultInstanceForType() {
-        return com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.RoleRequest.getDefaultInstance();
+      public com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.CreateRoleRequest getDefaultInstanceForType() {
+        return com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.CreateRoleRequest.getDefaultInstance();
       }
 
       @java.lang.Override
-      public com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.RoleRequest build() {
-        com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.RoleRequest result = buildPartial();
+      public com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.CreateRoleRequest build() {
+        com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.CreateRoleRequest result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -6579,14 +6579,14 @@ public final class UsersProtos {
       }
 
       @java.lang.Override
-      public com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.RoleRequest buildPartial() {
-        com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.RoleRequest result = new com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.RoleRequest(this);
+      public com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.CreateRoleRequest buildPartial() {
+        com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.CreateRoleRequest result = new com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.CreateRoleRequest(this);
         if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      private void buildPartial0(com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.RoleRequest result) {
+      private void buildPartial0(com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.CreateRoleRequest result) {
         int from_bitField0_ = bitField0_;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.name_ = name_;
@@ -6602,16 +6602,16 @@ public final class UsersProtos {
 
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.RoleRequest) {
-          return mergeFrom((com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.RoleRequest)other);
+        if (other instanceof com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.CreateRoleRequest) {
+          return mergeFrom((com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.CreateRoleRequest)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.RoleRequest other) {
-        if (other == com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.RoleRequest.getDefaultInstance()) return this;
+      public Builder mergeFrom(com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.CreateRoleRequest other) {
+        if (other == com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.CreateRoleRequest.getDefaultInstance()) return this;
         if (!other.getName().isEmpty()) {
           name_ = other.name_;
           bitField0_ |= 0x00000001;
@@ -6946,23 +6946,23 @@ public final class UsersProtos {
         return this;
       }
 
-      // @@protoc_insertion_point(builder_scope:ecommerce.RoleRequest)
+      // @@protoc_insertion_point(builder_scope:ecommerce.CreateRoleRequest)
     }
 
-    // @@protoc_insertion_point(class_scope:ecommerce.RoleRequest)
-    private static final com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.RoleRequest DEFAULT_INSTANCE;
+    // @@protoc_insertion_point(class_scope:ecommerce.CreateRoleRequest)
+    private static final com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.CreateRoleRequest DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.RoleRequest();
+      DEFAULT_INSTANCE = new com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.CreateRoleRequest();
     }
 
-    public static com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.RoleRequest getDefaultInstance() {
+    public static com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.CreateRoleRequest getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<RoleRequest>
-        PARSER = new com.google.protobuf.AbstractParser<RoleRequest>() {
+    private static final com.google.protobuf.Parser<CreateRoleRequest>
+        PARSER = new com.google.protobuf.AbstractParser<CreateRoleRequest>() {
       @java.lang.Override
-      public RoleRequest parsePartialFrom(
+      public CreateRoleRequest parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
@@ -6981,17 +6981,17 @@ public final class UsersProtos {
       }
     };
 
-    public static com.google.protobuf.Parser<RoleRequest> parser() {
+    public static com.google.protobuf.Parser<CreateRoleRequest> parser() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.google.protobuf.Parser<RoleRequest> getParserForType() {
+    public com.google.protobuf.Parser<CreateRoleRequest> getParserForType() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.RoleRequest getDefaultInstanceForType() {
+    public com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.CreateRoleRequest getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -7033,10 +7033,10 @@ public final class UsersProtos {
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_ecommerce_RolesResponse_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_ecommerce_RoleRequest_descriptor;
+    internal_static_ecommerce_CreateRoleRequest_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_ecommerce_RoleRequest_fieldAccessorTable;
+      internal_static_ecommerce_CreateRoleRequest_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -7059,11 +7059,11 @@ public final class UsersProtos {
       "onResponse\"R\n\014RoleResponse\022\n\n\002id\030\001 \001(\t\022\014" +
       "\n\004name\030\002 \001(\t\022\023\n\013description\030\003 \001(\t\022\023\n\013per" +
       "missions\030\004 \003(\t\"9\n\rRolesResponse\022(\n\007conte" +
-      "nt\030\001 \003(\0132\027.ecommerce.RoleResponse\"E\n\013Rol" +
-      "eRequest\022\014\n\004name\030\001 \001(\t\022\023\n\013description\030\002 " +
-      "\001(\t\022\023\n\013permissions\030\003 \003(\tB7\n(com.lkgroup." +
-      "ecommerce.protobuf.userprotoB\013UsersProto" +
-      "sb\006proto3"
+      "nt\030\001 \003(\0132\027.ecommerce.RoleResponse\"K\n\021Cre" +
+      "ateRoleRequest\022\014\n\004name\030\001 \001(\t\022\023\n\013descript" +
+      "ion\030\002 \001(\t\022\023\n\013permissions\030\003 \003(\tB7\n(com.lk" +
+      "group.ecommerce.protobuf.userprotoB\013User" +
+      "sProtosb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -7111,11 +7111,11 @@ public final class UsersProtos {
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_ecommerce_RolesResponse_descriptor,
         new java.lang.String[] { "Content", });
-    internal_static_ecommerce_RoleRequest_descriptor =
+    internal_static_ecommerce_CreateRoleRequest_descriptor =
       getDescriptor().getMessageTypes().get(7);
-    internal_static_ecommerce_RoleRequest_fieldAccessorTable = new
+    internal_static_ecommerce_CreateRoleRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_ecommerce_RoleRequest_descriptor,
+        internal_static_ecommerce_CreateRoleRequest_descriptor,
         new java.lang.String[] { "Name", "Description", "Permissions", });
     descriptor.resolveAllFeaturesImmutable();
   }

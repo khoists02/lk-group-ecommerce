@@ -44,7 +44,7 @@ message RolesResponse {
   repeated RoleResponse content = 1;
 }
 
-message RoleRequest {
+message CreateRoleRequest {
   string name = 1;
   string description = 2;
   repeated string permissions = 3;

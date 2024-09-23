@@ -21,8 +21,8 @@ import java.util.UUID;
 import java.util.function.Supplier;
 
 @RestController
-@RequestMapping("/roles")
 @Validated
+@RequestMapping("/roles")
 public class RoleController {
     private final RoleRepository roleRepository;
     private final ModelMapper modelMapper;
@@ -71,10 +71,13 @@ public class RoleController {
         return builder.build();
     }
 
+    /**
+     * TODO: eror with @Valid
+     */
     @PostMapping
     @ResponseStatus(HttpStatus.NO_CONTENT)
     @PreAuthorize("hasPermission('manageRole')")
-    public void createRole(@Valid @RequestBody UsersProtos.RoleRequest request) {
+    public void createRole(@RequestBody UsersProtos.CreateRoleRequest request) {
         try {
             Role role = new Role();
             role.setName(request.getName());
@@ -96,7 +99,7 @@ public class RoleController {
     @Transactional
     @ResponseStatus(HttpStatus.NO_CONTENT)
     @PreAuthorize("hasPermission('manageRole')")
-    public void updateRole(@PathVariable("roleId") @PathUUID String roleId , @RequestBody UsersProtos.RoleRequest request) {
+    public void updateRole(@PathVariable("roleId") @PathUUID String roleId , @RequestBody UsersProtos.CreateRoleRequest request) {
         Role role = roleRepository.findById(UUID.fromString(roleId)).orElseThrow((NotFoundException::new));
         role.setName(request.getName());
         role.setDescription(request.getDescription());

@@ -1,5 +1,6 @@
 package com.lkgroup.ecommerce.services.user_service.api.validation;
 
+import com.lkgroup.ecommerce.common.validation.support.IsUUID;
 import com.lkgroup.ecommerce.common.validation.support.ProtoValidator;
 import com.lkgroup.ecommerce.common.validation.support.ValidatesProto;
 import com.lkgroup.ecommerce.protobuf.userproto.UsersProtos;
@@ -10,13 +11,13 @@ import lombok.Data;
 import java.util.List;
 
 @Data
-@ValidatesProto(UsersProtos.RoleRequest.class)
-public class RoleRequestValidator implements ProtoValidator {
+@ValidatesProto(UsersProtos.CreateRoleRequest.class)
+public class CreateRoleRequestValidator implements ProtoValidator {
     @NotBlank
     private String name;
 
     private String description;
 
     @Size(min = 1)
-    private List<String> permissions;
+    private List<@IsUUID String> permissions;
 }
