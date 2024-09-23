@@ -18,6 +18,7 @@ import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.security.web.access.intercept.AuthorizationFilter;
 import org.springframework.security.web.csrf.CsrfFilter;
 import org.springframework.security.web.csrf.CsrfTokenRequestAttributeHandler;
+import org.springframework.util.AntPathMatcher;
 
 @Configuration
 @EnableWebSecurity
@@ -26,6 +27,7 @@ public class WebSecurityConfiguration {
     private final UnauthenticatedHandler unauthenticatedHandler;
     private final UnauthorisedHandler unauthorisedHandler;
     public final CookieCsrfTokenRepository csrfTokenRepository;
+    private final AntPathMatcher pathMatcher = new AntPathMatcher();
 
     public WebSecurityConfiguration(
             AutowireCapableBeanFactory beanFactory,
@@ -50,7 +52,7 @@ public class WebSecurityConfiguration {
         httpSecurity.addFilterAfter(beanFactory.createBean(FilterChainExceptionHandler.class), LogContextFilter.class);
         httpSecurity.addFilterAfter(beanFactory.createBean(CookieAuthFilter.class), FilterChainExceptionHandler.class);
         httpSecurity.addFilterAfter(corsFilter, AuthorizationFilter.class);
-        httpSecurity.csrf(x -> x.ignoringRequestMatchers("/csrf", "/auth/saml2/*/acs").csrfTokenRepository(csrfTokenRepository).csrfTokenRequestHandler(new CsrfTokenRequestAttributeHandler()));
+        httpSecurity.csrf(x -> x.ignoringRequestMatchers("/csrf").csrfTokenRepository(csrfTokenRepository).csrfTokenRequestHandler(new CsrfTokenRequestAttributeHandler()));
         // Need to disable the built in CORS as we have our own
         httpSecurity.cors(AbstractHttpConfigurer::disable);
 //        httpSecurity.csrf(AbstractHttpConfigurer::disable);

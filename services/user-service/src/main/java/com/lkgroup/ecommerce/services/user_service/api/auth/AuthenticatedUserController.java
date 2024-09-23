@@ -9,9 +9,7 @@ import org.modelmapper.ModelMapper;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.validation.annotation.Validated;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.UUID;
 
@@ -43,10 +41,12 @@ public class AuthenticatedUserController {
                 .setAddress(user.getAddress())
                 .setPhone(user.getPhone())
                 .setImagePath(user.getImagePath())
-                .setEnabled(user.isEnabled());
-//                .addAllPermissions(userRepository.getPermissionCodesForUser(UserUtils.getUser()).toList()) // TODO: will remove these permissions after worklist-api launched
+                .setEnabled(user.isEnabled())
+                // TODO: permisisons Query
+                .addAllPermissions(userRepository.getPermissionCodesForUser(UserUtils.getUser()).toList());
 
         return builder.build();
     }
+
 
 }

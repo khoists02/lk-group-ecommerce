@@ -3,6 +3,7 @@ package com.lkgroup.ecommerce.services.user_service.api.service;
 import com.lkgroup.ecommerce.common.domain.entities.User;
 import com.lkgroup.ecommerce.common.domain.repositories.UserRepository;
 import com.lkgroup.ecommerce.services.user_service.api.exceptions.UnauthenticatedException;
+import com.lkgroup.ecommerce.services.user_service.utils.UserUtils;
 import io.jsonwebtoken.*;
 import jakarta.annotation.PostConstruct;
 import jakarta.servlet.http.Cookie;
@@ -14,6 +15,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.Arrays;
 import java.util.Optional;
@@ -47,6 +49,10 @@ public class AuthenticationService {
         //Check the credentials, if not a SAML auth request
         if (!passwordEncoder.matches(context.getPassword(), user.getPassword())) {
             throw UnauthenticatedException.INVALID_CREDENTIALS;
+        }
+
+        if (!user.isEnabled()) {
+            throw UnauthenticatedException.USER_DISABLED; // TODO: should enabled account by admin.
         }
         //Create the JWT and Refresh Token
         String accessToken = this.generateAccessToken(context, user);
@@ -113,6 +119,22 @@ public class AuthenticationService {
             logger.error("There was an exception parsing the refresh token during logout. The user will be logged out but there session will not be removed", e);
             throw e;
         }
+    }
+
+    @Transactional(readOnly = true)
+    public boolean hasPermission(User user, String permission) {
+        return userRepository.hasPermission(user, permission);
+    }
+
+    @Transactional(readOnly = true)
+    public boolean hasPermission(String permission) {
+        return hasPermission(UserUtils.getUser(), permission);
+    }
+
+
+    @Transactional(readOnly = true)
+    public boolean hasSuperAdmin() {
+        return userRepository.hasSuperAdmin(UserUtils.getUser());
     }
 
 }
