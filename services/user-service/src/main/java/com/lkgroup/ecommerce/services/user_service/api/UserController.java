@@ -60,4 +60,12 @@ public class UserController {
         user.setEnabled(request.getEnabled());
         userRepository.saveAndFlush(user);
     }
+
+    @DeleteMapping("/{userId}")
+    @ResponseStatus(HttpStatus.NO_CONTENT)
+    @PreAuthorize("hasPermission('manageUser')")
+    public void deleteUser(@PathVariable("userId") @PathUUID String userId) {
+        User user = userRepository.findById(UUID.fromString(userId)).orElseThrow(NotFoundException::new);
+        userRepository.delete(user);
+    }
 }
