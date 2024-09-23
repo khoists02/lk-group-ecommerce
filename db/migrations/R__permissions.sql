@@ -9,6 +9,16 @@ VALUES (uuid_generate_v4(), 'viewUser', 'View User', 'users')
 ON CONFLICT (name) DO UPDATE SET name = 'viewUser',
                                  "group" = 'users';
 
+INSERT INTO permissions
+VALUES (uuid_generate_v4(), 'viewRole', 'View Role', 'users')
+ON CONFLICT (name) DO UPDATE SET name = 'viewRole',
+                                 "group" = 'users';
+
+INSERT INTO permissions
+VALUES (uuid_generate_v4(), 'manageRole', 'Manage Role', 'users')
+ON CONFLICT (name) DO UPDATE SET name = 'manageRole',
+                                 "group" = 'users';
+
 -- Products --
 INSERT INTO permissions
 VALUES (uuid_generate_v4(), 'viewProduct', 'View Product', 'products')
@@ -30,3 +40,8 @@ INSERT INTO permissions
 VALUES (uuid_generate_v4(), 'manageOrders', 'Manage Orders', 'orders')
 ON CONFLICT (name) DO UPDATE SET name = 'manageOrders',
                                  "group" = 'orders';
+-- Super admin can access all resource
+INSERT INTO permissions
+VALUES (uuid_generate_v4(), 'superAdmin', 'Super Admin can access all resource.', 'admin')
+ON CONFLICT (name) DO UPDATE SET name = 'superAdmin',
+                                 "group" = 'admin';

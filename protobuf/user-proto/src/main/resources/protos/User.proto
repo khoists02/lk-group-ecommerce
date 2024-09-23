@@ -37,6 +37,7 @@ message RoleResponse {
   string id = 1;
   string name = 2;
   string description = 3;
+  repeated string permissions = 4;
 }
 
 message RolesResponse {
@@ -46,5 +47,5 @@ message RolesResponse {
 message RoleRequest {
   string name = 1;
   string description = 2;
-  repeated string permissionIds = 3;
+  repeated string permissions = 3;
 }

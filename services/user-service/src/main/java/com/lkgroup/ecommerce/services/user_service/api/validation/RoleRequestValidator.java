@@ -15,7 +15,8 @@ public class RoleRequestValidator implements ProtoValidator {
     @NotBlank
     private String name;
 
-    @NotBlank
+    private String description;
+
     @Size(min = 1)
-    private List<String> descriptionIds;
+    private List<String> permissions;
 }

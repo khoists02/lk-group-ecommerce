@@ -31,4 +31,14 @@ public interface UserRepository extends MyJpaRepository<User, UUID> {
             where ur.user = :user and rolePermission.permission.name = :permission
             """)
     boolean hasPermission(@Param("user") User user, @Param("permission") String permission);
+
+
+    @Query("""
+            select case when (count(ur.id) > 0) then true else false end
+            from UserRole ur
+            join ur.role role
+            join role.rolePermissions rolePermission
+            where ur.user = :user and rolePermission.permission.name = 'superAdmin'
+            """)
+    boolean hasSuperAdmin(@Param("user") User user);
 }

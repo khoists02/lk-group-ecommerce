@@ -45,9 +45,9 @@ public class CookieAuthFilter extends OncePerRequestFilter {
 
         Optional<Cookie> authCookie = resolveAuthenticationCookieForSubdomain(httpServletRequest);
 
-        if (authCookie.get().getValue().isEmpty()) {
+        if (authCookie.isEmpty() || authCookie.get().getValue().isEmpty()) {
             logger.info("No cookie found in request");
-            throw UnauthenticatedException.NOT_COOKIE_FOUND;
+            throw UnauthenticatedException.UNAUTHENTICATED;
         }
         try {
             parsedJwt = jwtTokenService.parseJwt(authCookie.get().getValue());

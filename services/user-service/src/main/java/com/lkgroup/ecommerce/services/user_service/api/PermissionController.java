@@ -3,6 +3,7 @@ package com.lkgroup.ecommerce.services.user_service.api;
 import com.lkgroup.ecommerce.common.domain.entities.Permission;
 import com.lkgroup.ecommerce.common.domain.repositories.PermissionRepository;
 import com.lkgroup.ecommerce.protobuf.userproto.UsersProtos;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -20,6 +21,7 @@ public class PermissionController {
     }
 
     @GetMapping
+    @PreAuthorize("hasPermission('viewRole')")
     public UsersProtos.PermissionsResponse getPermissions() {
         List<Permission> permissions = permissionRepository.findAll();
         UsersProtos.PermissionsResponse.Builder b = UsersProtos.PermissionsResponse.newBuilder();

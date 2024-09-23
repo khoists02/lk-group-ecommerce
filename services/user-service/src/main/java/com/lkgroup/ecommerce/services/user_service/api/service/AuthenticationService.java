@@ -131,4 +131,10 @@ public class AuthenticationService {
         return hasPermission(UserUtils.getUser(), permission);
     }
 
+
+    @Transactional(readOnly = true)
+    public boolean hasSuperAdmin() {
+        return userRepository.hasSuperAdmin(UserUtils.getUser());
+    }
+
 }

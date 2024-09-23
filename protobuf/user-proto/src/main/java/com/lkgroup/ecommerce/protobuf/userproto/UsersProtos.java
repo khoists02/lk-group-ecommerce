@@ -4404,6 +4404,31 @@ public final class UsersProtos {
      */
     com.google.protobuf.ByteString
         getDescriptionBytes();
+
+    /**
+     * <code>repeated string permissions = 4;</code>
+     * @return A list containing the permissions.
+     */
+    java.util.List<java.lang.String>
+        getPermissionsList();
+    /**
+     * <code>repeated string permissions = 4;</code>
+     * @return The count of permissions.
+     */
+    int getPermissionsCount();
+    /**
+     * <code>repeated string permissions = 4;</code>
+     * @param index The index of the element to return.
+     * @return The permissions at the given index.
+     */
+    java.lang.String getPermissions(int index);
+    /**
+     * <code>repeated string permissions = 4;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the permissions at the given index.
+     */
+    com.google.protobuf.ByteString
+        getPermissionsBytes(int index);
   }
   /**
    * Protobuf type {@code ecommerce.RoleResponse}
@@ -4430,6 +4455,8 @@ public final class UsersProtos {
       id_ = "";
       name_ = "";
       description_ = "";
+      permissions_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
     }
 
     public static final com.google.protobuf.Descriptors.Descriptor
@@ -4562,6 +4589,43 @@ public final class UsersProtos {
       }
     }
 
+    public static final int PERMISSIONS_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private com.google.protobuf.LazyStringArrayList permissions_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+    /**
+     * <code>repeated string permissions = 4;</code>
+     * @return A list containing the permissions.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getPermissionsList() {
+      return permissions_;
+    }
+    /**
+     * <code>repeated string permissions = 4;</code>
+     * @return The count of permissions.
+     */
+    public int getPermissionsCount() {
+      return permissions_.size();
+    }
+    /**
+     * <code>repeated string permissions = 4;</code>
+     * @param index The index of the element to return.
+     * @return The permissions at the given index.
+     */
+    public java.lang.String getPermissions(int index) {
+      return permissions_.get(index);
+    }
+    /**
+     * <code>repeated string permissions = 4;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the permissions at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getPermissionsBytes(int index) {
+      return permissions_.getByteString(index);
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -4585,6 +4649,9 @@ public final class UsersProtos {
       if (!com.google.protobuf.GeneratedMessage.isStringEmpty(description_)) {
         com.google.protobuf.GeneratedMessage.writeString(output, 3, description_);
       }
+      for (int i = 0; i < permissions_.size(); i++) {
+        com.google.protobuf.GeneratedMessage.writeString(output, 4, permissions_.getRaw(i));
+      }
       getUnknownFields().writeTo(output);
     }
 
@@ -4602,6 +4669,14 @@ public final class UsersProtos {
       }
       if (!com.google.protobuf.GeneratedMessage.isStringEmpty(description_)) {
         size += com.google.protobuf.GeneratedMessage.computeStringSize(3, description_);
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < permissions_.size(); i++) {
+          dataSize += computeStringSizeNoTag(permissions_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getPermissionsList().size();
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -4624,6 +4699,8 @@ public final class UsersProtos {
           .equals(other.getName())) return false;
       if (!getDescription()
           .equals(other.getDescription())) return false;
+      if (!getPermissionsList()
+          .equals(other.getPermissionsList())) return false;
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -4641,6 +4718,10 @@ public final class UsersProtos {
       hash = (53 * hash) + getName().hashCode();
       hash = (37 * hash) + DESCRIPTION_FIELD_NUMBER;
       hash = (53 * hash) + getDescription().hashCode();
+      if (getPermissionsCount() > 0) {
+        hash = (37 * hash) + PERMISSIONS_FIELD_NUMBER;
+        hash = (53 * hash) + getPermissionsList().hashCode();
+      }
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -4775,6 +4856,8 @@ public final class UsersProtos {
         id_ = "";
         name_ = "";
         description_ = "";
+        permissions_ =
+            com.google.protobuf.LazyStringArrayList.emptyList();
         return this;
       }
 
@@ -4817,6 +4900,10 @@ public final class UsersProtos {
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.description_ = description_;
         }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          permissions_.makeImmutable();
+          result.permissions_ = permissions_;
+        }
       }
 
       @java.lang.Override
@@ -4844,6 +4931,16 @@ public final class UsersProtos {
         if (!other.getDescription().isEmpty()) {
           description_ = other.description_;
           bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        if (!other.permissions_.isEmpty()) {
+          if (permissions_.isEmpty()) {
+            permissions_ = other.permissions_;
+            bitField0_ |= 0x00000008;
+          } else {
+            ensurePermissionsIsMutable();
+            permissions_.addAll(other.permissions_);
+          }
           onChanged();
         }
         this.mergeUnknownFields(other.getUnknownFields());
@@ -4887,6 +4984,12 @@ public final class UsersProtos {
                 bitField0_ |= 0x00000004;
                 break;
               } // case 26
+              case 34: {
+                java.lang.String s = input.readStringRequireUtf8();
+                ensurePermissionsIsMutable();
+                permissions_.add(s);
+                break;
+              } // case 34
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -5116,6 +5219,117 @@ public final class UsersProtos {
         checkByteStringIsUtf8(value);
         description_ = value;
         bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.LazyStringArrayList permissions_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+      private void ensurePermissionsIsMutable() {
+        if (!permissions_.isModifiable()) {
+          permissions_ = new com.google.protobuf.LazyStringArrayList(permissions_);
+        }
+        bitField0_ |= 0x00000008;
+      }
+      /**
+       * <code>repeated string permissions = 4;</code>
+       * @return A list containing the permissions.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getPermissionsList() {
+        permissions_.makeImmutable();
+        return permissions_;
+      }
+      /**
+       * <code>repeated string permissions = 4;</code>
+       * @return The count of permissions.
+       */
+      public int getPermissionsCount() {
+        return permissions_.size();
+      }
+      /**
+       * <code>repeated string permissions = 4;</code>
+       * @param index The index of the element to return.
+       * @return The permissions at the given index.
+       */
+      public java.lang.String getPermissions(int index) {
+        return permissions_.get(index);
+      }
+      /**
+       * <code>repeated string permissions = 4;</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the permissions at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getPermissionsBytes(int index) {
+        return permissions_.getByteString(index);
+      }
+      /**
+       * <code>repeated string permissions = 4;</code>
+       * @param index The index to set the value at.
+       * @param value The permissions to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPermissions(
+          int index, java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensurePermissionsIsMutable();
+        permissions_.set(index, value);
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string permissions = 4;</code>
+       * @param value The permissions to add.
+       * @return This builder for chaining.
+       */
+      public Builder addPermissions(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensurePermissionsIsMutable();
+        permissions_.add(value);
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string permissions = 4;</code>
+       * @param values The permissions to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllPermissions(
+          java.lang.Iterable<java.lang.String> values) {
+        ensurePermissionsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, permissions_);
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string permissions = 4;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPermissions() {
+        permissions_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000008);;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string permissions = 4;</code>
+       * @param value The bytes of the permissions to add.
+       * @return This builder for chaining.
+       */
+      public Builder addPermissionsBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        ensurePermissionsIsMutable();
+        permissions_.add(value);
+        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
@@ -5940,29 +6154,29 @@ public final class UsersProtos {
         getDescriptionBytes();
 
     /**
-     * <code>repeated string permissionIds = 3;</code>
-     * @return A list containing the permissionIds.
+     * <code>repeated string permissions = 3;</code>
+     * @return A list containing the permissions.
      */
     java.util.List<java.lang.String>
-        getPermissionIdsList();
+        getPermissionsList();
     /**
-     * <code>repeated string permissionIds = 3;</code>
-     * @return The count of permissionIds.
+     * <code>repeated string permissions = 3;</code>
+     * @return The count of permissions.
      */
-    int getPermissionIdsCount();
+    int getPermissionsCount();
     /**
-     * <code>repeated string permissionIds = 3;</code>
+     * <code>repeated string permissions = 3;</code>
      * @param index The index of the element to return.
-     * @return The permissionIds at the given index.
+     * @return The permissions at the given index.
      */
-    java.lang.String getPermissionIds(int index);
+    java.lang.String getPermissions(int index);
     /**
-     * <code>repeated string permissionIds = 3;</code>
+     * <code>repeated string permissions = 3;</code>
      * @param index The index of the value to return.
-     * @return The bytes of the permissionIds at the given index.
+     * @return The bytes of the permissions at the given index.
      */
     com.google.protobuf.ByteString
-        getPermissionIdsBytes(int index);
+        getPermissionsBytes(int index);
   }
   /**
    * Protobuf type {@code ecommerce.RoleRequest}
@@ -5988,7 +6202,7 @@ public final class UsersProtos {
     private RoleRequest() {
       name_ = "";
       description_ = "";
-      permissionIds_ =
+      permissions_ =
           com.google.protobuf.LazyStringArrayList.emptyList();
     }
 
@@ -6083,41 +6297,41 @@ public final class UsersProtos {
       }
     }
 
-    public static final int PERMISSIONIDS_FIELD_NUMBER = 3;
+    public static final int PERMISSIONS_FIELD_NUMBER = 3;
     @SuppressWarnings("serial")
-    private com.google.protobuf.LazyStringArrayList permissionIds_ =
+    private com.google.protobuf.LazyStringArrayList permissions_ =
         com.google.protobuf.LazyStringArrayList.emptyList();
     /**
-     * <code>repeated string permissionIds = 3;</code>
-     * @return A list containing the permissionIds.
+     * <code>repeated string permissions = 3;</code>
+     * @return A list containing the permissions.
      */
     public com.google.protobuf.ProtocolStringList
-        getPermissionIdsList() {
-      return permissionIds_;
+        getPermissionsList() {
+      return permissions_;
     }
     /**
-     * <code>repeated string permissionIds = 3;</code>
-     * @return The count of permissionIds.
+     * <code>repeated string permissions = 3;</code>
+     * @return The count of permissions.
      */
-    public int getPermissionIdsCount() {
-      return permissionIds_.size();
+    public int getPermissionsCount() {
+      return permissions_.size();
     }
     /**
-     * <code>repeated string permissionIds = 3;</code>
+     * <code>repeated string permissions = 3;</code>
      * @param index The index of the element to return.
-     * @return The permissionIds at the given index.
+     * @return The permissions at the given index.
      */
-    public java.lang.String getPermissionIds(int index) {
-      return permissionIds_.get(index);
+    public java.lang.String getPermissions(int index) {
+      return permissions_.get(index);
     }
     /**
-     * <code>repeated string permissionIds = 3;</code>
+     * <code>repeated string permissions = 3;</code>
      * @param index The index of the value to return.
-     * @return The bytes of the permissionIds at the given index.
+     * @return The bytes of the permissions at the given index.
      */
     public com.google.protobuf.ByteString
-        getPermissionIdsBytes(int index) {
-      return permissionIds_.getByteString(index);
+        getPermissionsBytes(int index) {
+      return permissions_.getByteString(index);
     }
 
     private byte memoizedIsInitialized = -1;
@@ -6140,8 +6354,8 @@ public final class UsersProtos {
       if (!com.google.protobuf.GeneratedMessage.isStringEmpty(description_)) {
         com.google.protobuf.GeneratedMessage.writeString(output, 2, description_);
       }
-      for (int i = 0; i < permissionIds_.size(); i++) {
-        com.google.protobuf.GeneratedMessage.writeString(output, 3, permissionIds_.getRaw(i));
+      for (int i = 0; i < permissions_.size(); i++) {
+        com.google.protobuf.GeneratedMessage.writeString(output, 3, permissions_.getRaw(i));
       }
       getUnknownFields().writeTo(output);
     }
@@ -6160,11 +6374,11 @@ public final class UsersProtos {
       }
       {
         int dataSize = 0;
-        for (int i = 0; i < permissionIds_.size(); i++) {
-          dataSize += computeStringSizeNoTag(permissionIds_.getRaw(i));
+        for (int i = 0; i < permissions_.size(); i++) {
+          dataSize += computeStringSizeNoTag(permissions_.getRaw(i));
         }
         size += dataSize;
-        size += 1 * getPermissionIdsList().size();
+        size += 1 * getPermissionsList().size();
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -6185,8 +6399,8 @@ public final class UsersProtos {
           .equals(other.getName())) return false;
       if (!getDescription()
           .equals(other.getDescription())) return false;
-      if (!getPermissionIdsList()
-          .equals(other.getPermissionIdsList())) return false;
+      if (!getPermissionsList()
+          .equals(other.getPermissionsList())) return false;
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -6202,9 +6416,9 @@ public final class UsersProtos {
       hash = (53 * hash) + getName().hashCode();
       hash = (37 * hash) + DESCRIPTION_FIELD_NUMBER;
       hash = (53 * hash) + getDescription().hashCode();
-      if (getPermissionIdsCount() > 0) {
-        hash = (37 * hash) + PERMISSIONIDS_FIELD_NUMBER;
-        hash = (53 * hash) + getPermissionIdsList().hashCode();
+      if (getPermissionsCount() > 0) {
+        hash = (37 * hash) + PERMISSIONS_FIELD_NUMBER;
+        hash = (53 * hash) + getPermissionsList().hashCode();
       }
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
@@ -6339,7 +6553,7 @@ public final class UsersProtos {
         bitField0_ = 0;
         name_ = "";
         description_ = "";
-        permissionIds_ =
+        permissions_ =
             com.google.protobuf.LazyStringArrayList.emptyList();
         return this;
       }
@@ -6381,8 +6595,8 @@ public final class UsersProtos {
           result.description_ = description_;
         }
         if (((from_bitField0_ & 0x00000004) != 0)) {
-          permissionIds_.makeImmutable();
-          result.permissionIds_ = permissionIds_;
+          permissions_.makeImmutable();
+          result.permissions_ = permissions_;
         }
       }
 
@@ -6408,13 +6622,13 @@ public final class UsersProtos {
           bitField0_ |= 0x00000002;
           onChanged();
         }
-        if (!other.permissionIds_.isEmpty()) {
-          if (permissionIds_.isEmpty()) {
-            permissionIds_ = other.permissionIds_;
+        if (!other.permissions_.isEmpty()) {
+          if (permissions_.isEmpty()) {
+            permissions_ = other.permissions_;
             bitField0_ |= 0x00000004;
           } else {
-            ensurePermissionIdsIsMutable();
-            permissionIds_.addAll(other.permissionIds_);
+            ensurePermissionsIsMutable();
+            permissions_.addAll(other.permissions_);
           }
           onChanged();
         }
@@ -6456,8 +6670,8 @@ public final class UsersProtos {
               } // case 18
               case 26: {
                 java.lang.String s = input.readStringRequireUtf8();
-                ensurePermissionIdsIsMutable();
-                permissionIds_.add(s);
+                ensurePermissionsIsMutable();
+                permissions_.add(s);
                 break;
               } // case 26
               default: {
@@ -6621,112 +6835,112 @@ public final class UsersProtos {
         return this;
       }
 
-      private com.google.protobuf.LazyStringArrayList permissionIds_ =
+      private com.google.protobuf.LazyStringArrayList permissions_ =
           com.google.protobuf.LazyStringArrayList.emptyList();
-      private void ensurePermissionIdsIsMutable() {
-        if (!permissionIds_.isModifiable()) {
-          permissionIds_ = new com.google.protobuf.LazyStringArrayList(permissionIds_);
+      private void ensurePermissionsIsMutable() {
+        if (!permissions_.isModifiable()) {
+          permissions_ = new com.google.protobuf.LazyStringArrayList(permissions_);
         }
         bitField0_ |= 0x00000004;
       }
       /**
-       * <code>repeated string permissionIds = 3;</code>
-       * @return A list containing the permissionIds.
+       * <code>repeated string permissions = 3;</code>
+       * @return A list containing the permissions.
        */
       public com.google.protobuf.ProtocolStringList
-          getPermissionIdsList() {
-        permissionIds_.makeImmutable();
-        return permissionIds_;
+          getPermissionsList() {
+        permissions_.makeImmutable();
+        return permissions_;
       }
       /**
-       * <code>repeated string permissionIds = 3;</code>
-       * @return The count of permissionIds.
+       * <code>repeated string permissions = 3;</code>
+       * @return The count of permissions.
        */
-      public int getPermissionIdsCount() {
-        return permissionIds_.size();
+      public int getPermissionsCount() {
+        return permissions_.size();
       }
       /**
-       * <code>repeated string permissionIds = 3;</code>
+       * <code>repeated string permissions = 3;</code>
        * @param index The index of the element to return.
-       * @return The permissionIds at the given index.
+       * @return The permissions at the given index.
        */
-      public java.lang.String getPermissionIds(int index) {
-        return permissionIds_.get(index);
+      public java.lang.String getPermissions(int index) {
+        return permissions_.get(index);
       }
       /**
-       * <code>repeated string permissionIds = 3;</code>
+       * <code>repeated string permissions = 3;</code>
        * @param index The index of the value to return.
-       * @return The bytes of the permissionIds at the given index.
+       * @return The bytes of the permissions at the given index.
        */
       public com.google.protobuf.ByteString
-          getPermissionIdsBytes(int index) {
-        return permissionIds_.getByteString(index);
+          getPermissionsBytes(int index) {
+        return permissions_.getByteString(index);
       }
       /**
-       * <code>repeated string permissionIds = 3;</code>
+       * <code>repeated string permissions = 3;</code>
        * @param index The index to set the value at.
-       * @param value The permissionIds to set.
+       * @param value The permissions to set.
        * @return This builder for chaining.
        */
-      public Builder setPermissionIds(
+      public Builder setPermissions(
           int index, java.lang.String value) {
         if (value == null) { throw new NullPointerException(); }
-        ensurePermissionIdsIsMutable();
-        permissionIds_.set(index, value);
+        ensurePermissionsIsMutable();
+        permissions_.set(index, value);
         bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
       /**
-       * <code>repeated string permissionIds = 3;</code>
-       * @param value The permissionIds to add.
+       * <code>repeated string permissions = 3;</code>
+       * @param value The permissions to add.
        * @return This builder for chaining.
        */
-      public Builder addPermissionIds(
+      public Builder addPermissions(
           java.lang.String value) {
         if (value == null) { throw new NullPointerException(); }
-        ensurePermissionIdsIsMutable();
-        permissionIds_.add(value);
+        ensurePermissionsIsMutable();
+        permissions_.add(value);
         bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
       /**
-       * <code>repeated string permissionIds = 3;</code>
-       * @param values The permissionIds to add.
+       * <code>repeated string permissions = 3;</code>
+       * @param values The permissions to add.
        * @return This builder for chaining.
        */
-      public Builder addAllPermissionIds(
+      public Builder addAllPermissions(
           java.lang.Iterable<java.lang.String> values) {
-        ensurePermissionIdsIsMutable();
+        ensurePermissionsIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
-            values, permissionIds_);
+            values, permissions_);
         bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
       /**
-       * <code>repeated string permissionIds = 3;</code>
+       * <code>repeated string permissions = 3;</code>
        * @return This builder for chaining.
        */
-      public Builder clearPermissionIds() {
-        permissionIds_ =
+      public Builder clearPermissions() {
+        permissions_ =
           com.google.protobuf.LazyStringArrayList.emptyList();
         bitField0_ = (bitField0_ & ~0x00000004);;
         onChanged();
         return this;
       }
       /**
-       * <code>repeated string permissionIds = 3;</code>
-       * @param value The bytes of the permissionIds to add.
+       * <code>repeated string permissions = 3;</code>
+       * @param value The bytes of the permissions to add.
        * @return This builder for chaining.
        */
-      public Builder addPermissionIdsBytes(
+      public Builder addPermissionsBytes(
           com.google.protobuf.ByteString value) {
         if (value == null) { throw new NullPointerException(); }
         checkByteStringIsUtf8(value);
-        ensurePermissionIdsIsMutable();
-        permissionIds_.add(value);
+        ensurePermissionsIsMutable();
+        permissions_.add(value);
         bitField0_ |= 0x00000004;
         onChanged();
         return this;
@@ -6842,13 +7056,14 @@ public final class UsersProtos {
       "\022\n\n\002id\030\001 \001(\t\022\014\n\004code\030\002 \001(\t\022\014\n\004desc\030\003 \001(\t" +
       "\022\021\n\tgroup_key\030\004 \001(\t\"E\n\023PermissionsRespon" +
       "se\022.\n\007content\030\001 \003(\0132\035.ecommerce.Permissi" +
-      "onResponse\"=\n\014RoleResponse\022\n\n\002id\030\001 \001(\t\022\014" +
-      "\n\004name\030\002 \001(\t\022\023\n\013description\030\003 \001(\t\"9\n\rRol" +
-      "esResponse\022(\n\007content\030\001 \003(\0132\027.ecommerce." +
-      "RoleResponse\"G\n\013RoleRequest\022\014\n\004name\030\001 \001(" +
-      "\t\022\023\n\013description\030\002 \001(\t\022\025\n\rpermissionIds\030" +
-      "\003 \003(\tB7\n(com.lkgroup.ecommerce.protobuf." +
-      "userprotoB\013UsersProtosb\006proto3"
+      "onResponse\"R\n\014RoleResponse\022\n\n\002id\030\001 \001(\t\022\014" +
+      "\n\004name\030\002 \001(\t\022\023\n\013description\030\003 \001(\t\022\023\n\013per" +
+      "missions\030\004 \003(\t\"9\n\rRolesResponse\022(\n\007conte" +
+      "nt\030\001 \003(\0132\027.ecommerce.RoleResponse\"E\n\013Rol" +
+      "eRequest\022\014\n\004name\030\001 \001(\t\022\023\n\013description\030\002 " +
+      "\001(\t\022\023\n\013permissions\030\003 \003(\tB7\n(com.lkgroup." +
+      "ecommerce.protobuf.userprotoB\013UsersProto" +
+      "sb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -6889,7 +7104,7 @@ public final class UsersProtos {
     internal_static_ecommerce_RoleResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_ecommerce_RoleResponse_descriptor,
-        new java.lang.String[] { "Id", "Name", "Description", });
+        new java.lang.String[] { "Id", "Name", "Description", "Permissions", });
     internal_static_ecommerce_RolesResponse_descriptor =
       getDescriptor().getMessageTypes().get(6);
     internal_static_ecommerce_RolesResponse_fieldAccessorTable = new
@@ -6901,7 +7116,7 @@ public final class UsersProtos {
     internal_static_ecommerce_RoleRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_ecommerce_RoleRequest_descriptor,
-        new java.lang.String[] { "Name", "Description", "PermissionIds", });
+        new java.lang.String[] { "Name", "Description", "Permissions", });
     descriptor.resolveAllFeaturesImmutable();
   }
 
