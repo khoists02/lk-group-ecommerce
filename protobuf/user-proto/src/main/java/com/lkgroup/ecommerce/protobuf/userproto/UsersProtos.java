@@ -2671,6 +2671,4118 @@ public final class UsersProtos {
 
   }
 
+  public interface PermissionResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:ecommerce.PermissionResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string id = 1;</code>
+     * @return The id.
+     */
+    java.lang.String getId();
+    /**
+     * <code>string id = 1;</code>
+     * @return The bytes for id.
+     */
+    com.google.protobuf.ByteString
+        getIdBytes();
+
+    /**
+     * <code>string code = 2;</code>
+     * @return The code.
+     */
+    java.lang.String getCode();
+    /**
+     * <code>string code = 2;</code>
+     * @return The bytes for code.
+     */
+    com.google.protobuf.ByteString
+        getCodeBytes();
+
+    /**
+     * <code>string desc = 3;</code>
+     * @return The desc.
+     */
+    java.lang.String getDesc();
+    /**
+     * <code>string desc = 3;</code>
+     * @return The bytes for desc.
+     */
+    com.google.protobuf.ByteString
+        getDescBytes();
+
+    /**
+     * <code>string group_key = 4;</code>
+     * @return The groupKey.
+     */
+    java.lang.String getGroupKey();
+    /**
+     * <code>string group_key = 4;</code>
+     * @return The bytes for groupKey.
+     */
+    com.google.protobuf.ByteString
+        getGroupKeyBytes();
+  }
+  /**
+   * Protobuf type {@code ecommerce.PermissionResponse}
+   */
+  public static final class PermissionResponse extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:ecommerce.PermissionResponse)
+      PermissionResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    static {
+      com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
+        com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
+        /* major= */ 4,
+        /* minor= */ 28,
+        /* patch= */ 1,
+        /* suffix= */ "",
+        PermissionResponse.class.getName());
+    }
+    // Use PermissionResponse.newBuilder() to construct.
+    private PermissionResponse(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+    }
+    private PermissionResponse() {
+      id_ = "";
+      code_ = "";
+      desc_ = "";
+      groupKey_ = "";
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.internal_static_ecommerce_PermissionResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.internal_static_ecommerce_PermissionResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.PermissionResponse.class, com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.PermissionResponse.Builder.class);
+    }
+
+    public static final int ID_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object id_ = "";
+    /**
+     * <code>string id = 1;</code>
+     * @return The id.
+     */
+    @java.lang.Override
+    public java.lang.String getId() {
+      java.lang.Object ref = id_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        id_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string id = 1;</code>
+     * @return The bytes for id.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getIdBytes() {
+      java.lang.Object ref = id_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        id_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int CODE_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object code_ = "";
+    /**
+     * <code>string code = 2;</code>
+     * @return The code.
+     */
+    @java.lang.Override
+    public java.lang.String getCode() {
+      java.lang.Object ref = code_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        code_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string code = 2;</code>
+     * @return The bytes for code.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getCodeBytes() {
+      java.lang.Object ref = code_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        code_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DESC_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object desc_ = "";
+    /**
+     * <code>string desc = 3;</code>
+     * @return The desc.
+     */
+    @java.lang.Override
+    public java.lang.String getDesc() {
+      java.lang.Object ref = desc_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        desc_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string desc = 3;</code>
+     * @return The bytes for desc.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDescBytes() {
+      java.lang.Object ref = desc_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        desc_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int GROUP_KEY_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object groupKey_ = "";
+    /**
+     * <code>string group_key = 4;</code>
+     * @return The groupKey.
+     */
+    @java.lang.Override
+    public java.lang.String getGroupKey() {
+      java.lang.Object ref = groupKey_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        groupKey_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string group_key = 4;</code>
+     * @return The bytes for groupKey.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getGroupKeyBytes() {
+      java.lang.Object ref = groupKey_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        groupKey_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(id_)) {
+        com.google.protobuf.GeneratedMessage.writeString(output, 1, id_);
+      }
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(code_)) {
+        com.google.protobuf.GeneratedMessage.writeString(output, 2, code_);
+      }
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(desc_)) {
+        com.google.protobuf.GeneratedMessage.writeString(output, 3, desc_);
+      }
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(groupKey_)) {
+        com.google.protobuf.GeneratedMessage.writeString(output, 4, groupKey_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(id_)) {
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(1, id_);
+      }
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(code_)) {
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(2, code_);
+      }
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(desc_)) {
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(3, desc_);
+      }
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(groupKey_)) {
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(4, groupKey_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.PermissionResponse)) {
+        return super.equals(obj);
+      }
+      com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.PermissionResponse other = (com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.PermissionResponse) obj;
+
+      if (!getId()
+          .equals(other.getId())) return false;
+      if (!getCode()
+          .equals(other.getCode())) return false;
+      if (!getDesc()
+          .equals(other.getDesc())) return false;
+      if (!getGroupKey()
+          .equals(other.getGroupKey())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ID_FIELD_NUMBER;
+      hash = (53 * hash) + getId().hashCode();
+      hash = (37 * hash) + CODE_FIELD_NUMBER;
+      hash = (53 * hash) + getCode().hashCode();
+      hash = (37 * hash) + DESC_FIELD_NUMBER;
+      hash = (53 * hash) + getDesc().hashCode();
+      hash = (37 * hash) + GROUP_KEY_FIELD_NUMBER;
+      hash = (53 * hash) + getGroupKey().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.PermissionResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.PermissionResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.PermissionResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.PermissionResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.PermissionResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.PermissionResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.PermissionResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.PermissionResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.PermissionResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.PermissionResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.PermissionResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.PermissionResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.PermissionResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code ecommerce.PermissionResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:ecommerce.PermissionResponse)
+        com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.PermissionResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.internal_static_ecommerce_PermissionResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.internal_static_ecommerce_PermissionResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.PermissionResponse.class, com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.PermissionResponse.Builder.class);
+      }
+
+      // Construct using com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.PermissionResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        id_ = "";
+        code_ = "";
+        desc_ = "";
+        groupKey_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.internal_static_ecommerce_PermissionResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.PermissionResponse getDefaultInstanceForType() {
+        return com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.PermissionResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.PermissionResponse build() {
+        com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.PermissionResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.PermissionResponse buildPartial() {
+        com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.PermissionResponse result = new com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.PermissionResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.PermissionResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.id_ = id_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.code_ = code_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.desc_ = desc_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.groupKey_ = groupKey_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.PermissionResponse) {
+          return mergeFrom((com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.PermissionResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.PermissionResponse other) {
+        if (other == com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.PermissionResponse.getDefaultInstance()) return this;
+        if (!other.getId().isEmpty()) {
+          id_ = other.id_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getCode().isEmpty()) {
+          code_ = other.code_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (!other.getDesc().isEmpty()) {
+          desc_ = other.desc_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        if (!other.getGroupKey().isEmpty()) {
+          groupKey_ = other.groupKey_;
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                id_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                code_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                desc_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 34: {
+                groupKey_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object id_ = "";
+      /**
+       * <code>string id = 1;</code>
+       * @return The id.
+       */
+      public java.lang.String getId() {
+        java.lang.Object ref = id_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          id_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string id = 1;</code>
+       * @return The bytes for id.
+       */
+      public com.google.protobuf.ByteString
+          getIdBytes() {
+        java.lang.Object ref = id_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          id_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string id = 1;</code>
+       * @param value The id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        id_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string id = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearId() {
+        id_ = getDefaultInstance().getId();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string id = 1;</code>
+       * @param value The bytes for id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        id_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object code_ = "";
+      /**
+       * <code>string code = 2;</code>
+       * @return The code.
+       */
+      public java.lang.String getCode() {
+        java.lang.Object ref = code_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          code_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string code = 2;</code>
+       * @return The bytes for code.
+       */
+      public com.google.protobuf.ByteString
+          getCodeBytes() {
+        java.lang.Object ref = code_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          code_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string code = 2;</code>
+       * @param value The code to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCode(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        code_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string code = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCode() {
+        code_ = getDefaultInstance().getCode();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string code = 2;</code>
+       * @param value The bytes for code to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCodeBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        code_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object desc_ = "";
+      /**
+       * <code>string desc = 3;</code>
+       * @return The desc.
+       */
+      public java.lang.String getDesc() {
+        java.lang.Object ref = desc_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          desc_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string desc = 3;</code>
+       * @return The bytes for desc.
+       */
+      public com.google.protobuf.ByteString
+          getDescBytes() {
+        java.lang.Object ref = desc_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          desc_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string desc = 3;</code>
+       * @param value The desc to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDesc(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        desc_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string desc = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDesc() {
+        desc_ = getDefaultInstance().getDesc();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string desc = 3;</code>
+       * @param value The bytes for desc to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDescBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        desc_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object groupKey_ = "";
+      /**
+       * <code>string group_key = 4;</code>
+       * @return The groupKey.
+       */
+      public java.lang.String getGroupKey() {
+        java.lang.Object ref = groupKey_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          groupKey_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string group_key = 4;</code>
+       * @return The bytes for groupKey.
+       */
+      public com.google.protobuf.ByteString
+          getGroupKeyBytes() {
+        java.lang.Object ref = groupKey_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          groupKey_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string group_key = 4;</code>
+       * @param value The groupKey to set.
+       * @return This builder for chaining.
+       */
+      public Builder setGroupKey(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        groupKey_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string group_key = 4;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearGroupKey() {
+        groupKey_ = getDefaultInstance().getGroupKey();
+        bitField0_ = (bitField0_ & ~0x00000008);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string group_key = 4;</code>
+       * @param value The bytes for groupKey to set.
+       * @return This builder for chaining.
+       */
+      public Builder setGroupKeyBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        groupKey_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:ecommerce.PermissionResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:ecommerce.PermissionResponse)
+    private static final com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.PermissionResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.PermissionResponse();
+    }
+
+    public static com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.PermissionResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<PermissionResponse>
+        PARSER = new com.google.protobuf.AbstractParser<PermissionResponse>() {
+      @java.lang.Override
+      public PermissionResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<PermissionResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<PermissionResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.PermissionResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface PermissionsResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:ecommerce.PermissionsResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated .ecommerce.PermissionResponse content = 1;</code>
+     */
+    java.util.List<com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.PermissionResponse> 
+        getContentList();
+    /**
+     * <code>repeated .ecommerce.PermissionResponse content = 1;</code>
+     */
+    com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.PermissionResponse getContent(int index);
+    /**
+     * <code>repeated .ecommerce.PermissionResponse content = 1;</code>
+     */
+    int getContentCount();
+    /**
+     * <code>repeated .ecommerce.PermissionResponse content = 1;</code>
+     */
+    java.util.List<? extends com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.PermissionResponseOrBuilder> 
+        getContentOrBuilderList();
+    /**
+     * <code>repeated .ecommerce.PermissionResponse content = 1;</code>
+     */
+    com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.PermissionResponseOrBuilder getContentOrBuilder(
+        int index);
+  }
+  /**
+   * Protobuf type {@code ecommerce.PermissionsResponse}
+   */
+  public static final class PermissionsResponse extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:ecommerce.PermissionsResponse)
+      PermissionsResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    static {
+      com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
+        com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
+        /* major= */ 4,
+        /* minor= */ 28,
+        /* patch= */ 1,
+        /* suffix= */ "",
+        PermissionsResponse.class.getName());
+    }
+    // Use PermissionsResponse.newBuilder() to construct.
+    private PermissionsResponse(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+    }
+    private PermissionsResponse() {
+      content_ = java.util.Collections.emptyList();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.internal_static_ecommerce_PermissionsResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.internal_static_ecommerce_PermissionsResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.PermissionsResponse.class, com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.PermissionsResponse.Builder.class);
+    }
+
+    public static final int CONTENT_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private java.util.List<com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.PermissionResponse> content_;
+    /**
+     * <code>repeated .ecommerce.PermissionResponse content = 1;</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.PermissionResponse> getContentList() {
+      return content_;
+    }
+    /**
+     * <code>repeated .ecommerce.PermissionResponse content = 1;</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.PermissionResponseOrBuilder> 
+        getContentOrBuilderList() {
+      return content_;
+    }
+    /**
+     * <code>repeated .ecommerce.PermissionResponse content = 1;</code>
+     */
+    @java.lang.Override
+    public int getContentCount() {
+      return content_.size();
+    }
+    /**
+     * <code>repeated .ecommerce.PermissionResponse content = 1;</code>
+     */
+    @java.lang.Override
+    public com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.PermissionResponse getContent(int index) {
+      return content_.get(index);
+    }
+    /**
+     * <code>repeated .ecommerce.PermissionResponse content = 1;</code>
+     */
+    @java.lang.Override
+    public com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.PermissionResponseOrBuilder getContentOrBuilder(
+        int index) {
+      return content_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < content_.size(); i++) {
+        output.writeMessage(1, content_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < content_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, content_.get(i));
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.PermissionsResponse)) {
+        return super.equals(obj);
+      }
+      com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.PermissionsResponse other = (com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.PermissionsResponse) obj;
+
+      if (!getContentList()
+          .equals(other.getContentList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getContentCount() > 0) {
+        hash = (37 * hash) + CONTENT_FIELD_NUMBER;
+        hash = (53 * hash) + getContentList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.PermissionsResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.PermissionsResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.PermissionsResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.PermissionsResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.PermissionsResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.PermissionsResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.PermissionsResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.PermissionsResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.PermissionsResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.PermissionsResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.PermissionsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.PermissionsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.PermissionsResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code ecommerce.PermissionsResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:ecommerce.PermissionsResponse)
+        com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.PermissionsResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.internal_static_ecommerce_PermissionsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.internal_static_ecommerce_PermissionsResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.PermissionsResponse.class, com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.PermissionsResponse.Builder.class);
+      }
+
+      // Construct using com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.PermissionsResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        if (contentBuilder_ == null) {
+          content_ = java.util.Collections.emptyList();
+        } else {
+          content_ = null;
+          contentBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.internal_static_ecommerce_PermissionsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.PermissionsResponse getDefaultInstanceForType() {
+        return com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.PermissionsResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.PermissionsResponse build() {
+        com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.PermissionsResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.PermissionsResponse buildPartial() {
+        com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.PermissionsResponse result = new com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.PermissionsResponse(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.PermissionsResponse result) {
+        if (contentBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            content_ = java.util.Collections.unmodifiableList(content_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.content_ = content_;
+        } else {
+          result.content_ = contentBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.PermissionsResponse result) {
+        int from_bitField0_ = bitField0_;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.PermissionsResponse) {
+          return mergeFrom((com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.PermissionsResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.PermissionsResponse other) {
+        if (other == com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.PermissionsResponse.getDefaultInstance()) return this;
+        if (contentBuilder_ == null) {
+          if (!other.content_.isEmpty()) {
+            if (content_.isEmpty()) {
+              content_ = other.content_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureContentIsMutable();
+              content_.addAll(other.content_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.content_.isEmpty()) {
+            if (contentBuilder_.isEmpty()) {
+              contentBuilder_.dispose();
+              contentBuilder_ = null;
+              content_ = other.content_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              contentBuilder_ = 
+                com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                   getContentFieldBuilder() : null;
+            } else {
+              contentBuilder_.addAllMessages(other.content_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.PermissionResponse m =
+                    input.readMessage(
+                        com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.PermissionResponse.parser(),
+                        extensionRegistry);
+                if (contentBuilder_ == null) {
+                  ensureContentIsMutable();
+                  content_.add(m);
+                } else {
+                  contentBuilder_.addMessage(m);
+                }
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.PermissionResponse> content_ =
+        java.util.Collections.emptyList();
+      private void ensureContentIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          content_ = new java.util.ArrayList<com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.PermissionResponse>(content_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilder<
+          com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.PermissionResponse, com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.PermissionResponse.Builder, com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.PermissionResponseOrBuilder> contentBuilder_;
+
+      /**
+       * <code>repeated .ecommerce.PermissionResponse content = 1;</code>
+       */
+      public java.util.List<com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.PermissionResponse> getContentList() {
+        if (contentBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(content_);
+        } else {
+          return contentBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .ecommerce.PermissionResponse content = 1;</code>
+       */
+      public int getContentCount() {
+        if (contentBuilder_ == null) {
+          return content_.size();
+        } else {
+          return contentBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .ecommerce.PermissionResponse content = 1;</code>
+       */
+      public com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.PermissionResponse getContent(int index) {
+        if (contentBuilder_ == null) {
+          return content_.get(index);
+        } else {
+          return contentBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .ecommerce.PermissionResponse content = 1;</code>
+       */
+      public Builder setContent(
+          int index, com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.PermissionResponse value) {
+        if (contentBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureContentIsMutable();
+          content_.set(index, value);
+          onChanged();
+        } else {
+          contentBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ecommerce.PermissionResponse content = 1;</code>
+       */
+      public Builder setContent(
+          int index, com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.PermissionResponse.Builder builderForValue) {
+        if (contentBuilder_ == null) {
+          ensureContentIsMutable();
+          content_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          contentBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ecommerce.PermissionResponse content = 1;</code>
+       */
+      public Builder addContent(com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.PermissionResponse value) {
+        if (contentBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureContentIsMutable();
+          content_.add(value);
+          onChanged();
+        } else {
+          contentBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ecommerce.PermissionResponse content = 1;</code>
+       */
+      public Builder addContent(
+          int index, com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.PermissionResponse value) {
+        if (contentBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureContentIsMutable();
+          content_.add(index, value);
+          onChanged();
+        } else {
+          contentBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ecommerce.PermissionResponse content = 1;</code>
+       */
+      public Builder addContent(
+          com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.PermissionResponse.Builder builderForValue) {
+        if (contentBuilder_ == null) {
+          ensureContentIsMutable();
+          content_.add(builderForValue.build());
+          onChanged();
+        } else {
+          contentBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ecommerce.PermissionResponse content = 1;</code>
+       */
+      public Builder addContent(
+          int index, com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.PermissionResponse.Builder builderForValue) {
+        if (contentBuilder_ == null) {
+          ensureContentIsMutable();
+          content_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          contentBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ecommerce.PermissionResponse content = 1;</code>
+       */
+      public Builder addAllContent(
+          java.lang.Iterable<? extends com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.PermissionResponse> values) {
+        if (contentBuilder_ == null) {
+          ensureContentIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, content_);
+          onChanged();
+        } else {
+          contentBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ecommerce.PermissionResponse content = 1;</code>
+       */
+      public Builder clearContent() {
+        if (contentBuilder_ == null) {
+          content_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          contentBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ecommerce.PermissionResponse content = 1;</code>
+       */
+      public Builder removeContent(int index) {
+        if (contentBuilder_ == null) {
+          ensureContentIsMutable();
+          content_.remove(index);
+          onChanged();
+        } else {
+          contentBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ecommerce.PermissionResponse content = 1;</code>
+       */
+      public com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.PermissionResponse.Builder getContentBuilder(
+          int index) {
+        return getContentFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .ecommerce.PermissionResponse content = 1;</code>
+       */
+      public com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.PermissionResponseOrBuilder getContentOrBuilder(
+          int index) {
+        if (contentBuilder_ == null) {
+          return content_.get(index);  } else {
+          return contentBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .ecommerce.PermissionResponse content = 1;</code>
+       */
+      public java.util.List<? extends com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.PermissionResponseOrBuilder> 
+           getContentOrBuilderList() {
+        if (contentBuilder_ != null) {
+          return contentBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(content_);
+        }
+      }
+      /**
+       * <code>repeated .ecommerce.PermissionResponse content = 1;</code>
+       */
+      public com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.PermissionResponse.Builder addContentBuilder() {
+        return getContentFieldBuilder().addBuilder(
+            com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.PermissionResponse.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .ecommerce.PermissionResponse content = 1;</code>
+       */
+      public com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.PermissionResponse.Builder addContentBuilder(
+          int index) {
+        return getContentFieldBuilder().addBuilder(
+            index, com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.PermissionResponse.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .ecommerce.PermissionResponse content = 1;</code>
+       */
+      public java.util.List<com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.PermissionResponse.Builder> 
+           getContentBuilderList() {
+        return getContentFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilder<
+          com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.PermissionResponse, com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.PermissionResponse.Builder, com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.PermissionResponseOrBuilder> 
+          getContentFieldBuilder() {
+        if (contentBuilder_ == null) {
+          contentBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+              com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.PermissionResponse, com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.PermissionResponse.Builder, com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.PermissionResponseOrBuilder>(
+                  content_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          content_ = null;
+        }
+        return contentBuilder_;
+      }
+
+      // @@protoc_insertion_point(builder_scope:ecommerce.PermissionsResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:ecommerce.PermissionsResponse)
+    private static final com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.PermissionsResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.PermissionsResponse();
+    }
+
+    public static com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.PermissionsResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<PermissionsResponse>
+        PARSER = new com.google.protobuf.AbstractParser<PermissionsResponse>() {
+      @java.lang.Override
+      public PermissionsResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<PermissionsResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<PermissionsResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.PermissionsResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface RoleResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:ecommerce.RoleResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string id = 1;</code>
+     * @return The id.
+     */
+    java.lang.String getId();
+    /**
+     * <code>string id = 1;</code>
+     * @return The bytes for id.
+     */
+    com.google.protobuf.ByteString
+        getIdBytes();
+
+    /**
+     * <code>string name = 2;</code>
+     * @return The name.
+     */
+    java.lang.String getName();
+    /**
+     * <code>string name = 2;</code>
+     * @return The bytes for name.
+     */
+    com.google.protobuf.ByteString
+        getNameBytes();
+
+    /**
+     * <code>string description = 3;</code>
+     * @return The description.
+     */
+    java.lang.String getDescription();
+    /**
+     * <code>string description = 3;</code>
+     * @return The bytes for description.
+     */
+    com.google.protobuf.ByteString
+        getDescriptionBytes();
+  }
+  /**
+   * Protobuf type {@code ecommerce.RoleResponse}
+   */
+  public static final class RoleResponse extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:ecommerce.RoleResponse)
+      RoleResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    static {
+      com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
+        com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
+        /* major= */ 4,
+        /* minor= */ 28,
+        /* patch= */ 1,
+        /* suffix= */ "",
+        RoleResponse.class.getName());
+    }
+    // Use RoleResponse.newBuilder() to construct.
+    private RoleResponse(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+    }
+    private RoleResponse() {
+      id_ = "";
+      name_ = "";
+      description_ = "";
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.internal_static_ecommerce_RoleResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.internal_static_ecommerce_RoleResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.RoleResponse.class, com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.RoleResponse.Builder.class);
+    }
+
+    public static final int ID_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object id_ = "";
+    /**
+     * <code>string id = 1;</code>
+     * @return The id.
+     */
+    @java.lang.Override
+    public java.lang.String getId() {
+      java.lang.Object ref = id_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        id_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string id = 1;</code>
+     * @return The bytes for id.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getIdBytes() {
+      java.lang.Object ref = id_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        id_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int NAME_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object name_ = "";
+    /**
+     * <code>string name = 2;</code>
+     * @return The name.
+     */
+    @java.lang.Override
+    public java.lang.String getName() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        name_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string name = 2;</code>
+     * @return The bytes for name.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getNameBytes() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        name_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DESCRIPTION_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object description_ = "";
+    /**
+     * <code>string description = 3;</code>
+     * @return The description.
+     */
+    @java.lang.Override
+    public java.lang.String getDescription() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        description_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string description = 3;</code>
+     * @return The bytes for description.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDescriptionBytes() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        description_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(id_)) {
+        com.google.protobuf.GeneratedMessage.writeString(output, 1, id_);
+      }
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(name_)) {
+        com.google.protobuf.GeneratedMessage.writeString(output, 2, name_);
+      }
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(description_)) {
+        com.google.protobuf.GeneratedMessage.writeString(output, 3, description_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(id_)) {
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(1, id_);
+      }
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(name_)) {
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(2, name_);
+      }
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(description_)) {
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(3, description_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.RoleResponse)) {
+        return super.equals(obj);
+      }
+      com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.RoleResponse other = (com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.RoleResponse) obj;
+
+      if (!getId()
+          .equals(other.getId())) return false;
+      if (!getName()
+          .equals(other.getName())) return false;
+      if (!getDescription()
+          .equals(other.getDescription())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ID_FIELD_NUMBER;
+      hash = (53 * hash) + getId().hashCode();
+      hash = (37 * hash) + NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getName().hashCode();
+      hash = (37 * hash) + DESCRIPTION_FIELD_NUMBER;
+      hash = (53 * hash) + getDescription().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.RoleResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.RoleResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.RoleResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.RoleResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.RoleResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.RoleResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.RoleResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.RoleResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.RoleResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.RoleResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.RoleResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.RoleResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.RoleResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code ecommerce.RoleResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:ecommerce.RoleResponse)
+        com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.RoleResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.internal_static_ecommerce_RoleResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.internal_static_ecommerce_RoleResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.RoleResponse.class, com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.RoleResponse.Builder.class);
+      }
+
+      // Construct using com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.RoleResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        id_ = "";
+        name_ = "";
+        description_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.internal_static_ecommerce_RoleResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.RoleResponse getDefaultInstanceForType() {
+        return com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.RoleResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.RoleResponse build() {
+        com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.RoleResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.RoleResponse buildPartial() {
+        com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.RoleResponse result = new com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.RoleResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.RoleResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.id_ = id_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.name_ = name_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.description_ = description_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.RoleResponse) {
+          return mergeFrom((com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.RoleResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.RoleResponse other) {
+        if (other == com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.RoleResponse.getDefaultInstance()) return this;
+        if (!other.getId().isEmpty()) {
+          id_ = other.id_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getName().isEmpty()) {
+          name_ = other.name_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (!other.getDescription().isEmpty()) {
+          description_ = other.description_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                id_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                name_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                description_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object id_ = "";
+      /**
+       * <code>string id = 1;</code>
+       * @return The id.
+       */
+      public java.lang.String getId() {
+        java.lang.Object ref = id_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          id_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string id = 1;</code>
+       * @return The bytes for id.
+       */
+      public com.google.protobuf.ByteString
+          getIdBytes() {
+        java.lang.Object ref = id_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          id_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string id = 1;</code>
+       * @param value The id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        id_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string id = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearId() {
+        id_ = getDefaultInstance().getId();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string id = 1;</code>
+       * @param value The bytes for id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        id_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object name_ = "";
+      /**
+       * <code>string name = 2;</code>
+       * @return The name.
+       */
+      public java.lang.String getName() {
+        java.lang.Object ref = name_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          name_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string name = 2;</code>
+       * @return The bytes for name.
+       */
+      public com.google.protobuf.ByteString
+          getNameBytes() {
+        java.lang.Object ref = name_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          name_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string name = 2;</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setName(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        name_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string name = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearName() {
+        name_ = getDefaultInstance().getName();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string name = 2;</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        name_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object description_ = "";
+      /**
+       * <code>string description = 3;</code>
+       * @return The description.
+       */
+      public java.lang.String getDescription() {
+        java.lang.Object ref = description_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          description_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string description = 3;</code>
+       * @return The bytes for description.
+       */
+      public com.google.protobuf.ByteString
+          getDescriptionBytes() {
+        java.lang.Object ref = description_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          description_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string description = 3;</code>
+       * @param value The description to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDescription(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        description_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string description = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDescription() {
+        description_ = getDefaultInstance().getDescription();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string description = 3;</code>
+       * @param value The bytes for description to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDescriptionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        description_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:ecommerce.RoleResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:ecommerce.RoleResponse)
+    private static final com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.RoleResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.RoleResponse();
+    }
+
+    public static com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.RoleResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<RoleResponse>
+        PARSER = new com.google.protobuf.AbstractParser<RoleResponse>() {
+      @java.lang.Override
+      public RoleResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<RoleResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<RoleResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.RoleResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface RolesResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:ecommerce.RolesResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated .ecommerce.RoleResponse content = 1;</code>
+     */
+    java.util.List<com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.RoleResponse> 
+        getContentList();
+    /**
+     * <code>repeated .ecommerce.RoleResponse content = 1;</code>
+     */
+    com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.RoleResponse getContent(int index);
+    /**
+     * <code>repeated .ecommerce.RoleResponse content = 1;</code>
+     */
+    int getContentCount();
+    /**
+     * <code>repeated .ecommerce.RoleResponse content = 1;</code>
+     */
+    java.util.List<? extends com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.RoleResponseOrBuilder> 
+        getContentOrBuilderList();
+    /**
+     * <code>repeated .ecommerce.RoleResponse content = 1;</code>
+     */
+    com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.RoleResponseOrBuilder getContentOrBuilder(
+        int index);
+  }
+  /**
+   * Protobuf type {@code ecommerce.RolesResponse}
+   */
+  public static final class RolesResponse extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:ecommerce.RolesResponse)
+      RolesResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    static {
+      com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
+        com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
+        /* major= */ 4,
+        /* minor= */ 28,
+        /* patch= */ 1,
+        /* suffix= */ "",
+        RolesResponse.class.getName());
+    }
+    // Use RolesResponse.newBuilder() to construct.
+    private RolesResponse(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+    }
+    private RolesResponse() {
+      content_ = java.util.Collections.emptyList();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.internal_static_ecommerce_RolesResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.internal_static_ecommerce_RolesResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.RolesResponse.class, com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.RolesResponse.Builder.class);
+    }
+
+    public static final int CONTENT_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private java.util.List<com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.RoleResponse> content_;
+    /**
+     * <code>repeated .ecommerce.RoleResponse content = 1;</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.RoleResponse> getContentList() {
+      return content_;
+    }
+    /**
+     * <code>repeated .ecommerce.RoleResponse content = 1;</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.RoleResponseOrBuilder> 
+        getContentOrBuilderList() {
+      return content_;
+    }
+    /**
+     * <code>repeated .ecommerce.RoleResponse content = 1;</code>
+     */
+    @java.lang.Override
+    public int getContentCount() {
+      return content_.size();
+    }
+    /**
+     * <code>repeated .ecommerce.RoleResponse content = 1;</code>
+     */
+    @java.lang.Override
+    public com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.RoleResponse getContent(int index) {
+      return content_.get(index);
+    }
+    /**
+     * <code>repeated .ecommerce.RoleResponse content = 1;</code>
+     */
+    @java.lang.Override
+    public com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.RoleResponseOrBuilder getContentOrBuilder(
+        int index) {
+      return content_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < content_.size(); i++) {
+        output.writeMessage(1, content_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < content_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, content_.get(i));
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.RolesResponse)) {
+        return super.equals(obj);
+      }
+      com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.RolesResponse other = (com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.RolesResponse) obj;
+
+      if (!getContentList()
+          .equals(other.getContentList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getContentCount() > 0) {
+        hash = (37 * hash) + CONTENT_FIELD_NUMBER;
+        hash = (53 * hash) + getContentList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.RolesResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.RolesResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.RolesResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.RolesResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.RolesResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.RolesResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.RolesResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.RolesResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.RolesResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.RolesResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.RolesResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.RolesResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.RolesResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code ecommerce.RolesResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:ecommerce.RolesResponse)
+        com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.RolesResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.internal_static_ecommerce_RolesResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.internal_static_ecommerce_RolesResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.RolesResponse.class, com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.RolesResponse.Builder.class);
+      }
+
+      // Construct using com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.RolesResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        if (contentBuilder_ == null) {
+          content_ = java.util.Collections.emptyList();
+        } else {
+          content_ = null;
+          contentBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.internal_static_ecommerce_RolesResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.RolesResponse getDefaultInstanceForType() {
+        return com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.RolesResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.RolesResponse build() {
+        com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.RolesResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.RolesResponse buildPartial() {
+        com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.RolesResponse result = new com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.RolesResponse(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.RolesResponse result) {
+        if (contentBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            content_ = java.util.Collections.unmodifiableList(content_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.content_ = content_;
+        } else {
+          result.content_ = contentBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.RolesResponse result) {
+        int from_bitField0_ = bitField0_;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.RolesResponse) {
+          return mergeFrom((com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.RolesResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.RolesResponse other) {
+        if (other == com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.RolesResponse.getDefaultInstance()) return this;
+        if (contentBuilder_ == null) {
+          if (!other.content_.isEmpty()) {
+            if (content_.isEmpty()) {
+              content_ = other.content_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureContentIsMutable();
+              content_.addAll(other.content_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.content_.isEmpty()) {
+            if (contentBuilder_.isEmpty()) {
+              contentBuilder_.dispose();
+              contentBuilder_ = null;
+              content_ = other.content_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              contentBuilder_ = 
+                com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                   getContentFieldBuilder() : null;
+            } else {
+              contentBuilder_.addAllMessages(other.content_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.RoleResponse m =
+                    input.readMessage(
+                        com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.RoleResponse.parser(),
+                        extensionRegistry);
+                if (contentBuilder_ == null) {
+                  ensureContentIsMutable();
+                  content_.add(m);
+                } else {
+                  contentBuilder_.addMessage(m);
+                }
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.RoleResponse> content_ =
+        java.util.Collections.emptyList();
+      private void ensureContentIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          content_ = new java.util.ArrayList<com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.RoleResponse>(content_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilder<
+          com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.RoleResponse, com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.RoleResponse.Builder, com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.RoleResponseOrBuilder> contentBuilder_;
+
+      /**
+       * <code>repeated .ecommerce.RoleResponse content = 1;</code>
+       */
+      public java.util.List<com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.RoleResponse> getContentList() {
+        if (contentBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(content_);
+        } else {
+          return contentBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .ecommerce.RoleResponse content = 1;</code>
+       */
+      public int getContentCount() {
+        if (contentBuilder_ == null) {
+          return content_.size();
+        } else {
+          return contentBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .ecommerce.RoleResponse content = 1;</code>
+       */
+      public com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.RoleResponse getContent(int index) {
+        if (contentBuilder_ == null) {
+          return content_.get(index);
+        } else {
+          return contentBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .ecommerce.RoleResponse content = 1;</code>
+       */
+      public Builder setContent(
+          int index, com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.RoleResponse value) {
+        if (contentBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureContentIsMutable();
+          content_.set(index, value);
+          onChanged();
+        } else {
+          contentBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ecommerce.RoleResponse content = 1;</code>
+       */
+      public Builder setContent(
+          int index, com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.RoleResponse.Builder builderForValue) {
+        if (contentBuilder_ == null) {
+          ensureContentIsMutable();
+          content_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          contentBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ecommerce.RoleResponse content = 1;</code>
+       */
+      public Builder addContent(com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.RoleResponse value) {
+        if (contentBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureContentIsMutable();
+          content_.add(value);
+          onChanged();
+        } else {
+          contentBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ecommerce.RoleResponse content = 1;</code>
+       */
+      public Builder addContent(
+          int index, com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.RoleResponse value) {
+        if (contentBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureContentIsMutable();
+          content_.add(index, value);
+          onChanged();
+        } else {
+          contentBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ecommerce.RoleResponse content = 1;</code>
+       */
+      public Builder addContent(
+          com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.RoleResponse.Builder builderForValue) {
+        if (contentBuilder_ == null) {
+          ensureContentIsMutable();
+          content_.add(builderForValue.build());
+          onChanged();
+        } else {
+          contentBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ecommerce.RoleResponse content = 1;</code>
+       */
+      public Builder addContent(
+          int index, com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.RoleResponse.Builder builderForValue) {
+        if (contentBuilder_ == null) {
+          ensureContentIsMutable();
+          content_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          contentBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ecommerce.RoleResponse content = 1;</code>
+       */
+      public Builder addAllContent(
+          java.lang.Iterable<? extends com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.RoleResponse> values) {
+        if (contentBuilder_ == null) {
+          ensureContentIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, content_);
+          onChanged();
+        } else {
+          contentBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ecommerce.RoleResponse content = 1;</code>
+       */
+      public Builder clearContent() {
+        if (contentBuilder_ == null) {
+          content_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          contentBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ecommerce.RoleResponse content = 1;</code>
+       */
+      public Builder removeContent(int index) {
+        if (contentBuilder_ == null) {
+          ensureContentIsMutable();
+          content_.remove(index);
+          onChanged();
+        } else {
+          contentBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ecommerce.RoleResponse content = 1;</code>
+       */
+      public com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.RoleResponse.Builder getContentBuilder(
+          int index) {
+        return getContentFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .ecommerce.RoleResponse content = 1;</code>
+       */
+      public com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.RoleResponseOrBuilder getContentOrBuilder(
+          int index) {
+        if (contentBuilder_ == null) {
+          return content_.get(index);  } else {
+          return contentBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .ecommerce.RoleResponse content = 1;</code>
+       */
+      public java.util.List<? extends com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.RoleResponseOrBuilder> 
+           getContentOrBuilderList() {
+        if (contentBuilder_ != null) {
+          return contentBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(content_);
+        }
+      }
+      /**
+       * <code>repeated .ecommerce.RoleResponse content = 1;</code>
+       */
+      public com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.RoleResponse.Builder addContentBuilder() {
+        return getContentFieldBuilder().addBuilder(
+            com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.RoleResponse.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .ecommerce.RoleResponse content = 1;</code>
+       */
+      public com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.RoleResponse.Builder addContentBuilder(
+          int index) {
+        return getContentFieldBuilder().addBuilder(
+            index, com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.RoleResponse.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .ecommerce.RoleResponse content = 1;</code>
+       */
+      public java.util.List<com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.RoleResponse.Builder> 
+           getContentBuilderList() {
+        return getContentFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilder<
+          com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.RoleResponse, com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.RoleResponse.Builder, com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.RoleResponseOrBuilder> 
+          getContentFieldBuilder() {
+        if (contentBuilder_ == null) {
+          contentBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+              com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.RoleResponse, com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.RoleResponse.Builder, com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.RoleResponseOrBuilder>(
+                  content_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          content_ = null;
+        }
+        return contentBuilder_;
+      }
+
+      // @@protoc_insertion_point(builder_scope:ecommerce.RolesResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:ecommerce.RolesResponse)
+    private static final com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.RolesResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.RolesResponse();
+    }
+
+    public static com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.RolesResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<RolesResponse>
+        PARSER = new com.google.protobuf.AbstractParser<RolesResponse>() {
+      @java.lang.Override
+      public RolesResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<RolesResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<RolesResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.RolesResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface RoleRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:ecommerce.RoleRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string name = 1;</code>
+     * @return The name.
+     */
+    java.lang.String getName();
+    /**
+     * <code>string name = 1;</code>
+     * @return The bytes for name.
+     */
+    com.google.protobuf.ByteString
+        getNameBytes();
+
+    /**
+     * <code>string description = 2;</code>
+     * @return The description.
+     */
+    java.lang.String getDescription();
+    /**
+     * <code>string description = 2;</code>
+     * @return The bytes for description.
+     */
+    com.google.protobuf.ByteString
+        getDescriptionBytes();
+
+    /**
+     * <code>repeated string permissionIds = 3;</code>
+     * @return A list containing the permissionIds.
+     */
+    java.util.List<java.lang.String>
+        getPermissionIdsList();
+    /**
+     * <code>repeated string permissionIds = 3;</code>
+     * @return The count of permissionIds.
+     */
+    int getPermissionIdsCount();
+    /**
+     * <code>repeated string permissionIds = 3;</code>
+     * @param index The index of the element to return.
+     * @return The permissionIds at the given index.
+     */
+    java.lang.String getPermissionIds(int index);
+    /**
+     * <code>repeated string permissionIds = 3;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the permissionIds at the given index.
+     */
+    com.google.protobuf.ByteString
+        getPermissionIdsBytes(int index);
+  }
+  /**
+   * Protobuf type {@code ecommerce.RoleRequest}
+   */
+  public static final class RoleRequest extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:ecommerce.RoleRequest)
+      RoleRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    static {
+      com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
+        com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
+        /* major= */ 4,
+        /* minor= */ 28,
+        /* patch= */ 1,
+        /* suffix= */ "",
+        RoleRequest.class.getName());
+    }
+    // Use RoleRequest.newBuilder() to construct.
+    private RoleRequest(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+    }
+    private RoleRequest() {
+      name_ = "";
+      description_ = "";
+      permissionIds_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.internal_static_ecommerce_RoleRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.internal_static_ecommerce_RoleRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.RoleRequest.class, com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.RoleRequest.Builder.class);
+    }
+
+    public static final int NAME_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object name_ = "";
+    /**
+     * <code>string name = 1;</code>
+     * @return The name.
+     */
+    @java.lang.Override
+    public java.lang.String getName() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        name_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string name = 1;</code>
+     * @return The bytes for name.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getNameBytes() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        name_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DESCRIPTION_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object description_ = "";
+    /**
+     * <code>string description = 2;</code>
+     * @return The description.
+     */
+    @java.lang.Override
+    public java.lang.String getDescription() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        description_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string description = 2;</code>
+     * @return The bytes for description.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDescriptionBytes() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        description_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int PERMISSIONIDS_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private com.google.protobuf.LazyStringArrayList permissionIds_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+    /**
+     * <code>repeated string permissionIds = 3;</code>
+     * @return A list containing the permissionIds.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getPermissionIdsList() {
+      return permissionIds_;
+    }
+    /**
+     * <code>repeated string permissionIds = 3;</code>
+     * @return The count of permissionIds.
+     */
+    public int getPermissionIdsCount() {
+      return permissionIds_.size();
+    }
+    /**
+     * <code>repeated string permissionIds = 3;</code>
+     * @param index The index of the element to return.
+     * @return The permissionIds at the given index.
+     */
+    public java.lang.String getPermissionIds(int index) {
+      return permissionIds_.get(index);
+    }
+    /**
+     * <code>repeated string permissionIds = 3;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the permissionIds at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getPermissionIdsBytes(int index) {
+      return permissionIds_.getByteString(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(name_)) {
+        com.google.protobuf.GeneratedMessage.writeString(output, 1, name_);
+      }
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(description_)) {
+        com.google.protobuf.GeneratedMessage.writeString(output, 2, description_);
+      }
+      for (int i = 0; i < permissionIds_.size(); i++) {
+        com.google.protobuf.GeneratedMessage.writeString(output, 3, permissionIds_.getRaw(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(name_)) {
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(1, name_);
+      }
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(description_)) {
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(2, description_);
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < permissionIds_.size(); i++) {
+          dataSize += computeStringSizeNoTag(permissionIds_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getPermissionIdsList().size();
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.RoleRequest)) {
+        return super.equals(obj);
+      }
+      com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.RoleRequest other = (com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.RoleRequest) obj;
+
+      if (!getName()
+          .equals(other.getName())) return false;
+      if (!getDescription()
+          .equals(other.getDescription())) return false;
+      if (!getPermissionIdsList()
+          .equals(other.getPermissionIdsList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getName().hashCode();
+      hash = (37 * hash) + DESCRIPTION_FIELD_NUMBER;
+      hash = (53 * hash) + getDescription().hashCode();
+      if (getPermissionIdsCount() > 0) {
+        hash = (37 * hash) + PERMISSIONIDS_FIELD_NUMBER;
+        hash = (53 * hash) + getPermissionIdsList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.RoleRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.RoleRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.RoleRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.RoleRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.RoleRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.RoleRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.RoleRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.RoleRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.RoleRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.RoleRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.RoleRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.RoleRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.RoleRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code ecommerce.RoleRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:ecommerce.RoleRequest)
+        com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.RoleRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.internal_static_ecommerce_RoleRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.internal_static_ecommerce_RoleRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.RoleRequest.class, com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.RoleRequest.Builder.class);
+      }
+
+      // Construct using com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.RoleRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        name_ = "";
+        description_ = "";
+        permissionIds_ =
+            com.google.protobuf.LazyStringArrayList.emptyList();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.internal_static_ecommerce_RoleRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.RoleRequest getDefaultInstanceForType() {
+        return com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.RoleRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.RoleRequest build() {
+        com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.RoleRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.RoleRequest buildPartial() {
+        com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.RoleRequest result = new com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.RoleRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.RoleRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.name_ = name_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.description_ = description_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          permissionIds_.makeImmutable();
+          result.permissionIds_ = permissionIds_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.RoleRequest) {
+          return mergeFrom((com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.RoleRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.RoleRequest other) {
+        if (other == com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.RoleRequest.getDefaultInstance()) return this;
+        if (!other.getName().isEmpty()) {
+          name_ = other.name_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getDescription().isEmpty()) {
+          description_ = other.description_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (!other.permissionIds_.isEmpty()) {
+          if (permissionIds_.isEmpty()) {
+            permissionIds_ = other.permissionIds_;
+            bitField0_ |= 0x00000004;
+          } else {
+            ensurePermissionIdsIsMutable();
+            permissionIds_.addAll(other.permissionIds_);
+          }
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                name_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                description_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                java.lang.String s = input.readStringRequireUtf8();
+                ensurePermissionIdsIsMutable();
+                permissionIds_.add(s);
+                break;
+              } // case 26
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object name_ = "";
+      /**
+       * <code>string name = 1;</code>
+       * @return The name.
+       */
+      public java.lang.String getName() {
+        java.lang.Object ref = name_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          name_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string name = 1;</code>
+       * @return The bytes for name.
+       */
+      public com.google.protobuf.ByteString
+          getNameBytes() {
+        java.lang.Object ref = name_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          name_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string name = 1;</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setName(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        name_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string name = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearName() {
+        name_ = getDefaultInstance().getName();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string name = 1;</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        name_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object description_ = "";
+      /**
+       * <code>string description = 2;</code>
+       * @return The description.
+       */
+      public java.lang.String getDescription() {
+        java.lang.Object ref = description_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          description_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string description = 2;</code>
+       * @return The bytes for description.
+       */
+      public com.google.protobuf.ByteString
+          getDescriptionBytes() {
+        java.lang.Object ref = description_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          description_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string description = 2;</code>
+       * @param value The description to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDescription(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        description_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string description = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDescription() {
+        description_ = getDefaultInstance().getDescription();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string description = 2;</code>
+       * @param value The bytes for description to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDescriptionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        description_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.LazyStringArrayList permissionIds_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+      private void ensurePermissionIdsIsMutable() {
+        if (!permissionIds_.isModifiable()) {
+          permissionIds_ = new com.google.protobuf.LazyStringArrayList(permissionIds_);
+        }
+        bitField0_ |= 0x00000004;
+      }
+      /**
+       * <code>repeated string permissionIds = 3;</code>
+       * @return A list containing the permissionIds.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getPermissionIdsList() {
+        permissionIds_.makeImmutable();
+        return permissionIds_;
+      }
+      /**
+       * <code>repeated string permissionIds = 3;</code>
+       * @return The count of permissionIds.
+       */
+      public int getPermissionIdsCount() {
+        return permissionIds_.size();
+      }
+      /**
+       * <code>repeated string permissionIds = 3;</code>
+       * @param index The index of the element to return.
+       * @return The permissionIds at the given index.
+       */
+      public java.lang.String getPermissionIds(int index) {
+        return permissionIds_.get(index);
+      }
+      /**
+       * <code>repeated string permissionIds = 3;</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the permissionIds at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getPermissionIdsBytes(int index) {
+        return permissionIds_.getByteString(index);
+      }
+      /**
+       * <code>repeated string permissionIds = 3;</code>
+       * @param index The index to set the value at.
+       * @param value The permissionIds to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPermissionIds(
+          int index, java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensurePermissionIdsIsMutable();
+        permissionIds_.set(index, value);
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string permissionIds = 3;</code>
+       * @param value The permissionIds to add.
+       * @return This builder for chaining.
+       */
+      public Builder addPermissionIds(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensurePermissionIdsIsMutable();
+        permissionIds_.add(value);
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string permissionIds = 3;</code>
+       * @param values The permissionIds to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllPermissionIds(
+          java.lang.Iterable<java.lang.String> values) {
+        ensurePermissionIdsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, permissionIds_);
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string permissionIds = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPermissionIds() {
+        permissionIds_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000004);;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string permissionIds = 3;</code>
+       * @param value The bytes of the permissionIds to add.
+       * @return This builder for chaining.
+       */
+      public Builder addPermissionIdsBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        ensurePermissionIdsIsMutable();
+        permissionIds_.add(value);
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:ecommerce.RoleRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:ecommerce.RoleRequest)
+    private static final com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.RoleRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.RoleRequest();
+    }
+
+    public static com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.RoleRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<RoleRequest>
+        PARSER = new com.google.protobuf.AbstractParser<RoleRequest>() {
+      @java.lang.Override
+      public RoleRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<RoleRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<RoleRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.lkgroup.ecommerce.protobuf.userproto.UsersProtos.RoleRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_ecommerce_UserResponse_descriptor;
   private static final 
@@ -2686,6 +6798,31 @@ public final class UsersProtos {
   private static final 
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_ecommerce_EnabledUser_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_ecommerce_PermissionResponse_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_ecommerce_PermissionResponse_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_ecommerce_PermissionsResponse_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_ecommerce_PermissionsResponse_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_ecommerce_RoleResponse_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_ecommerce_RoleResponse_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_ecommerce_RolesResponse_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_ecommerce_RolesResponse_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_ecommerce_RoleRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_ecommerce_RoleRequest_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -2701,9 +6838,17 @@ public final class UsersProtos {
       "phone\030\006 \001(\t\022\021\n\timagePath\030\007 \001(\t\022\017\n\007enable" +
       "d\030\010 \001(\010\"9\n\rUsersResponse\022(\n\007content\030\001 \003(" +
       "\0132\027.ecommerce.UserResponse\"\036\n\013EnabledUse" +
-      "r\022\017\n\007enabled\030\001 \001(\010B7\n(com.lkgroup.ecomme" +
-      "rce.protobuf.userprotoB\013UsersProtosb\006pro" +
-      "to3"
+      "r\022\017\n\007enabled\030\001 \001(\010\"O\n\022PermissionResponse" +
+      "\022\n\n\002id\030\001 \001(\t\022\014\n\004code\030\002 \001(\t\022\014\n\004desc\030\003 \001(\t" +
+      "\022\021\n\tgroup_key\030\004 \001(\t\"E\n\023PermissionsRespon" +
+      "se\022.\n\007content\030\001 \003(\0132\035.ecommerce.Permissi" +
+      "onResponse\"=\n\014RoleResponse\022\n\n\002id\030\001 \001(\t\022\014" +
+      "\n\004name\030\002 \001(\t\022\023\n\013description\030\003 \001(\t\"9\n\rRol" +
+      "esResponse\022(\n\007content\030\001 \003(\0132\027.ecommerce." +
+      "RoleResponse\"G\n\013RoleRequest\022\014\n\004name\030\001 \001(" +
+      "\t\022\023\n\013description\030\002 \001(\t\022\025\n\rpermissionIds\030" +
+      "\003 \003(\tB7\n(com.lkgroup.ecommerce.protobuf." +
+      "userprotoB\013UsersProtosb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -2727,6 +6872,36 @@ public final class UsersProtos {
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_ecommerce_EnabledUser_descriptor,
         new java.lang.String[] { "Enabled", });
+    internal_static_ecommerce_PermissionResponse_descriptor =
+      getDescriptor().getMessageTypes().get(3);
+    internal_static_ecommerce_PermissionResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_ecommerce_PermissionResponse_descriptor,
+        new java.lang.String[] { "Id", "Code", "Desc", "GroupKey", });
+    internal_static_ecommerce_PermissionsResponse_descriptor =
+      getDescriptor().getMessageTypes().get(4);
+    internal_static_ecommerce_PermissionsResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_ecommerce_PermissionsResponse_descriptor,
+        new java.lang.String[] { "Content", });
+    internal_static_ecommerce_RoleResponse_descriptor =
+      getDescriptor().getMessageTypes().get(5);
+    internal_static_ecommerce_RoleResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_ecommerce_RoleResponse_descriptor,
+        new java.lang.String[] { "Id", "Name", "Description", });
+    internal_static_ecommerce_RolesResponse_descriptor =
+      getDescriptor().getMessageTypes().get(6);
+    internal_static_ecommerce_RolesResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_ecommerce_RolesResponse_descriptor,
+        new java.lang.String[] { "Content", });
+    internal_static_ecommerce_RoleRequest_descriptor =
+      getDescriptor().getMessageTypes().get(7);
+    internal_static_ecommerce_RoleRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_ecommerce_RoleRequest_descriptor,
+        new java.lang.String[] { "Name", "Description", "PermissionIds", });
     descriptor.resolveAllFeaturesImmutable();
   }
 
