@@ -40,6 +40,8 @@
 		<disposable.email.version>1.0</disposable.email.version>
 		<maven.surefire.plugin>3.3.0</maven.surefire.plugin>
 		<commons.net.version>3.10.0</commons.net.version>
+		<hibernate.version>6.5.3.Final</hibernate.version>
+		<jakarta.bind-xml.version>4.0.2</jakarta.bind-xml.version>
 	</properties>
 
 	<dependencyManagement>

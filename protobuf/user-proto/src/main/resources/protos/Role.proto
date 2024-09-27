@@ -1,0 +1,21 @@
+syntax = "proto3";
+package ecommerce;
+option java_package = "com.lkgroup.ecommerce.protobuf.userproto";
+option java_outer_classname = "RoleProtos";
+
+message RoleResponse {
+  string id = 1;
+  string name = 2;
+  string description = 3;
+  repeated string permissions = 4;
+}
+
+message RolesResponse {
+  repeated RoleResponse content = 1;
+}
+
+message CreateRoleRequest {
+  string name = 1;
+  string description = 2;
+  repeated string permissions = 3;
+}

@@ -40,12 +40,15 @@ public class ProtoValidatorAspect {
     private List<ProtoValidator> protoValidators;
     @Autowired(required = false)
     private List<ValidationCondition> validationConditions;
-    @Autowired
-    private ModelMapper mapper;
+    private final ModelMapper mapper;
     @Autowired
     private Validator beanValidator;
 
     private final ExpressionParser expressionParser = new SpelExpressionParser();
+
+    public ProtoValidatorAspect(ModelMapper mapper) {
+        this.mapper = mapper;
+    }
 
     record ValidatorAnnotation(Class<? extends ProtoValidator> clazz, ValidatesProto annotation) {
     }

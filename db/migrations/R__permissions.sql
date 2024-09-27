@@ -45,3 +45,7 @@ INSERT INTO permissions
 VALUES (uuid_generate_v4(), 'superAdmin', 'Super Admin can access all resource.', 'admin')
 ON CONFLICT (name) DO UPDATE SET name = 'superAdmin',
                                  "group" = 'admin';
+
+-- Inser Category master data --
+INSERT INTO categories
+VALUES (uuid_generate_v4(), 'SPORT');
