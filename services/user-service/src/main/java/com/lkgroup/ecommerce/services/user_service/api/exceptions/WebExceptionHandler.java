@@ -13,6 +13,7 @@ import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.web.csrf.CsrfException;
 import org.springframework.security.web.csrf.InvalidCsrfTokenException;
 import org.springframework.security.web.csrf.MissingCsrfTokenException;
+import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.server.ResponseStatusException;
@@ -27,6 +28,11 @@ public class WebExceptionHandler {
 
     @ExceptionHandler(ApplicationException.class)
     public ResponseEntity<GenericProtos.ErrorResponse> handleApiException(ApplicationException exception) {
+        return this.handle(exception);
+    }
+
+    @ExceptionHandler(MethodArgumentNotValidException.class)
+    public ResponseEntity<GenericProtos.ErrorResponse> handleMethodArgumentNotValid(ApplicationException exception) {
         return this.handle(exception);
     }
 

@@ -5,4 +5,36 @@ option java_outer_classname = "ProductProtos";
 
 message ProductRequest {
   string productName = 1;
+  double price = 2;
+  string pathImage = 3;
+  string description = 4;
+  string subDescription = 5;
+  string categoryId = 6;
+}
+
+message CategoryResponse {
+  string type = 1;
+}
+
+message ProductResponse {
+  string productName = 1;
+  double price = 2;
+  string pathImage = 3;
+  string description = 4;
+  string subDescription = 5;
+  CategoryResponse category = 6;
+}
+
+message ProductsResponse {
+  repeated ProductResponse content = 1;
+}
+
+message ProductOrderRequest {
+  string productId = 1;
+  string orderId = 2;
+}
+
+message OrderRequest {
+  string userId = 1;
+  int32 quality = 2;
 }
