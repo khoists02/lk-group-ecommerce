@@ -1,4 +1,4 @@
-ALTER TABLE users add COLUMN  address  VARCHAR NULL;
-ALTER TABLE users add COLUMN  phone  VARCHAR NULL;
-ALTER TABLE users add COLUMN  imagePath  VARCHAR NULL;
-ALTER TABLE users add COLUMN  enabled  boolean NULL;
+ALTER TABLE users ADD COLUMN  address  VARCHAR NULL;
+ALTER TABLE users ADD COLUMN  phone  VARCHAR NULL;
+ALTER TABLE users ADD COLUMN  imagePath  VARCHAR NULL;
+ALTER TABLE users ADD COLUMN  enabled  boolean NULL;

@@ -1,2 +1,2 @@
-alter table public.users rename column imagepath to image_path;
+ALTER TABLE public.users RENAME COLUMN imagepath to image_path;
 
