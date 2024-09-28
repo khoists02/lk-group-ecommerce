@@ -5,7 +5,6 @@ import com.lkgroup.ecommerce.common.domain.repositories.UserRepository;
 import com.lkgroup.ecommerce.services.user_service.api.exceptions.UnauthenticatedException;
 import com.lkgroup.ecommerce.services.user_service.utils.UserUtils;
 import io.jsonwebtoken.*;
-import jakarta.annotation.PostConstruct;
 import jakarta.servlet.http.Cookie;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
@@ -19,7 +18,6 @@ import org.springframework.transaction.annotation.Transactional;
 
 import java.util.Arrays;
 import java.util.Optional;
-import java.util.UUID;
 
 @Service
 public class AuthenticationService {
@@ -27,13 +25,15 @@ public class AuthenticationService {
     private final UserRepository userRepository;
     private final HttpServletResponse response;
     private final JwtTokenService jwtTokenService;
+    private final ConfigurationService configurationService;
     private Logger logger = LoggerFactory.getLogger(AuthenticationService.class);
 
-    public AuthenticationService(PasswordEncoder passwordEncoder, UserRepository userRepository, HttpServletRequest request, HttpServletResponse response, JwtTokenService jwtTokenService) {
+    public AuthenticationService(PasswordEncoder passwordEncoder, UserRepository userRepository, HttpServletRequest request, HttpServletResponse response, JwtTokenService jwtTokenService, ConfigurationService configurationService) {
         this.passwordEncoder = passwordEncoder;
         this.userRepository = userRepository;
         this.response = response;
         this.jwtTokenService = jwtTokenService;
+        this.configurationService = configurationService;
     }
 
 
@@ -77,7 +77,7 @@ public class AuthenticationService {
         tokenCookie.setPath("/");
         tokenCookie.setSecure(true);
         // TODO: move to docker ENV
-        tokenCookie.setDomain("user.api.ecommerce.local");
+        tokenCookie.setDomain(configurationService.getRootDomain());
         response.addCookie(tokenCookie);
     }
 
@@ -86,7 +86,7 @@ public class AuthenticationService {
         refreshCookie.setHttpOnly(true);
         refreshCookie.setPath("/auth");
         // TODO: move to docker ENV
-        refreshCookie.setDomain("user.api.ecommerce.local");
+        refreshCookie.setDomain(configurationService.getRootDomain());
         refreshCookie.setSecure(true);
         response.addCookie(refreshCookie);
     }

@@ -8,7 +8,6 @@ import com.lkgroup.ecommerce.common.domain.services.TransactionHandler;
 import com.lkgroup.ecommerce.common.validation.validators.PathUUID;
 import com.lkgroup.ecommerce.protobuf.userproto.RoleProtos;
 import com.lkgroup.ecommerce.services.user_service.api.exceptions.NotFoundException;
-import com.lkgroup.ecommerce.services.user_service.api.service.ConfigurationService;
 import jakarta.persistence.EntityGraph;
 import jakarta.validation.Valid;
 import org.apache.coyote.BadRequestException;
@@ -33,20 +32,16 @@ public class RoleController {
     private final TransactionHandler transactionHandler;
     private final PermissionRepository permissionRepository;
 
-    private final ConfigurationService configurationService;
-
-    public RoleController(final RoleRepository roleRepository, TransactionHandler transactionHandler, PermissionRepository permissionRepository, ConfigurationService configurationService) {
+    public RoleController(final RoleRepository roleRepository, TransactionHandler transactionHandler, PermissionRepository permissionRepository) {
         this.roleRepository = roleRepository;
         this.transactionHandler = transactionHandler;
         this.permissionRepository = permissionRepository;
-        this.configurationService = configurationService;
     }
 
     @GetMapping
     @PreAuthorize("hasPermission('viewRole') or hasSuperAdmin()")
     public RoleProtos.RolesResponse getAllRoles() {
         RoleProtos.RolesResponse.Builder b = RoleProtos.RolesResponse.newBuilder();
-        logger.info("Get Configuration Hostname {}", configurationService.getRootDomain());
         List<Role> roles = roleRepository.findAll();
         b.addAllContent(roles.stream().map(r -> {
             RoleProtos.RoleResponse.Builder builder = RoleProtos.RoleResponse.newBuilder();

@@ -3,7 +3,6 @@ package com.lkgroup.ecommerce.services.user_service.api.service;
 import com.lkgroup.ecommerce.common.domain.entities.User;
 import com.lkgroup.ecommerce.common.domain.repositories.UserRepository;
 import com.lkgroup.ecommerce.protobuf.userproto.AuthenticationProtos;
-import lombok.experimental.Delegate;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
@@ -12,7 +11,7 @@ public class UserService {
     private final UserRepository userRepository;;
     private final PasswordEncoder passwordEncoder;
 
-    public UserService(UserRepository userRepository, PasswordEncoder passwordEncoder) {
+    public UserService(UserRepository userRepository, PasswordEncoder passwordEncoder, ConfigurationService configurationService) {
         this.userRepository = userRepository;
         this.passwordEncoder = passwordEncoder;
     }
