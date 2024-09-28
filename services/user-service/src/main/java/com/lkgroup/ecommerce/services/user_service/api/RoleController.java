@@ -8,9 +8,12 @@ import com.lkgroup.ecommerce.common.domain.services.TransactionHandler;
 import com.lkgroup.ecommerce.common.validation.validators.PathUUID;
 import com.lkgroup.ecommerce.protobuf.userproto.RoleProtos;
 import com.lkgroup.ecommerce.services.user_service.api.exceptions.NotFoundException;
+import com.lkgroup.ecommerce.services.user_service.api.service.ConfigurationService;
 import jakarta.persistence.EntityGraph;
 import jakarta.validation.Valid;
 import org.apache.coyote.BadRequestException;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpStatus;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.transaction.annotation.Transactional;
@@ -25,21 +28,25 @@ import java.util.function.Supplier;
 @Validated
 @RequestMapping("/roles")
 public class RoleController {
+    private Logger logger = LoggerFactory.getLogger(RoleController.class);
     private final RoleRepository roleRepository;
     private final TransactionHandler transactionHandler;
     private final PermissionRepository permissionRepository;
 
-    public RoleController(final RoleRepository roleRepository, TransactionHandler transactionHandler, PermissionRepository permissionRepository) {
+    private final ConfigurationService configurationService;
+
+    public RoleController(final RoleRepository roleRepository, TransactionHandler transactionHandler, PermissionRepository permissionRepository, ConfigurationService configurationService) {
         this.roleRepository = roleRepository;
         this.transactionHandler = transactionHandler;
         this.permissionRepository = permissionRepository;
+        this.configurationService = configurationService;
     }
 
     @GetMapping
     @PreAuthorize("hasPermission('viewRole') or hasSuperAdmin()")
     public RoleProtos.RolesResponse getAllRoles() {
         RoleProtos.RolesResponse.Builder b = RoleProtos.RolesResponse.newBuilder();
-
+        logger.info("Get Configuration Hostname {}", configurationService.getRootDomain());
         List<Role> roles = roleRepository.findAll();
         b.addAllContent(roles.stream().map(r -> {
             RoleProtos.RoleResponse.Builder builder = RoleProtos.RoleResponse.newBuilder();
@@ -54,7 +61,7 @@ public class RoleController {
 
     @GetMapping("/{roleId}")
     @Transactional(readOnly = true)
-    @PreAuthorize("hasPermission('viewRole')")
+    @PreAuthorize("hasPermission('manageRole') or hasSuperAdmin()")
     public RoleProtos.RoleResponse getRoleById(@PathVariable("roleId") @PathUUID String roleId) {
         EntityGraph<Role> entityGraph = roleRepository.createEntityGraph();
         entityGraph.addAttributeNodes(Role_.ROLE_PERMISSIONS);
@@ -91,7 +98,7 @@ public class RoleController {
     @PutMapping("/{roleId}")
     @Transactional
     @ResponseStatus(HttpStatus.NO_CONTENT)
-    @PreAuthorize("hasPermission('manageRole')")
+    @PreAuthorize("hasPermission('manageRole') or hasSuperAdmin()")
     public void updateRole(@PathVariable("roleId") @PathUUID String roleId ,@Valid @RequestBody CreateRoleRequest request) {
         Role role = roleRepository.findById(UUID.fromString(roleId)).orElseThrow((NotFoundException::new));
         role.setName(request.getName());
@@ -118,7 +125,7 @@ public class RoleController {
     @DeleteMapping("/{roleId}")
     @Transactional
     @ResponseStatus(HttpStatus.NO_CONTENT)
-    @PreAuthorize("hasPermission('manageRole')")
+    @PreAuthorize("hasPermission('manageRole') or hasSuperAdmin()")
     public void deleteRole(@PathVariable("roleId") @PathUUID String roleId) {
         Role role = roleRepository.findById(UUID.fromString(roleId)).orElseThrow((NotFoundException::new));
         roleRepository.delete(role);

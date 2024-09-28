@@ -34,7 +34,7 @@ public class UserController {
     @GetMapping
     @Transactional(readOnly = true)
     // TODO: will implete filtering on another branch.
-    @PreAuthorize("hasPermission('viewUser')")
+    @PreAuthorize("hasPermission('viewUser') or hasSuperAdmin()")
     public UsersProtos.UsersResponse getAllUsers() {
         UsersProtos.UsersResponse.Builder usersBuilder = UsersProtos.UsersResponse.newBuilder();
         List<User> users = userRepository.findAll();
@@ -67,7 +67,7 @@ public class UserController {
     @PutMapping("/{userId}/assignRoles")
     @Transactional
     @ResponseStatus(HttpStatus.NO_CONTENT)
-    @PreAuthorize("hasPermission('manageUser')")
+    @PreAuthorize("hasPermission('manageUser') or hasSuperAdmin()")
     // TODO: enabled user accout, admin role only.
     public void assignRoles(@PathVariable("userId") @PathUUID String userId, @RequestBody UsersProtos.AssignRolesToUserRequest request) {
         // User will update.
@@ -80,7 +80,7 @@ public class UserController {
 
     @DeleteMapping("/{userId}")
     @ResponseStatus(HttpStatus.NO_CONTENT)
-    @PreAuthorize("hasPermission('manageUser')")
+    @PreAuthorize("hasPermission('manageUser') or hasSuperAdmin()")
     public void deleteUser(@PathVariable("userId") @PathUUID String userId) {
         User user = userRepository.findById(UUID.fromString(userId)).orElseThrow(NotFoundException::new);
         userRepository.delete(user);

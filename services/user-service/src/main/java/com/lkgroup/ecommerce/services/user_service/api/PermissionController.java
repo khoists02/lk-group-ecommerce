@@ -21,10 +21,11 @@ public class PermissionController {
     }
 
     @GetMapping
-    @PreAuthorize("hasPermission('viewRole')")
+    @PreAuthorize("hasPermission('viewRole') or hasSuperAdmin()")
     public UsersProtos.PermissionsResponse getPermissions() {
-        List<Permission> permissions = permissionRepository.findAll();
+        List<Permission> permissions = permissionRepository.getAllPermissions();
         UsersProtos.PermissionsResponse.Builder b = UsersProtos.PermissionsResponse.newBuilder();
+        // TODO: should filter out super admin permissions.
         b.addAllContent(permissions.stream().map(p -> {
             UsersProtos.PermissionResponse.Builder r = UsersProtos.PermissionResponse.newBuilder();
             r.setId(p.getId().toString());
